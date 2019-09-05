@@ -26,7 +26,7 @@
 ## Setup
 - Ensure that you've a github account. If you do not have one, check <a href="git#create-github-account" target="_blank">this page</a>.
 - Ensure that you've git set up locally on your Laptop/PC. If it is not set up, check <a href="git#install-git-locally" target="_blank">this page</a>.
-- Go to <a href="https://github.com/gcnit/mock-machine-coding-1" target="_blank">mock-machine-coding-1 repository</a>.
+- Go to <a href="https://github.com/workattech/mock-machine-coding-1" target="_blank">mock-machine-coding-1 repository</a>.
 - Fork the repository. If you're new to git, follow the steps mentioned <a href="git#fork" target="_blank">in the fork section here</a>
 - Clone the repository in your local machine.If you're new to git, follow the steps mentioned <a href="git#clone" target="_blank">in the clone section here</a>
 
