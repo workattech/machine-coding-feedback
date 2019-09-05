@@ -58,6 +58,4 @@
 ## Contact us
 If you need any help regarding this event:
 - Comment on <a href="https://www.facebook.com/groups/2380270958746431/" target="_blank">work@tech interview prep group</a>
-- Ping us:
-    - <a href="https://www.facebook.com/gcnit.93" target="_blank">Gaurav Chandak</a>
-    - <a href="https://www.facebook.com/sagar0907" target="_blank">Sagar Jain</a>
+- Ping us on <a href="m.me/workattech" target="_blank">messenger</a>
