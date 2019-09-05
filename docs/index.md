@@ -41,6 +41,7 @@
 - Separation of concern should be addressed
 - Code should easily accommodate new requirements and minimal changes
 - There should be a main method from where the code could be easily testable
+- [Optional] Write unit tests, if possible
 - No need to create a GUI
 
 ## Submission
