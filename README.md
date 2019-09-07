@@ -1,5 +1,6 @@
 # mock-machine-coding-1
-Welcome to the 1st Mock Machine Coding Round by work@tech.
 
-Please visit [this link](https://workattech.github.io/mock-machine-coding-1/) to participate.
+### Keep input file in ./IO as input.txt
+### Compile and run the code
+### Output will be generated ./IO as output.txt
 
