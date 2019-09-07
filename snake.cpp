@@ -49,16 +49,18 @@ class games_in{
 class games_out : public games_in{
 	public :
 	void play(){
-		int khiladi_number = 0;
+		int player_number = 0;
+
 		while(1){
 			
-			khiladi_number %= n;
+			player_number %= n;
 			
-			string s = players[ khiladi_number ].first;
+			string s = players[ player_number ].first;
 			
-			int cur_start = players[ khiladi_number ].second;
+			int cur_start = players[ player_number ].second;
 			
-			int move = rand() % 7;
+			int move = rand() % 7 + 1;
+
 			
 			if(move + cur_start <= 100)
 				int end = cur_start + move;
@@ -69,16 +71,10 @@ class games_out : public games_in{
 			if(snakeH.find( end ) != snakeH.end()  ){
 				end = snakeH[ end ];
 			}
-			else if(snakeT.find( end ) != snakeT.end()  ){
-				end = snakeT[ end ];
-			}
-			else if(ladderH.find( end ) != ladderH.end()  ){
-				end = ladderH[ end ];
-			}
 			else if(ladderT.find( end ) != ladderT.end()  ){
 				end = ladderT[ end ];
 			}
-			++khiladi_number;
+			++player_number;
 
 			if(end == 100){
 				cout<< s << " wins the game";
