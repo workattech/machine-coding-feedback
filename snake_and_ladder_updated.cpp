@@ -10,7 +10,7 @@ class Snake_and_ladder
 	map<string,int> m;
 	public:
     Snake_and_ladder()
-	{
+	{  cout<<"welcome";
 	  	s_no=0;
 	  	l_no=0;
 	  	p_no=0;
@@ -23,7 +23,7 @@ class Snake_and_ladder
 	  		l_end[i]=0;
 	  		v[i]=0;
 		}
-
+		cout<<"Ended";
 	}	
     void s_insert(int s)
 	{
@@ -34,7 +34,7 @@ class Snake_and_ladder
 			cin>>s_head[i]>>s_tail[i];
 			v[s_head[i]]=s_tail[i];
 		}
-
+		cout<<"finish1";
 	}	
     void l_insert(int l)
 	{
@@ -45,7 +45,7 @@ class Snake_and_ladder
 			cin>>l_start[i]>>l_end[i];
 			v[l_start[i]]=l_end[i];
 		}
-
+		cout<<"finish2";
 	}	
 	void p_insert(int p)
 	{
@@ -58,7 +58,7 @@ class Snake_and_ladder
 		m[p_list[i]]=0;
 		
 	   }
-
+	   	cout<<"finish3";
 	}
 	void output()
 	{
@@ -97,11 +97,11 @@ class Snake_and_ladder
 int main()
 {
 	int sn,l,p,x,y;
-
-	Snake_and_ladder turn;
+	cout<<"hi";
+/*	Snake_and_ladder turn;
 	
 	cin>>sn;
-
+	cout<<"No";
 	turn.s_insert(sn);
 	
 	cin>>l;
@@ -113,6 +113,6 @@ int main()
 	turn.p_insert(p);
 	
 	turn.output();
-	
+*/	
 	return 0;
 }
