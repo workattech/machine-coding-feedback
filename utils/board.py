@@ -62,8 +62,21 @@ class Board():
     # roll dice and get value
     def __get_dice_val(self):
         val = 0
-        for d in range(self.__no_of_dice):
-            val += randrange(1, 6)
+        six_cnt = 0
+        chances = 1
+        while (chances != 0):
+            x = 0
+            for d in range(self.__no_of_dice):
+                x += randrange(1, 6)
+            if x == 6:
+                six_cnt += 1
+                chances += 1
+            val += x
+            # 3 times sixes
+            if six_cnt == 3:
+                val = 0
+                six_cnt = 0
+            chances -= 1
         return val
 
     def get_current_player(self):

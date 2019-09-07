@@ -1,6 +1,7 @@
 from utils.board import Board
 from utils.player import Player
 from utils.movable import Movable
+from create_board import create_board
 
 # Parse the input file
 def parse_input_file():
@@ -61,4 +62,10 @@ def main(board_size, number_of_dice):
 if __name__ == "__main__":
     number_of_dice = 1
     board_size = 100
+
+    # optional
+    # create input file
+
+    # create_board('input.txt', board_size)
+
     main(board_size, number_of_dice)
