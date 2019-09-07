@@ -59,7 +59,10 @@ public class Game {
     }
     
     private void makeMove(Player player){
-        int move = rollDice();
+        // Play with two dices instead of one
+        int dice1 = rollDice();
+        int dice2 = rollDice();
+        int move = dice1 + dice2;
         int initialPosition = player.getPosition();
         // Get next position of player on board on making the move
         int newPosition = this.board.getNextPosition(initialPosition, move);
