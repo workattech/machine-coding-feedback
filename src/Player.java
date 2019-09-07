@@ -5,10 +5,20 @@
 public class Player {
   private String name;
   private int position;
+  private boolean won;
   
   public Player(String name) {
     this.name = name;
     position = 0;
+    won = false;
+  }
+  
+  public boolean hasWon() {
+    return won;
+  }
+  
+  public void setWon() {
+    won = true;
   }
   
   public int getPosition() {

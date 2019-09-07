@@ -52,9 +52,13 @@ public class Game {
     return game;
   }
   
-  public String play(PrintStream out) {
+  public void play(PrintStream out) {
+    int left = players.size() - 1;
     while (true) {
       for (Player player : players) {
+        if (player.hasWon()) {
+          continue;
+        }
         int initialPosition = player.getPosition();
         int shifts = dice.roll();
         int finalPosition = board.getPositionAfterMove(initialPosition, shifts);
@@ -62,7 +66,12 @@ public class Game {
         out.printf("%s rolled a %d and moved from %d to %d\n", player.getName(), shifts, initialPosition,
                    finalPosition);
         if (finalPosition == board.getSize()) {
-          return player.getName();
+          System.out.println(player.getName() + " wins the game");
+          player.setWon();
+          left--;
+          if (left == 0) {
+            return;
+          }
         }
       }
     }
