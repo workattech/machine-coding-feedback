@@ -79,11 +79,14 @@ class Board():
             chances -= 1
         return val
 
+    # return the player who is holding the dice
     def get_current_player(self):
         return self.__player_list[self.__curr_player]
 
+    # return how many players have won yet
     def get_number_of_winner(self):
         return len(self.__rank)
 
+    # returns ranking for players at current instant
     def get_rank_list(self):
         return self.__rank

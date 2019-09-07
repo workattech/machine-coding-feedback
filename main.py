@@ -49,6 +49,9 @@ def main(board_size, number_of_dice):
     board_object = Board(board_size, player_list, snake_list, ladder_list, number_of_dice)
 
     # stop when one player wins
+    
+    # can be extended to playing game till one player exists by changing to
+    # while board_object.get_number_of_winner() != len(player_list)-1:
     while board_object.get_number_of_winner() == 0:
         _dice_val, _source, _player = board_object.make_move()
          
