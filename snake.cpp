@@ -11,7 +11,7 @@ unordered_map<int, int>snakeT;
 unordered_map<int, int>ladderH;
 unordered_map<int, int>ladderT;
 
-class games{
+class games_in{
 	public :
 	void take_input_for_snakes(){
 		int number_of_snake; cin >> number_of_snake;
@@ -45,6 +45,9 @@ class games{
 			players.pb( mp( s, 0 ) );
 		}
 	}
+}
+class games_out : public games_in{
+	public :
 	void play(){
 		int khiladi_number = 0;
 		while(1){
@@ -87,7 +90,7 @@ class games{
 int32_t main()
 {
 	//fast
-	games ob;
+	games_out ob;
 	ob.take_input_for_snakes();
 	ob.take_input_for_ladders();
 	ob.intake_player();
