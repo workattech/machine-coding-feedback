@@ -6,6 +6,7 @@
 int main()
 {
     // read the file and create the board
+    std::cout << "Give relative paths to input and output files respectively" << std::endl;
     std::string inputFilePath, outputFilePath;
     std::cin >> inputFilePath;
     std::cin >> outputFilePath;

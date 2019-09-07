@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 #include <vector>
+#include <fstream>
 
 // abstract parent class for both snakes and ladders
 // they just modify the positions differently, that's why I have used virtual function for it
@@ -69,17 +70,14 @@ class Board
 {
     std::vector<Snake_Ladder *> components;
     std::vector<GamePlayer *> players;
-    std::string in_path;
-    std::string out_path;
+    std::ifstream in_path;
+    std::ofstream out_path;
     int size;
 
     void initiateBoardGame();
 
 public:
-    Board(std::string inputFilePath, std::string outputFilePath) : in_path(inputFilePath), out_path(outputFilePath)
-    {
-        initiateBoardGame();
-    }
+    Board(std::string inputFilePath, std::string outputFilePath);
     void restartGame();
     void startGame();
 };
