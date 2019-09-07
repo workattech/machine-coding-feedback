@@ -52,7 +52,7 @@ public:
     }
     void updatePosition(int p)
     {
-        curr_position = (p <= 100) ? p : curr_position;
+        curr_position = p;
     }
     bool getActiveStatus()
     {
@@ -69,6 +69,7 @@ class Board
 {
     std::vector<Snake_Ladder *> components;
     std::vector<GamePlayer *> players;
+    int size;
 
 public:
     Board(std::string filePath);

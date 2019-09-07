@@ -14,6 +14,7 @@ Board::Board(std::string filePath)
     if (file.is_open())
     {
         int numSnakes, numLadders, numPlayers;
+        file >> this->size;
         file >> numSnakes;
         for (int i = 0; i < numSnakes; i++)
         {
@@ -56,6 +57,13 @@ void Board::startGame()
             for (Snake_Ladder *comp : components)
             {
                 int modified_pos = comp->modifyPosition(pos_init + k);
+                if (modified_pos > this->size)
+                {
+                    // it means, we are landing outside the board, and this can't be due to any component
+                    // it can only be due to the number thrown on the dice
+                    // Thus we don't need to do any update in the current postion of the player
+                    break;
+                }
                 players[i]->updatePosition(modified_pos);
                 if (modified_pos != (pos_init + k))
                 {
@@ -66,7 +74,7 @@ void Board::startGame()
 
             std::cout << players[i]->getName() << " rolled a " << k << " and moved from " << pos_init << " to " << pos_final << std::endl;
 
-            if (pos_final == 100)
+            if (pos_final == this->size)
             {
                 std::cout << "-------------------------------------------------------" << std::endl;
                 std::cout << players[i]->getName() << " wins among the currently active players" << std::endl;
