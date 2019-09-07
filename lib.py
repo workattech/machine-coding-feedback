@@ -28,8 +28,8 @@ def playGame(player_info, board):
             else:
                 dice_value = dice_value + dice_value2
 
-        # After the dice roll, if a piece is supposed to move outside position 100, it does not move.
-        if dice_value + cur_pos > 100:
+        # After the dice roll, if a piece is supposed to move outside board, it does not move.
+        if dice_value + cur_pos > board.get_end_position():
             print('{0} rolled a {1} and moved from {2} to {3}'.format(player, dice_value, cur_pos, cur_pos))
             cur_player = (cur_player + 1) % board.get_number_of_players()
             continue
