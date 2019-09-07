@@ -1,56 +1,6 @@
-import random
-
-class Player:
-    ## Creating player object to store name and current position of player
-    def __init__(self,name):
-        self.name=name
-        self.position=0
-
-    def getName(self):
-        return self.name
-    
-    def setPosition(self,pos):
-        self.position=pos
-        
-    def getPosition(self):
-        return self.position
-
-class Dices:
-    ## Creating number of Dices
-    def __init__(self,number_of_dices):
-        self.dice_count=number_of_dices
-
-    def rollDices(self):
-        result=[]
-        for i in range(self.dice_count):
-            result.append(random.randint(1,7))
-        return result
-
-class Board:
-    ## Generating Board with given snakes,ladders and size
-    def __init__(self,snakes,ladders,size):
-        self.snakes=snakes
-        self.ladders=ladders
-        self.size=size
-
-    def getNewPos(self,curr_pos,dice_roll):
-        if curr_pos+dice_roll<=self.size:
-            curr_pos+=dice_roll
-
-        if curr_pos==self.size-1 and dice_roll==2:
-            curr_pos=self.size
-            
-        while curr_pos in self.snakes or curr_pos in self.ladders:
-            if curr_pos in self.snakes:
-                curr_pos=self.snakes[curr_pos]
-            if curr_pos in self.ladders:
-                curr_pos=self.ladders[curr_pos]
-        return curr_pos
-
-    def checkWin(self,pos):
-        if pos==self.size:
-            return True
-        return False
+from Player import Player
+from dice import Dices   
+from board import Board
 
 def initialize(num_dices):
     snakes={}
@@ -95,6 +45,7 @@ def play(board,dices,players):
             players_left-=1
             next_win_position+=1
             players.pop(turn)
+            turn=turn%players_left
         else :
             turn=(turn+1)%players_left
         
