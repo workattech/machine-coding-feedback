@@ -1,5 +1,4 @@
 #include <fstream>
-#include <iostream>
 #include <random>
 
 #include "Board.h"
@@ -7,10 +6,10 @@
 std::default_random_engine generator;
 std::uniform_int_distribution<int> distribution(1, 6);
 
-Board::Board(std::string filePath)
+void Board::initiateBoardGame()
 {
     std::ifstream file;
-    file.open(filePath);
+    file.open(in_path);
     if (file.is_open())
     {
         int numSnakes, numLadders, numPlayers;
@@ -44,6 +43,7 @@ Board::Board(std::string filePath)
 
 void Board::startGame()
 {
+    std::ofstream file(out_path);
     int activePlayers = this->players.size();
     while (activePlayers > 1)
     {
@@ -72,13 +72,13 @@ void Board::startGame()
             }
             int pos_final = this->players[i]->getCurrPosition();
 
-            std::cout << this->players[i]->getName() << " rolled a " << k << " and moved from " << pos_init << " to " << pos_final << std::endl;
+            file << this->players[i]->getName() << " rolled a " << k << " and moved from " << pos_init << " to " << pos_final << std::endl;
 
             if (pos_final == this->size)
             {
-                std::cout << "-------------------------------------------------------" << std::endl;
-                std::cout << this->players[i]->getName() << " wins among the currently active players" << std::endl;
-                std::cout << "-------------------------------------------------------" << std::endl;
+                file << "-------------------------------------------------------" << std::endl;
+                file << this->players[i]->getName() << " wins among the currently active players" << std::endl;
+                file << "-------------------------------------------------------" << std::endl;
                 this->players[i]->setActiveStatus(false);
                 activePlayers--;
                 if (activePlayers <= 1)

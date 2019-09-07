@@ -69,10 +69,17 @@ class Board
 {
     std::vector<Snake_Ladder *> components;
     std::vector<GamePlayer *> players;
+    std::string in_path;
+    std::string out_path;
     int size;
 
+    void initiateBoardGame();
+
 public:
-    Board(std::string filePath);
+    Board(std::string inputFilePath, std::string outputFilePath) : in_path(inputFilePath), out_path(outputFilePath)
+    {
+        initiateBoardGame();
+    }
     void restartGame();
     void startGame();
 };
