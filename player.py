@@ -1,5 +1,6 @@
 class Player():
     def __init__(self, name, position):
+        # Player name and current position
         self.__name = name
         self.__position = position
 
