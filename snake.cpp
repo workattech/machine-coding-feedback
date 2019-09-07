@@ -55,39 +55,39 @@ int main()
     fout.open("output.txt");
     map<int,int> s,l;
     int a;
-    fin>>a;
+    fin>>a;  // number of snakes
     f(i,a)
     {
         int b,c;
-        fin>>b>>c;
-        s.insert({b,c});
+        fin>>b>>c; // position of snake
+        s.insert({b,c}); // inserting in map : - head as key and tail as value
     }
-    fin>>a;
+    fin>>a;  // number of ladders
     f(i,a)
     {
         int b,c;
-        fin>>b>>c;
-        l.insert({b,c});
+        fin>>b>>c; // position of ladders
+        l.insert({b,c}); // inserting in map :- lower end as key and upper end as value
     }
     int n;
-    fin>>n;
+    fin>>n;  // number of players
     vector<string> p(n);
     f(i,n)
     {
-        fin>>p[i];
+        fin>>p[i]; // name of players are pushed in vector
     }
-    vector<int> v(n,0);
-    uniform_int_distribution <int> dis(1,6);
+    vector<int> v(n,0); // vector for current position of every player and is initialized to zero
+    uniform_int_distribution <int> dis(1,6); // dice can take values from 1 to 6 . so using uniform distribution with random number generator mt19937
     while(1)
     {
         for(int i=0;i<n;i++)
         {
-            int num=dis(rng);
-            int ini=v[i];
+            int num=dis(rng); // generating a random number between 1 to 6
+            int ini=v[i];     // initial value of the player's postion
             int ch=num;
             num+=v[i];
             bool ok=true;
-            if(num>100)
+            if(num>100)  // no moves , program will jump to printing the statements
             {
                 ok=false;
                 num=v[i];
@@ -95,24 +95,26 @@ int main()
             while(ok)
             {
                 ok=false;
-                if(s.find(num)!=s.end())
+                if(s.find(num)!=s.end()) // finding if there is a snake at the postion which has been obtained by rolling the dice
                 {
                     ok=true;
-                    num=s[num];
+                    num=s[num]; // if its true , we make the postion of player as the tail of the snake
                 }
-                if(l.find(num)!=l.end())
+                if(l.find(num)!=l.end()) // finding if there is a ladder at the postion which has been obtained by rolling the dice
                 {
                     ok=true;
-                    num=l[num];
+                    num=l[num];  // if its true , we make the postion of player as the upper end of the ladder
                 }
+                // since there can be cases where one player rolled a dice and got a snake and when he/she arrived at new postion arrrived, there is ladder/snake .so we run the loop till we are geeting a laader or snake.
             }
             fout<<p[i]<<" rolled a "<<ch<<" and moved from "<<ini<<" to "<<num<<endl;
             if(num==100)
             {
-                fout<<p[i]<<" wins the game"<<endl;
+                fout<<p[i]<<" wins the game"<<endl; // game ends when someonr reaches 100.
                 return 0;
             }
-            v[i]=num;
+            v[i]=num; // updating the position of the current player after all the moves :D
         }
     }
 }
+
