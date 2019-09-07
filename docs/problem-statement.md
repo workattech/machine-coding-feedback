@@ -143,6 +143,9 @@ Sagar wins the game
 - On getting a 6, you get another turn and on getting 3 consecutive 6s, all the three of those get cancelled.
 - On starting the application, the snakes and ladders should be created programmatically without any user input, keeping in mind the constraints mentioned in rules.
 
+## Setup process
+Please go through the setup process <a href="https://workattech.github.io/mock-machine-coding-1/#setup" target="_blank">here</a>.
+
 ## Submission
 - You've 3 hours to submit the solution. Please submit by 7 PM if you start at 4 PM.
 - Please go through the submission process <a href="https://workattech.github.io/mock-machine-coding-1/#submission" target="_blank">here</a>.
