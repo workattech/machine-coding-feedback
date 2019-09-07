@@ -39,17 +39,21 @@
 - Make sure that the code is functionally correct
 - Code should be modular and readable
 - Separation of concern should be addressed
+- Please do not write everything in a single file
 - Code should easily accommodate new requirements and minimal changes
 - There should be a main method from where the code could be easily testable
 - [Optional] Write unit tests, if possible
 - No need to create a GUI
+
+## Problem Statement
+<a href="problem-statement" target="_blank">Snake and Ladder</a>
 
 ## Submission
 - After you're done with coding, you need to commit and push your changes to github.
 - You should push your changes to the master branch of your forked repository. If you're new to git, follow the steps mentioned <a href="git#push-local-changes-to-remote" target="_blank">in the push local changes to remote section here</a>
 - Create a pull request to our master branch. If you're new to git, follow the steps mentioned <a href="git#pr" target="_blank">in the PR section here</a>
 - Copy the URL of the PR.
-- Comment the url in the same facebook post where we provide the problem statement.
+- Go to <a href="https://www.facebook.com/groups/2380270958746431" target="_blank">work@tech interview prep group</a> and comment the url in the same facebook post where we've provided the problem statement.
 
 ## Evaluation
 - We'll be reviewing everyone's submission and try to provide feedback on how to improve through code review comments on GitHub.
