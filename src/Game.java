@@ -1,16 +1,20 @@
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class Game {
     private final Board board;
     private final Map<Integer,Integer> snakeMap;
     private final Map<Integer,Integer> ladderMap;
+    private final List<Player> winnerList;
     private boolean gameWon;
 
     public Game(Board board) {
         this.board = board;
         this.snakeMap = new HashMap<>();
         this.ladderMap = new HashMap<>();
+        this.winnerList = new ArrayList<>();
         this.gameWon = false;
     }
 
@@ -34,45 +38,37 @@ public class Game {
         this.ladderMap.put(startCoordinate, endCoordinate);
     }
 
-    /*public boolean isGameWon() {
-        for(Player player : this.board.getPlayerList()) {
-            if(player.getHasWon())
-                return true;
-        }
-        return false;
-    }*/
-
     private void printMove(Player player, int diceNumber, int start, int end) {
         System.out.println(player.getPlayerName() + " rolled a " + diceNumber + " and moved from " +
                            start + " to " + end);
         return;
     }
 
-    private int updateDieNumber() {
-        int val1 = 6;
-        int val2 = (int) ((Math.random()*6) + 1);
-        val1 += val2;
-        if(val2 == 6) {
-            int val3 = (int) ((Math.random()*6) + 1);
-            if(val3 == 6)
+    private int calculateDieSumUtil() {
+        int maximumDieOutput = 6;
+        int turn2 = (int) ((Math.random()*6) + 1);
+        maximumDieOutput += turn2;
+        if(turn2 == 6) {
+            int turn3 = (int) ((Math.random()*6) + 1);
+            if(turn3 == 6)
                 return 0;
-            val1 += val3;
+            maximumDieOutput += turn3;
         }
-        return val1;
+        return maximumDieOutput;
     }
 
-    private int getDieNumber(int numOfDie) {
+    private int calculateDieSum(int numOfDie) {
         int sum = 0,i;
         for(i=0;i<numOfDie;i++) {
             int val = (int) ((Math.random()*6) + 1);
             if(val == 6)
-                val = updateDieNumber();
+                val = calculateDieSumUtil();
             sum += val;
         }
         return sum;
     }
 
-    private int updateCoordinateBySnakesAndLadders(Tile tile, Player player, int newCoordinate) {
+    private int getPieceCoordinate(Tile tile, Player player, int newCoordinate) {
         while(tile.getHasSnake() || tile.getHasLadder()) {
             if(tile.getPlayerSet().contains(player))
                 tile.getPlayerSet().remove(player);
@@ -86,29 +82,41 @@ public class Game {
         return newCoordinate;
     }
 
+    private boolean checkPlayerHasWon(Player player, int tileNumber) {
+        if(tileNumber == 100) {
+            this.gameWon = true;
+            System.out.println(player.getPlayerName() + " wins the game");
+            return true;
+        }
+        return false;
+    }
+
     public void playGame() {
-        for(Player player:this.board.getPlayerList()) {
-            int diceNumber = getDieNumber(1);
-            Tile tile = null;
+        List<Player> playersList = this.board.getPlayerList();
+        for(Player player: playersList) {
+            if(winnerList.size() == (playersList.size() - 1))
+                return;
+            if(player.getHasWon())
+                continue;
+            int diceNumber = calculateDieSum(1);
+            Tile playerPieceTile = null;
             if(player.getPlayerCoordinate()!=0)
-                tile = this.board.getGameBoard().get(player.getPlayerCoordinate());
+                playerPieceTile = this.board.getGameBoard().get(player.getPlayerCoordinate());
             if((diceNumber+player.getPlayerCoordinate())>Constants.MAXIMUM_TILES) {
                 printMove(player, diceNumber, player.getPlayerCoordinate(), player.getPlayerCoordinate());
                 continue;
             }
-            if(tile != null)
-                tile.getPlayerSet().remove(player);
-            int newCoordinate = player.getPlayerCoordinate()+diceNumber;
-            tile = this.board.getGameBoard().get(newCoordinate);
-            newCoordinate = updateCoordinateBySnakesAndLadders(tile, player, newCoordinate);
-            printMove(player, diceNumber, player.getPlayerCoordinate(), newCoordinate);
-            player.setPlayerCoordinate(newCoordinate);
-            tile.getPlayerSet().add(player);
-            if(newCoordinate == 100) {
+            if(playerPieceTile != null)
+                playerPieceTile.getPlayerSet().remove(player);
+            int updatedPlayerCoordinate = player.getPlayerCoordinate()+diceNumber;
+            playerPieceTile = this.board.getGameBoard().get(updatedPlayerCoordinate);
+            updatedPlayerCoordinate = getPieceCoordinate(playerPieceTile, player, updatedPlayerCoordinate);
+            printMove(player, diceNumber, player.getPlayerCoordinate(), updatedPlayerCoordinate);
+            player.setPlayerCoordinate(updatedPlayerCoordinate);
+            playerPieceTile.getPlayerSet().add(player);
+            if(checkPlayerHasWon(player,updatedPlayerCoordinate)) {
                 player.setHasWon();
-                this.gameWon = true;
-                System.out.println(player.getPlayerName() + " wins the game");
-                return;
+                winnerList.add(player);
             }
         }
         return;

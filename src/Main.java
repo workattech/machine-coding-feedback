@@ -7,7 +7,7 @@ public class Main {
         GameManager gameManager = new GameManager(new Game(new Board()));
         int i=0, snakes, start, end, ladder, players;
         String name;
-        File file = new File("/home/saikat/IdeaProjects/SnakeAndLadderGame/test/input.txt");
+        File file = new File("/home/saikat/IdeaProjects/mock-machine-coding-1/test/input.txt");
         Scanner sc = new Scanner(file);
         snakes = sc.nextInt();
         while(i<snakes) {
