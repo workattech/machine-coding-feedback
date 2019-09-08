@@ -44,19 +44,26 @@ public class SnakeAndLadderMain{
     }
 
   
-
+     /**
+     * This method set up snakes in the board.
+     * @param snakesCount
+     * @return
+     */
     private static Map<Integer,Integer> setUpSnakes(int snakesCount){
        Map<Integer,Integer> snakesMap=new HashMap<>();
         if(snakesCount!=0){
             
             for(int i=1;i<=snakesCount;i++){
                 snakesMap.put(ScannerUtils.readInt(), ScannerUtils.readInt());
-              
             }
-            
         }
         return snakesMap;
     }
+    /**
+     * This method set up ladders in the board.
+     * @param laddersCount
+     * @return
+     */
     private static  Map<Integer,Integer>  setUpLadders(int laddersCount){
         Map<Integer,Integer> laddersMap=new HashMap<>();
         if(laddersCount!=0){
@@ -70,6 +77,11 @@ public class SnakeAndLadderMain{
         return laddersMap;
         
     }
+    /**
+     * This method sets up players of the game.
+     * @param playersCount
+     * @return
+     */
     private static Player[] setUpPlayers(int playersCount){
         Player[] players=null;
         if(playersCount!=0){
@@ -77,27 +89,24 @@ public class SnakeAndLadderMain{
             for(int i=0;i<playersCount;i++){
                 Player player=new Player(ScannerUtils.readString(),STARTING_POSITION);
                 players[i]=player;
-                
-                
            }
-      
         }
         return players;
-      
     }
+    /**
+     * This method initiates Snake and Ladder Game.
+     */
     private static void playSnakeAndLadder(Board board){
-        
         while(true){
             for(int i=0;i<board.getPlayers().length;i++){
                 int diceValue=getDiceRolling();
                 Player currentPlayer=board.getPlayers()[i];
-                int playerFinalPosition=currentPlayer.calculatePlayerPosition(diceValue,currentPlayer.getPosition(),currentPlayer.getName(),board);
+                int playerFinalPosition=board.calculatePlayerPosition(diceValue,currentPlayer.getPosition(),currentPlayer.getName());
                 System.out.println(currentPlayer.getName()+" rolled a "+diceValue+" and moved from "+currentPlayer.getPosition()+" to "+playerFinalPosition);
                 currentPlayer.setPosition(playerFinalPosition);
                 if(playerFinalPosition==WINNING_SCORE){
                     System.out.println(currentPlayer.getName()+" has won ");
                     return;
-        
                 }
             }
         }

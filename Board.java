@@ -24,4 +24,23 @@ public class Board{
     public Map<Integer,Integer> getLadders(){
         return this.ladders;
     }
+
+     /**
+     * Method used to calcluate the players position after rolling dice
+     * @param diceValue
+     * @param currentPosition
+     * @param playerName
+     * @return
+     */
+    public int calculatePlayerPosition(int diceValue,int currentPosition,String playerName){
+        int finalPosition=currentPosition+diceValue;
+        if(this.getSnakes()!=null&& !this.getSnakes().isEmpty() && this.getSnakes().containsKey(finalPosition)){
+            finalPosition=this.getSnakes().get(finalPosition);
+            //snake encountered move down the board
+        }else if(this.getLadders()!=null &&!this.getLadders().isEmpty()&& this.getLadders().containsKey(finalPosition)){
+            finalPosition=this.getLadders().get(finalPosition);
+            //ladder encountered move up the board
+        }
+            return finalPosition;
+}
 }
