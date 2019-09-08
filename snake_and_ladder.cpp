@@ -4,16 +4,16 @@ using namespace std;
 
 class Snake_and_ladder
 {
-	int s_no,l_no,p_no;
+	int no_of_snakes,no_of_ladders,no_of_persons;
 	int v[101],s_head[101],s_tail[101],l_start[101],l_end[101];
-	string p_list[1001];
+	string person_list[1001];
 	map<string,int> m;
 	public:
     Snake_and_ladder()
 	{
-	  	s_no=0;
-	  	l_no=0;
-	  	p_no=0;
+	  	no_of_snakes=0;
+	  	no_of_ladders=0;
+	  	no_of_persons=0;
 	  	
 	  	for(int i=0;i<101;i++)
 	  	{
@@ -25,37 +25,37 @@ class Snake_and_ladder
 		}
 
 	}	
-    void s_insert(int s)
+    void snakes_details(int s)
 	{
-		s_no=s;
+		no_of_snakes=s;
 		
-		for(int i=1;i<=s_no;i++)
+		for(int i=1;i<=no_of_snakes;i++)
 		{
 			cin>>s_head[i]>>s_tail[i];
 			v[s_head[i]]=s_tail[i];
 		}
 
 	}	
-    void l_insert(int l)
+    void ladders_details(int l)
 	{
-		l_no=l;
+		no_of_ladders=l;
 		
-		for(int i=1;i<=l_no;i++)
+		for(int i=1;i<=no_of_ladders;i++)
 		{
 			cin>>l_start[i]>>l_end[i];
 			v[l_start[i]]=l_end[i];
 		}
 
 	}	
-	void p_insert(int p)
+	void person_details(int p)
 	{
-		p_no=p;
+		no_of_persons=p;
 		
 		string str;
 		for(int i=1;i<=p;i++)
 	   {
-		cin>>p_list[i];
-		m[p_list[i]]=0;
+		cin>>person_list[i];
+		m[person_list[i]]=0;
 		
 	   }
 
@@ -84,10 +84,11 @@ class Snake_and_ladder
 		
 		    cout<<itr->first<<" rolled a "<<val<<" and moved from "<<itr->second<<" to "<<place<<endl;
 		    itr->second=place;
-		    itr++;
-		    if(itr==m.end())
-		    itr=m.begin();
+		
 		}
+	    itr++;
+	    if(itr==m.end())
+	    itr=m.begin();
 	}
 	}
 };
@@ -102,15 +103,15 @@ int main()
 	
 	cin>>sn;
 
-	turn.s_insert(sn);
+	turn.snakes_details(sn);
 	
 	cin>>l;
 	
-	turn.l_insert(l);
+	turn.ladders_details(l);
 	
 	cin>>p;
 	
-	turn.p_insert(p);
+	turn.person_details(p);
 	
 	turn.output();
 	
