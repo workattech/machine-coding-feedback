@@ -5,7 +5,7 @@ using namespace std;
 #define mp make_pair
 #define int long long
 const int mm = 1e5 + 5;
-/* space = 1 , tab = 2 for better understanding sublime test editor*/
+/* space = 1 , tab = 2 for better understanding sublime text editor*/
 unordered_map<int, int>snakeH;
 unordered_map<int, int>snakeT;
 unordered_map<int, int>ladderH;
@@ -16,7 +16,7 @@ class games_in{
 	void take_input_for_snakes(){
 		int number_of_snake; cin >> number_of_snake;
 
-		///intaking all the snake head and tail
+		///intaking all snake's head and tail
 
 		for(int i=0; i<number_of_snake; i++){
 			int head ,tail; cin >> head >> tail;
@@ -28,7 +28,7 @@ class games_in{
 	void take_input_for_ladders(){
 		int num_of_lad; cin >> num_of_lad;
 
-		// intaking all the ladders
+		// intaking all ladders
 
 		for(int i=0; i<num_of_lad; i++){
 			int head, tail; cin >> head >> tail;
@@ -66,7 +66,7 @@ class games_out : public games_in{
 				int end = cur_start + move;
 			
 			cout<< s << " rolled a " << move <<" from "
-				<<cur_start<<" to "<<end;
+				<<cur_start<<" to "<<endl;
 			
 			if(snakeH.find( end ) != snakeH.end()  ){
 				end = snakeH[ end ];
@@ -77,7 +77,7 @@ class games_out : public games_in{
 			++player_number;
 
 			if(end == 100){
-				cout<< s << " wins the game";
+				cout<< s << " wins the game" << endl;
 				break;
 			}
 		}
