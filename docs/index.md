@@ -1,4 +1,4 @@
-# Please go through this document to participate in the mock machine coding round by work@tech interview prep group
+# Please go through this document to participate in the mock machine coding round by workat.tech
 
 ## Event
 - Date: 7th September 2019 (Saturday)
@@ -6,13 +6,16 @@
 - Link: <a href="https://www.facebook.com/groups/2380270958746431" target="_blank">work@tech interview prep group</a>
 
 ## Why Mock Machine Coding Round?
-- In companies like Flipkart, Uber, Swiggy, Ola, Cred, etc the first onsite round is the machine coding round.
+- In companies like Flipkart, Uber, Swiggy, Ola, Cred, etc the first onsite round is the <a href="https://workat.tech/machine-coding/article/what-is-a-machine-coding-round-omfn1w54ojlg" target="_blank">machine coding round</a>.
 - You're given a design problem (like design a parking lot) with a set of requirements.
 - Then you need to create a clean, modular and extensible coding solution for the same.
 - The code is supposed to be written in a matter of 2-3 hours.
 - After the round, you sit with an interviewer who goes through your code and tries to understand your design decisions and also tries to see if your code works for all the requirements.
 - The interviewer may ask you to extend your solution based on some new requirement.
 - It is a pretty crucial round since most of the people get eliminated in this round and it is completely different from what everyone generally practices for.
+
+## How to prepare?
+Please go through our article on '<a href="https://workat.tech/machine-coding/article/how-to-prepare-for-machine-coding-round-naf2ih7a9e5l" target="_blank">How to prepare for machine coding round?</a>'.
 
 ## Event Format
 - We'll share a problem statement on <a href="https://www.facebook.com/groups/2380270958746431" target="_blank">our fb group</a> at 3:30 PM (30 mins before start of event).
