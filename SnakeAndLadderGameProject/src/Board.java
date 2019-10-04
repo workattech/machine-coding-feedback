@@ -1,12 +1,12 @@
 public class Board {
-    IBlock[] board;
+    ISpecialMove[] board;
     int size;
     public Board(int size)
     {
         this.size=size;
-        board = new IBlock[size+1];
+        board = new ISpecialMove[size+1];
     }
-    public void addSnakeOrLadder(IBlock specialObject)
+    public void addSpecialMove(ISpecialMove specialObject)
     {
         board[specialObject.start]=specialObject;
     }

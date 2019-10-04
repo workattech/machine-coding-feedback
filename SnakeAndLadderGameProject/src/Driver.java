@@ -15,7 +15,7 @@ public class Driver {
         {
             int start=sc.nextInt();
             int end=sc.nextInt();
-            gameBoard.addSnakeOrLadder(new Snake(start,end));
+            gameBoard.addSpecialMove(new Snake(start,end));
         }
         System.out.println("input number of ladders and their start and end points");
         int numberOfLadders=sc.nextInt();
@@ -23,7 +23,7 @@ public class Driver {
         {
             int start=sc.nextInt();
             int end=sc.nextInt();
-            gameBoard.addSnakeOrLadder(new Ladder(start,end));
+            gameBoard.addSpecialMove(new Ladder(start,end));
         }
         System.out.println("input number of players and their names");
         int numberOfPlayers=sc.nextInt();

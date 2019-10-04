@@ -1,4 +1,4 @@
-public class Ladder extends IBlock {
+public class Ladder extends ISpecialMove {
 
     public Ladder(int start,int end)
     {

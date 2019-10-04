@@ -1,4 +1,4 @@
-public class Snake extends IBlock {
+public class Snake extends ISpecialMove {
 
     public Snake(int start,int end)
     {
