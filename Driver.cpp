@@ -18,7 +18,7 @@ public:
 		this->name=name;
 		completed=false;
 		pos=0;
-		number_of_dices=1;
+		number_of_dices=2;
 	}
 	int RollDice()
 	{
@@ -37,7 +37,7 @@ public:
 	int size;
 	Board()
 	{
-		size=100;
+		size=200;
 		vector<int> temp(size+1,0);
 		boardMap=temp;
 	}
@@ -108,12 +108,11 @@ public:
 				int player_pos=players[turn].pos;
 				int dice_no=players[turn].RollDice();
 				int new_player_pos=player_pos+dice_no;
-				if(board.boardMap[new_player_pos]!=0)
-					new_player_pos=board.boardMap[new_player_pos];
 				if (new_player_pos>board.size)
 				{
 					new_player_pos=player_pos;
 				}
+
 				else if(new_player_pos==board.size)
 				{
 					players[turn].completed=true;
@@ -121,6 +120,11 @@ public:
 					cout<<players[turn].name<<" wins the game"<<endl;
 					continue;
 				}
+
+				else if(board.boardMap[new_player_pos]!=0)
+					new_player_pos=board.boardMap[new_player_pos];
+				
+				
 				players[turn].pos=new_player_pos;
 				cout<<players[turn].name<<" rolled a "<<dice_no<<" and moved from "<<player_pos<<" to "<<new_player_pos<<endl;
 			}
