@@ -49,7 +49,7 @@ Please go through our article on '<a href="https://workat.tech/machine-coding/ar
 - No need to create a GUI
 
 ## Problem Statement
-<a href="problem-statement" target="_blank">Snake and Ladder</a>
+<a href="https://workat.tech/machine-coding/practice/snake-and-ladder-problem-zgtac9lxwntg" target="_blank">Snake and Ladder</a>
 
 ## Submission
 - After you're done with coding, you need to commit and push your changes to github.
