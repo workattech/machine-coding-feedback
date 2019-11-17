@@ -55,8 +55,6 @@ Please go through our article on '<a href="https://workat.tech/machine-coding/ar
 - After you're done with coding, you need to commit and push your changes to github.
 - You should push your changes to the master branch of your forked repository. If you're new to git, follow the steps mentioned <a href="git#push-local-changes-to-remote" target="_blank">in the push local changes to remote section here</a>
 - Create a pull request to our master branch. If you're new to git, follow the steps mentioned <a href="git#pr" target="_blank">in the PR section here</a>
-- Copy the URL of the PR.
-- Go to <a href="https://www.facebook.com/groups/2380270958746431" target="_blank">work@tech interview prep group</a> and comment the url in the same facebook post where we've provided the problem statement.
 
 ## Evaluation
 - We'll be reviewing everyone's submission and try to provide feedback on how to improve through code review comments on GitHub.
