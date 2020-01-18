@@ -1,5 +1,11 @@
 # mock-machine-coding-1
 Welcome to the 1st Mock Machine Coding Round by workat.tech.
 
-Please visit [this link](https://workattech.github.io/mock-machine-coding-1/) to participate.
+Follow the below steps to run the application
+
+1) cd bin
+2) ./game input.txt
+
+Change the input file with your inputs and run the executable.
+
 
