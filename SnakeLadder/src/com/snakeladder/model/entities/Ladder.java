@@ -8,5 +8,6 @@ public class Ladder extends Entity{
 		super(startBlock, endBlock);
 		// TODO Auto-generated constructor stub
 	}
+	
 
 }

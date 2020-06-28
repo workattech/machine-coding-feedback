@@ -52,7 +52,6 @@ public class Board {
 		
 		Snake snake = new Snake(startBlock, endBlock);
 		this.blocks[startBlock.getX()][startBlock.getY()].setEntity(snake);
-		this.blocks[endBlock.getX()][endBlock.getY()].setEntity(snake);
 	}
 	
 	private void addLadder(int i, int j, Block startBlock, Block endBlock) throws Exception{
@@ -65,7 +64,6 @@ public class Board {
 		
 		Ladder ladder = new Ladder(startBlock, endBlock);
 		this.blocks[startBlock.getX()][startBlock.getY()].setEntity(ladder);
-		this.blocks[endBlock.getX()][endBlock.getY()].setEntity(ladder);
 	}
 	
 	public Block getBlockIndex(int blockNumber) {

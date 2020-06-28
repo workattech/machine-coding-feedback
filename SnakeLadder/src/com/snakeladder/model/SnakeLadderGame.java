@@ -44,10 +44,6 @@ public class SnakeLadderGame {
 		Block updatedBlock;
 		
 		Block startBlock = player.getCurrentBlock();
-		if(isWinner(player)) {
-			System.out.println(player.getName()+" wins the game.");
-			return false;
-		}
 		if (startBlock==null) {
 			updatedBlock = this.board.getBlockIndex(number);
 		}
@@ -57,21 +53,21 @@ public class SnakeLadderGame {
 					return true;
 			updatedBlock = this.board.getBlockIndex(newNumber);
 		}
-		if(updatedBlock!=null && updatedBlock.getEntity() != null && updatedBlock.getEntity() instanceof Snake && updatedBlock.getEntity().getEndBlock()==updatedBlock) {
-			System.out.println("end Block number snake = "+updatedBlock.getEntity().getEndBlock().getBlockNumber());
-			System.out.println("start Block number snake = "+updatedBlock.getEntity().getStartBlock().getBlockNumber());
+		if(updatedBlock!=null && updatedBlock.getEntity() != null && updatedBlock.getEntity() instanceof Snake) {
 			updatedBlock = updatedBlock.getEntity().getStartBlock();
 		}
 		
-		else if(updatedBlock!=null && updatedBlock.getEntity() != null && updatedBlock.getEntity() instanceof Ladder && updatedBlock.getEntity().getStartBlock()==updatedBlock) {
-			System.out.println("start Block number ladder = "+updatedBlock.getEntity().getStartBlock().getBlockNumber());
-			System.out.println("end Block number ladder = "+updatedBlock.getEntity().getEndBlock().getBlockNumber());
+		else if(updatedBlock!=null && updatedBlock.getEntity() != null && updatedBlock.getEntity() instanceof Ladder) {
 			updatedBlock = updatedBlock.getEntity().getEndBlock();
 		}
 
 		player.setCurrentBlock(updatedBlock);
 		Move move = new Move(number, startBlock, updatedBlock, player);
 		moves.add(move);
+		if(isWinner(player)) {
+			System.out.println(player.getName()+" wins the game.");
+			return false;
+		}
 		if(startBlock==null)
 			System.out.println(player.getName()+" rolled a " + number + " and moved from 0 to "+ updatedBlock.getBlockNumber());
 		else {

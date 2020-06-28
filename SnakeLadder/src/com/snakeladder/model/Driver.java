@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Driver {
 	public static void main(String[] args) throws Exception {
-		int s = 3;
+		int s = 9;
 		int l = 8;
 		int n = 2;
 		ArrayList<ArrayList<Integer>> snakes = new ArrayList<ArrayList<Integer>>();
@@ -24,18 +24,18 @@ public class Driver {
 		snakes.get(1).add(33);
 		snakes.get(2).add(9);
 		snakes.get(2).add(49);
-//		snakes.get(3).add(16);
-//		snakes.get(3).add(88);
-//		snakes.get(4).add(20);
-//		snakes.get(4).add(41);
-//		snakes.get(5).add(53);
-//		snakes.get(5).add(56);
-//		snakes.get(6).add(64);
-//		snakes.get(6).add(98);
-//		snakes.get(7).add(73);
-//		snakes.get(7).add(93);
-//		snakes.get(8).add(75);
-//		snakes.get(8).add(95);
+		snakes.get(3).add(16);
+		snakes.get(3).add(88);
+		snakes.get(4).add(20);
+		snakes.get(4).add(41);
+		snakes.get(5).add(53);
+		snakes.get(5).add(56);
+		snakes.get(6).add(64);
+		snakes.get(6).add(98);
+		snakes.get(7).add(73);
+		snakes.get(7).add(93);
+		snakes.get(8).add(75);
+		snakes.get(8).add(95);
 		
 		ladders.get(0).add(2);
 		ladders.get(0).add(37);
