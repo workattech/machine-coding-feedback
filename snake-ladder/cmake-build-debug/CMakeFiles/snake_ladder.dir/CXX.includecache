@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+E:/dev/machine-coding/snake-ladder/SnakeGame.cpp
+SnakeGame.h
+E:/dev/machine-coding/snake-ladder/SnakeGame.h
+bits/stdc++.h
+-
+
+E:/dev/machine-coding/snake-ladder/SnakeGame.h
+bits/stdc++.h
+-
+
