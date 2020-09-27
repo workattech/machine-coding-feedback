@@ -1,2 +1,5 @@
 .idea
 .DS_Store
+/snake-ladder/cmake-build-debug/*
+rougharea.txt
+testinput.txt
