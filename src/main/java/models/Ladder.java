@@ -11,6 +11,7 @@ public class Ladder {
         if(start>=end) {
             throw new IllegalArgumentException("start must be less than end");
         }
+
         this.start = start;
         this.end = end;
     }

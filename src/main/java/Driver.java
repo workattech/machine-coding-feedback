@@ -32,27 +32,32 @@ public class Driver {
         List<String> playersInput = new ArrayList<>(Arrays.asList(
                 "Gaurav"
                 ,"Sagar"));
+        Game game = null;
+        try {
+            List<Snake> snakes = new ArrayList<>();
+            for (String snakeInput: snakesInput
+            ) {
+                String[] headtail = snakeInput.split(" ");
+                snakes.add(new Snake(Integer.parseInt(headtail[0]), Integer.parseInt(headtail[1])));
+            }
 
-        List<Snake> snakes = new ArrayList<>();
-        for (String snakeInput: snakesInput
-             ) {
-            String[] headtail = snakeInput.split(" ");
-            snakes.add(new Snake(Integer.parseInt(headtail[0]), Integer.parseInt(headtail[1])));
+            List<Ladder> ladders = new ArrayList<>();
+            for (String ladderInput :
+                    laddersInput) {
+                String[] startend = ladderInput.split(" ");
+                ladders.add(new Ladder(Integer.parseInt(startend[0]),Integer.parseInt(startend[1])));
+            }
+            List<Player> players = new ArrayList<>();
+            for (String name :
+                    playersInput) {
+                players.add(new Player(name));
+            }
+
+            game = new Game(new Board(100, ladders, snakes),players);
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
         }
 
-        List<Ladder> ladders = new ArrayList<>();
-        for (String ladderInput :
-                laddersInput) {
-            String[] startend = ladderInput.split(" ");
-            ladders.add(new Ladder(Integer.parseInt(startend[0]),Integer.parseInt(startend[1])));
-        }
-        List<Player> players = new ArrayList<>();
-        for (String name :
-                playersInput) {
-            players.add(new Player(name));
-        }
-
-        Game game = new Game(new Board(100, ladders, snakes),players);
         do {
             game.makeMove();
         } while (!game.isOver());
