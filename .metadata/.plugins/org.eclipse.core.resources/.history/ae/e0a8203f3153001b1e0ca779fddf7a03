@@ -1,0 +1,27 @@
+package services;
+
+import models.BoardEntity;
+
+public class Board {
+	BoardEntity board;
+	public Board(BoardEntity board)
+	{
+		this.board=board;
+	}
+	public void play()
+	{
+		int index=0,rank=1;
+		while(true)
+		{
+			board.players.get(index).play(board);
+			if(board.positions.get(board.players.get(index))==board.numberOfCells)
+			{
+				System.out.println(board.players.get(index).player.getName()+" has rank "+rank);
+				rank++;
+			}
+			index++;
+			if(index>=board.players.size())
+				index=0;
+		}
+	}
+}

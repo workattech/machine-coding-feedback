@@ -1,5 +1,6 @@
 package services;
 
+
 import models.BoardEntity;
 import models.PlayerEntity;
 
@@ -11,8 +12,33 @@ public class Player {
 	}
 	public void play(BoardEntity board)
 	{
-		int diceThrow=board.dice.run(),oldPosition=board.positions.get(this),newPosition;
-		newPosition=oldPosition+diceThrow;
+		int diceThrow=board.dice.run(),diceThrow2nd=0,diceThrow3rd=0,oldPosition=board.positions.get(this),newPosition;
+		if(diceThrow==6)
+		{
+			diceThrow2nd=board.dice.run();
+			if(diceThrow2nd==6)
+			{
+				diceThrow3rd=board.dice.run();
+				if(diceThrow3rd==6)
+				{
+					diceThrow=0;
+					diceThrow2nd=0;
+					diceThrow3rd=0;
+				}
+			}
+		}
+		newPosition=oldPosition+diceThrow+diceThrow2nd+diceThrow3rd;
+		if(diceThrow==6 && diceThrow2nd==6 && diceThrow3rd==6)
+		{
+			System.out.println(player.getName()+" rolled a 6-6-6 and the chance got cancelled.");
+			return;
+		}
+		String diceValToDisplay = diceThrow3rd==0 ? (diceThrow2nd==0 ? diceThrow+"" : diceThrow+"-"+diceThrow2nd) : diceThrow+"-"+diceThrow2nd+"-"+diceThrow3rd;
+		if(newPosition > board.numberOfCells)
+		{
+			System.out.println(player.getName()+" rolled a "+diceValToDisplay+" and stayed at the same position "+oldPosition);
+			return;
+		}
 		while(true)
 		{
 			if(board.ladders.containsKey(newPosition))
@@ -22,7 +48,7 @@ public class Player {
 			else
 				break;
 		}
-		System.out.println(player.getName()+" rolled a "+diceThrow+" and moved from "+oldPosition+" to "+newPosition);
+		System.out.println(player.getName()+" rolled a "+diceValToDisplay+" and moved from "+oldPosition+" to "+newPosition);
 		board.positions.put(this, newPosition);
 	}
 }

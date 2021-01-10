@@ -10,14 +10,27 @@ public class Board {
 	}
 	public void play()
 	{
-		int index=0;
+		int index=0,rank=1;
 		while(true)
 		{
+			if(board.playersFinishedPlaying.contains(board.players.get(index)))
+			{
+				index++;
+				if(index>=board.players.size())
+					index=0;
+				continue;
+			}
+			if(rank==board.players.size())
+			{
+				System.out.println(board.players.get(index).player.getName()+" came last.");
+				return;
+			}
 			board.players.get(index).play(board);
 			if(board.positions.get(board.players.get(index))==board.numberOfCells)
 			{
-				System.out.println(board.players.get(index).player.getName()+" wins the game");
-				return;
+				System.out.println(board.players.get(index).player.getName()+" came rank "+rank);
+				rank++;
+				board.playersFinishedPlaying.add(board.players.get(index));
 			}
 			index++;
 			if(index>=board.players.size())
