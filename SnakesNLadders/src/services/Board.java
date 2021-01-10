@@ -13,27 +13,27 @@ public class Board {
 		int index=0,rank=1;
 		while(true)
 		{
-			if(board.playersFinishedPlaying.contains(board.players.get(index)))
+			if(board.getPlayersFinishedPlaying().contains(board.getPlayers().get(index)))
 			{
 				index++;
-				if(index>=board.players.size())
+				if(index>=board.getPlayers().size())
 					index=0;
 				continue;
 			}
-			if(rank==board.players.size())
+			if(rank==board.getPlayers().size())
 			{
-				System.out.println(board.players.get(index).player.getName()+" came last.");
+				System.out.println(board.getPlayers().get(index).player.getName()+" came last.");
 				return;
 			}
-			board.players.get(index).play(board);
-			if(board.positions.get(board.players.get(index))==board.numberOfCells)
+			board.getPlayers().get(index).play(board);
+			if(board.getPlayerPositions().get(board.getPlayers().get(index))==board.getNumberOfCells())
 			{
-				System.out.println(board.players.get(index).player.getName()+" came rank "+rank);
+				System.out.println(board.getPlayers().get(index).player.getName()+" came rank "+rank);
 				rank++;
-				board.playersFinishedPlaying.add(board.players.get(index));
+				board.getPlayersFinishedPlaying().add(board.getPlayers().get(index));
 			}
 			index++;
-			if(index>=board.players.size())
+			if(index>=board.getPlayers().size())
 				index=0;
 		}
 	}

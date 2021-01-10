@@ -43,12 +43,12 @@ public class Player {
 		{
 			if(board.getLadders().containsKey(newPosition))
 				newPosition=board.getLadders().get(newPosition);
-			else if(board.getSnakes().containsKey(newPosition))
-				newPosition=board.getSnakes().get(newPosition);
+			else if(board.snakes.containsKey(newPosition))
+				newPosition=board.snakes.get(newPosition);
 			else
 				break;
 		}
 		System.out.println(player.getName()+" rolled a "+diceValToDisplay+" and moved from "+oldPosition+" to "+newPosition);
-		board.getPlayerPositions().put(this, newPosition);
+		board.positions.put(this, newPosition);
 	}
 }
