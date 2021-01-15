@@ -1,0 +1,43 @@
+package services;
+
+import java.util.*;
+
+import models.*;
+
+import java.io.*;
+
+public class Driver {
+
+	public static void main(String[] args) {
+		Scanner in=new Scanner(System.in);
+		Dice dice=new Dice();
+		// TODO Auto-generated method stub
+		List<Snake> snakes=new ArrayList<>();
+		List<Ladder> ladders=new ArrayList<>();
+		List<Player> players=new ArrayList<>();
+		int index,noOfSnakes,noOfLadders,noOfPlayers;
+		noOfSnakes=in.nextInt();
+		for(index=0;index<noOfSnakes;index++)
+		{
+			Snake snake=new Snake(in.nextInt(),in.nextInt());
+			snakes.add(snake);
+		}
+		noOfLadders=in.nextInt();
+		for(index=0;index<noOfLadders;index++)
+		{
+			Ladder ladder=new Ladder(in.nextInt(),in.nextInt());
+			ladders.add(ladder);
+		}
+		noOfPlayers=in.nextInt();
+		for(index=0;index<noOfPlayers;index++)
+		{
+			Player player=new Player(in.next());
+			players.add(player);
+		}
+		BoardEntity boardEntity=new BoardEntity(100,dice,snakes,ladders,players);
+		Board board=new Board(boardEntity);
+		board.play();
+		in.close();
+	}
+
+}

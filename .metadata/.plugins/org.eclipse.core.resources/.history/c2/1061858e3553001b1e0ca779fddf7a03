@@ -1,0 +1,54 @@
+package services;
+
+
+import models.BoardEntity;
+import models.PlayerEntity;
+
+public class Player {
+	PlayerEntity player;
+	public Player(PlayerEntity player)
+	{
+		this.player=player;
+	}
+	public void play(BoardEntity board)
+	{
+		int diceThrow=board.dice.run(),diceThrow2nd=0,diceThrow3rd=0,oldPosition=board.positions.get(this),newPosition;
+		if(diceThrow==6)
+		{
+			diceThrow2nd=board.dice.run();
+			if(diceThrow2nd==6)
+			{
+				diceThrow3rd=board.dice.run();
+				if(diceThrow3rd==6)
+				{
+					diceThrow=0;
+					diceThrow2nd=0;
+					diceThrow3rd=0;
+				}
+			}
+		}
+		newPosition=oldPosition+diceThrow+diceThrow2nd+diceThrow3rd;
+		if(diceThrow==6 && diceThrow2nd==6 && diceThrow3rd==6)
+		{
+			System.out.println(player.getName()+" rolled a 6-6-6 and the chance got cancelled.");
+			return;
+		}
+		String diceValToDisplay = diceThrow3rd==0 ? (diceThrow2nd==0 ? diceThrow+"" : diceThrow+"-"+diceThrow2nd) : diceThrow+"-"+diceThrow2nd+"-"+diceThrow3rd;
+		if(newPosition > board.numberOfCells)
+		{
+			System.out.println(player.getName()+" rolled a "+diceValToDisplay+" and stayed at the same position "+oldPosition);
+			return;
+		}
+		while(true)
+		{
+			if(board.ladders.containsKey(newPosition))
+				newPosition=board.ladders.get(newPosition);
+			else if(board.snakes.containsKey(newPosition))
+				newPosition=board.snakes.get(newPosition);
+			else
+				break;
+		}
+		System.out.println(player.getName()+" rolled a "+diceValToDisplay+" and moved from "+oldPosition+" to "+newPosition);
+		board.positions.put(this, newPosition);
+	}
+}

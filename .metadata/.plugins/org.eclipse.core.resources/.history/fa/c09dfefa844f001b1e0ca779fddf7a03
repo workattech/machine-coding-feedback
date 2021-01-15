@@ -1,0 +1,27 @@
+package services;
+
+import models.BoardEntity;
+
+public class Board {
+	BoardEntity board;
+	public Board(BoardEntity board)
+	{
+		this.board=board;
+	}
+	public void play()
+	{
+		int index=0;
+		while(true)
+		{
+			players.get(index).play(this);
+			if(positions.get(players.get(index))==numberOfCells)
+			{
+				System.out.println(players.get(index).name+" wins the game");
+				return;
+			}
+			index++;
+			if(index>=players.size())
+				index=0;
+		}
+	}
+}
