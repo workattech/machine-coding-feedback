@@ -1,0 +1,31 @@
+# depslib dependency file v1.0
+1614985410 source:/home/sam/eclipse/Splitwise/main.cpp
+	<bits/stdc++.h>
+	"User.h"
+	"transaction.h"
+	"ServiceApp.h"
+
+1614971674 /home/sam/eclipse/Splitwise/User.h
+	<bits/stdc++.h>
+	<string>
+
+1614971621 source:/home/sam/eclipse/Splitwise/User.cpp
+	"User.h"
+
+1614986190 source:/home/sam/eclipse/Splitwise/transaction.cpp
+	"transaction.h"
+
+1614977151 /home/sam/eclipse/Splitwise/transaction.h
+	<bits/stdc++.h>
+	<string>
+	"User.h"
+
+1614984744 source:/home/sam/eclipse/Splitwise/ServiceApp.cpp
+	"ServiceApp.h"
+
+1614980874 /home/sam/eclipse/Splitwise/ServiceApp.h
+	<bits/stdc++.h>
+	<string>
+	"User.h"
+	"transaction.h"
+
