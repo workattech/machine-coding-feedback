@@ -1,0 +1,44 @@
+# depslib dependency file v1.0
+1615050785 source:/home/sam/cppcodes/Trello/card.cpp
+	"card.h"
+
+1615048405 /home/sam/cppcodes/Trello/card.h
+	<bits/stdc++.h>
+	<string>
+
+1615070035 source:/home/sam/cppcodes/Trello/main.cpp
+	<bits/stdc++.h>
+
+1615046857 source:/home/sam/cppcodes/Trello/user.cpp
+	"user.h"
+
+1615045003 /home/sam/cppcodes/Trello/user.h
+	<bits/stdc++.h>
+
+1615070390 source:/home/sam/cppcodes/Trello/listt.cpp
+	"listt.h"
+
+1615070811 /home/sam/cppcodes/Trello/listt.h
+	<bits/stdc++.h>
+	"card.h"
+
+1615070849 source:/home/sam/cppcodes/Trello/board.cpp
+	"board.h"
+
+1615070584 /home/sam/cppcodes/Trello/board.h
+	<bits/stdc++.h>
+	"user.h"
+	"card.h"
+	"listt.h"
+
+1615066843 source:/home/sam/cppcodes/Trello/App.cpp
+	"App.h"
+
+1615066557 /home/sam/cppcodes/Trello/App.h
+	<bits/stdc++.h>
+	<string>
+	"card.h"
+	"user.h"
+	"listt.h"
+	"board.h"
+
