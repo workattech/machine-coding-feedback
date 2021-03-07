@@ -1,0 +1,38 @@
+# depslib dependency file v1.0
+1615124938 source:/home/sam/CodeBlocks/Wallet_System/personalstatement.cpp
+	"personalstatement.h"
+
+1615117929 /home/sam/CodeBlocks/Wallet_System/personalstatement.h
+	<bits/stdc++.h>
+
+1615124953 source:/home/sam/CodeBlocks/Wallet_System/wallet.cpp
+	"wallet.h"
+
+1615124884 /home/sam/CodeBlocks/Wallet_System/wallet.h
+	<bits/stdc++.h>
+	"personalstatement.h"
+
+1615129260 source:/home/sam/CodeBlocks/Wallet_System/person.cpp
+	"person.h"
+
+1615128542 /home/sam/CodeBlocks/Wallet_System/person.h
+	<bits/stdc++.h>
+	"personalstatement.h"
+	"wallet.h"
+
+1615129149 source:/home/sam/CodeBlocks/Wallet_System/Service.cpp
+	"Service.h"
+
+1615129439 /home/sam/CodeBlocks/Wallet_System/Service.h
+	<bits/stdc++.h>
+	"personalstatement.h"
+	"wallet.h"
+	"person.h"
+
+1615139555 source:/home/sam/CodeBlocks/Wallet_System/main.cpp
+	<bits/stdc++.h>
+	"personalstatement.h"
+	"wallet.h"
+	"person.h"
+	"Service.h"
+
