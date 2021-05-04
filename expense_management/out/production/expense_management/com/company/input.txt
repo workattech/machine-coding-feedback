@@ -1,0 +1,10 @@
+SHOW
+SHOW user1
+EXPENSE user1 1000 4 user1 user2 user3 user4 EQUAL
+SHOW user4
+SHOW user1
+EXPENSE user1 1250 2 user2 user3 EXACT 370 880
+SHOW
+EXPENSE user4 1200 4 user1 user2 user3 user4 PERCENT 40 20 20 20
+SHOW user1
+SHOW
