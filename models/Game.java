@@ -8,18 +8,12 @@ import java.util.Map;
 public class Game {
 
   private Integer totalCells;
-  private List<Player> playersLeft;   /*List of players left to complete the game*/
+  private List<Player> playersLeft;
   private Integer currentPlayer;
   private List<Snake> snakes;
   private List<Ladder> ladders;
 
-  /** storing specific ladder/snake in the board
-   *  Key:position on board
-   *  vale:snake/ladder. Default value is null
-   */
   private Map<Integer, IntermediateObject> board;
-
-  /*Storing list of multiple winners in winning position respectively.*/
   private List<Player> sortedWinners;
 
   public Game(final List<Player> playersLeft, final List<Snake> snakes, final List<Ladder> ladders, final Integer totalCells) {
@@ -30,13 +24,6 @@ public class Game {
     this.totalCells = totalCells;
     sortedWinners = new ArrayList<>();
   }
-  /**
-   * Initialize {@link Game#board} object with snakes and ladders
-   *
-   * @param snakes  list of all snakes
-   * @param ladders list of all ladders
-   * @return {@link Game#board}
-   */
 
   private Map<Integer, IntermediateObject> initBoard(final List<Snake> snakes, final List<Ladder> ladders) {
     Map<Integer, IntermediateObject> newBoard = new HashMap<>();

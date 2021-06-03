@@ -17,12 +17,11 @@ public class Main {
     final List<Ladder> ladderList = new ArrayList<>();
     final int totalCells = 100;
 
-    //add temp input
     addtempInput(playersList, snakesList, ladderList);
 
     Game game = new Game(playersList, snakesList, ladderList, totalCells);
     GameHandler gameHandler = new GameHandler(game);
-    gameHandler.rungame();
+    gameHandler.runGame();
 
   }
 
