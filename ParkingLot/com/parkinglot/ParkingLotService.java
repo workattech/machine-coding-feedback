@@ -59,8 +59,9 @@ public class ParkingLotService {
           occupiedSlots.append(",").append(occupiedSlotNum);
         }
       }
-      if(occupiedSlots.length()>0)
+      if(occupiedSlots.length()>0){
         occupiedSlots = new StringBuilder(occupiedSlots.substring(1));
+      }
       System.out.println("Occupied slots for " + vehicleTypeToCheck + " on Floor " + floorNumberToDisplay
           + ": "+ occupiedSlots);
     }
@@ -78,8 +79,9 @@ public class ParkingLotService {
           availableSlots.append(",").append(availableSlotNum);
         }
       }
-      if(availableSlots.length() > 0)
+      if(availableSlots.length() > 0){
         availableSlots = new StringBuilder(availableSlots.substring(1));
+      }
       System.out.println("Free slots for " + vehicleTypeToCheck + " on Floor " + floorNumberToDisplay
           + ": "+availableSlots);
     }
