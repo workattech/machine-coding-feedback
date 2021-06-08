@@ -69,7 +69,7 @@ public class ParkingLot {
                 slots.add(slot);
             }
 
-            floors.add(new Floor(floorNum, slots));
+            floors.add(new Floor(slots));
         }
     }
 
