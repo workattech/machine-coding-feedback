@@ -1,7 +1,7 @@
 package com.nirley.mock.printer.impl;
 
-import com.nirley.snakeladders.player.Player;
-import com.nirley.snakeladders.printer.GamePrinter;
+import com.nirley.mock.player.Player;
+import com.nirley.mock.printer.GamePrinter;
 
 public class ConsoleGamePrinter implements GamePrinter {
 

@@ -1,8 +1,8 @@
 package com.nirley.mock.strategy;
 
-import com.nirley.snakeladders.game.Game;
-import com.nirley.snakeladders.player.Player;
-import com.nirley.snakeladders.player.PlayerKey;
+import com.nirley.mock.game.Game;
+import com.nirley.mock.player.Player;
+import com.nirley.mock.player.PlayerKey;
 
 public interface PlayingStrategy {
 

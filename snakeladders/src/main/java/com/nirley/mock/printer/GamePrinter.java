@@ -1,6 +1,6 @@
 package com.nirley.mock.printer;
 
-import com.nirley.snakeladders.player.Player;
+import com.nirley.mock.player.Player;
 
 public interface GamePrinter {
 

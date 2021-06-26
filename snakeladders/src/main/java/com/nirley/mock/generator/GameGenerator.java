@@ -1,8 +1,8 @@
 package com.nirley.mock.generator;
 
-import com.nirley.snakeladders.game.Game;
-import com.nirley.snakeladders.game.config.GameConfig;
-import com.nirley.snakeladders.player.Player;
+import com.nirley.mock.game.Game;
+import com.nirley.mock.game.config.GameConfig;
+import com.nirley.mock.player.Player;
 
 import java.util.List;
 

@@ -1,10 +1,10 @@
 package com.nirley.mock.strategy.impl;
 
-import com.nirley.snakeladders.game.Game;
-import com.nirley.snakeladders.game.config.GameConfig;
-import com.nirley.snakeladders.player.Player;
-import com.nirley.snakeladders.player.PlayerKey;
-import com.nirley.snakeladders.strategy.PlayingStrategy;
+import com.nirley.mock.game.Game;
+import com.nirley.mock.game.config.GameConfig;
+import com.nirley.mock.player.Player;
+import com.nirley.mock.player.PlayerKey;
+import com.nirley.mock.strategy.PlayingStrategy;
 
 import java.util.Map;
 import java.util.Optional;

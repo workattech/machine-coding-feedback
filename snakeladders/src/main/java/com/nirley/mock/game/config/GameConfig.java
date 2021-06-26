@@ -1,6 +1,7 @@
 package com.nirley.mock.game.config;
 
-import com.nirley.snakeladders.dice.Dice;
+import com.nirley.mock.dice.Dice;
+import com.nirley.mock.dice.Dice;
 
 import java.util.List;
 import java.util.Map;
