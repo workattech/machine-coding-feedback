@@ -16,6 +16,18 @@ public class Dice {
         this.initialDiceValue = initialDiceValue;
     }
 
+    public int getMinValue() {
+        return minValue;
+    }
+
+    public int getMaxValue() {
+        return maxValue;
+    }
+
+    public int getInitialDiceValue() {
+        return initialDiceValue;
+    }
+
     /**
      * @return a random int value between min and max value for dice
      * Eg - if we have one dice - min would be 1, max -6 , so below function would return a random int within
