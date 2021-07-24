@@ -30,6 +30,7 @@ public class Game {
         ladders = new ArrayList<>(numOfLadders);
         dice = new Dice(1, 6, 2);
         board = new Board(boardSize);
+        setSnakesAndLaddersForBoard();
     }
 
     public int getNumOfSnakes() {
@@ -61,11 +62,12 @@ public class Game {
     }
 
     public void setSnakesAndLaddersForBoard() {
+        System.out.println("Initialising game board");
         Set<String> snakesLaddersSet = new HashSet<>();
         for (int index = 0; index < numOfSnakes; ++index) {
             while (true) {
                 int snakeHeadRandom = (int) (Math.random() * (board.getEndBoardIndex())) + board.getStartBoardIndex();
-                int snakeTailRandom = (int) (Math.random() * (board.getEndBoardIndex())) + board.getEndBoardIndex();
+                int snakeTailRandom = (int) (Math.random() * (board.getEndBoardIndex())) + board.getStartBoardIndex();
                 if (snakeTailRandom >= snakeHeadRandom)
                     continue;
                 String snakeStartEndPair = String.valueOf(snakeHeadRandom) + snakeTailRandom;
@@ -81,7 +83,7 @@ public class Game {
         for (int index = 0; index < numOfLadders; ++index) {
             while (true) {
                 int ladderHeadRandom = (int) (Math.random() * (board.getEndBoardIndex())) + board.getStartBoardIndex();
-                int ladderTailRandom = (int) (Math.random() * (board.getEndBoardIndex())) + board.getEndBoardIndex();
+                int ladderTailRandom = (int) (Math.random() * (board.getEndBoardIndex())) + board.getStartBoardIndex();
                 if (ladderTailRandom <= ladderHeadRandom)
                     continue;
                 String ladderStartEndPair = String.valueOf(ladderHeadRandom) + ladderTailRandom;
@@ -92,6 +94,14 @@ public class Game {
                     break;
                 }
             }
+        }
+        System.out.println("Snakes and ladders in the game are as follows");
+        for (Snake gameSnake : snakes) {
+            System.out.printf("Snake head at %d, and tail at %d", gameSnake.getSnakeHead(), gameSnake.getSnakeTail());
+        }
+
+        for (Ladder gameLadder : ladders) {
+            System.out.printf("Ladder head at %d, and tail at %d", gameLadder.getLadderHead(), gameLadder.getLadderTail());
         }
     }
 
@@ -113,9 +123,9 @@ public class Game {
                 currentPlayer.setPosition(getCurrentPlayerNewPosition(newPosition, currentPlayer));
                 if (currentPlayer.getPosition() == board.getEndBoardIndex()) {
                     currentPlayer.setGame_status(true);
-                    System.out.printf("%s wins the game", currentPlayer.getName());
+                    System.out.printf("%s wins the game\n", currentPlayer.getName());
                 } else {
-                    System.out.printf("%s rolled a %d and moved from %d to %d", currentPlayer.getName(), diceVal, previousPosition, currentPlayer.getPosition());
+                    System.out.printf("%s rolled a %d and moved from %d to %d\n", currentPlayer.getName(), diceVal, previousPosition, currentPlayer.getPosition());
                     players.offer(currentPlayer);
                 }
             }
@@ -135,7 +145,7 @@ public class Game {
         }
         for (Ladder ladder : ladders) {
             if (ladder.getLadderHead() == newPosition) {
-                System.out.printf("Ladder found at position %d, %s moving up the ladder", newPosition, currentPlayer.getName());
+                System.out.printf("Ladder found at position %d, %s moving up the ladder\n", newPosition, currentPlayer.getName());
                 return ladder.getLadderTail();
             }
         }
