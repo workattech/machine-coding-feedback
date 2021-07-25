@@ -1,6 +1,6 @@
-# Design Snake And Ladder | Machine Coding
+# Design Snake And Ladder Game | Machine Coding
 
-This is my attempt at mock machine coding in Java for a snake and ladder application.
+This is my attempt at mock machine coding in Java for a snake and ladder game application.
 ##### Challenge posted by [workat.tech](https://workat.tech/) on [this link.](https://workat.tech/machine-coding/practice/snake-and-ladder-problem-zgtac9lxwntg)
 
 ## Problem Statement:
