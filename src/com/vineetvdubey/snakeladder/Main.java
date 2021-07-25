@@ -34,7 +34,6 @@ public class Main {
             players.add(new Player(sc.nextLine()));
         }
 
-
         Board board = new Board(boardSize, snakes, ladders, diceCount);
         Game game = new Game(board, players);
         game.play();
