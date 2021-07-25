@@ -52,18 +52,22 @@ public class snakeAndLadderExe {
                 int currentPosition = playersList[i].getPlayerPosition();
                 int newPosition = currentPosition + diceValue;
 
-                if(newPosition<100){
+                if(newPosition > 100){
+                    //do nothing
+                }
+                else if(newPosition<100){
                     while(snakesAndLadderList.containsKey(newPosition)){
                         newPosition = snakesAndLadderList.get(newPosition);
                     }
                 }
+                
                 playersList[i].setPlayerPosition(newPosition);
+                System.out.println( playersList[i].getPlayerName() +" rolled a " + diceValue +" and moved from "+ currentPosition+" to "+ newPosition);
                 if(newPosition == 100){
                     System.out.println(playersList[i].getPlayerName() + " wins the game");
                     done = true;
                     break;
                 }
-                System.out.println( playersList[i].getPlayerName() +" rolled a " + diceValue +" and moved from "+ currentPosition+" to "+ newPosition);
             }
             if(done) break;
         }
