@@ -5,16 +5,14 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
-public class PlaySnakeLadderGame {
+
+public class SnakeLadderGame {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Enter the board Size");
         int boardSize = Integer.parseInt(br.readLine());
-        System.out.println("Enter the number of Players");
-        int numberOfPlayers = Integer.parseInt(br.readLine());
         System.out.println("Enter the number of snakes");
         int numOfSnakes = Integer.parseInt(br.readLine());
         List<Snake> snakesList = new ArrayList<>(numOfSnakes);
@@ -52,6 +50,8 @@ public class PlaySnakeLadderGame {
         }
 
         Game game = new Game(snakesList, laddersList, boardSize);
+        System.out.println("Enter the number of Players");
+        int numberOfPlayers = Integer.parseInt(br.readLine());
         for (int index = 0; index < numberOfPlayers; ++index) {
             System.out.printf("Enter player %d name\n", (index + 1));
             String playerName = br.readLine();
