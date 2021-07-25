@@ -15,28 +15,21 @@ public class snakeAndLadderExe {
         numberOfSnakes = scanner.nextInt();
         Snake snakesList[] = new Snake[numberOfSnakes];
         for(int i=0;i<numberOfSnakes;i++){
-            int startingSnakePoint, endingSnakePoint;
-            startingSnakePoint = scanner.nextInt();
-            endingSnakePoint = scanner.nextInt();
-            snakesList[i] = new Snake(startingSnakePoint, endingSnakePoint);
+            snakesList[i] = new Snake(scanner.nextInt(), scanner.nextInt());
         }
 
         Integer numberOfLadders;
         numberOfLadders = scanner.nextInt();
         Ladder laddersList[] = new Ladder[numberOfLadders];
         for(int i=0;i<numberOfLadders;i++){
-            int startingLadderPoint, endingLadderPoint;
-            startingLadderPoint = scanner.nextInt();
-            endingLadderPoint = scanner.nextInt();
-            laddersList[i] = new Ladder(startingLadderPoint, endingLadderPoint);
+            laddersList[i] = new Ladder(scanner.nextInt(), scanner.nextInt());
         }
 
         int numberOfPlayers;
         numberOfPlayers = scanner.nextInt();
         Player[] playersList = new Player[numberOfPlayers];
         for(int i=0;i<numberOfPlayers;i++){
-            String playerName = scanner.next();
-            playersList[i] = new Player(playerName);
+            playersList[i] = new Player(scanner.next());
         }
         
         Board board = new Board(100, snakesList,laddersList);
@@ -44,32 +37,32 @@ public class snakeAndLadderExe {
         board.ladderSetupAtBoard();
         
         HashMap<Integer, Integer> snakesAndLadderList = board.getSnakesAndLadderList();
-        Boolean flag = true, done = false;
+        Boolean flag = true, gameFinishes = false;
         System.out.println("Start");
         while(flag){
             for(int i=0;i<numberOfPlayers;i++){
                 int diceValue = (int)(Math.random()*(6)+1);  
                 int currentPosition = playersList[i].getPlayerPosition();
-                int newPosition = currentPosition + diceValue;
-
-                if(newPosition > 100){
-                    //do nothing
+                int newPosition;
+                if(currentPosition + diceValue > 100){
+                    newPosition = currentPosition;
                 }
-                else if(newPosition<100){
+                else{
+                    newPosition = currentPosition + diceValue;
                     while(snakesAndLadderList.containsKey(newPosition)){
                         newPosition = snakesAndLadderList.get(newPosition);
                     }
                 }
-                
+
                 playersList[i].setPlayerPosition(newPosition);
                 System.out.println( playersList[i].getPlayerName() +" rolled a " + diceValue +" and moved from "+ currentPosition+" to "+ newPosition);
                 if(newPosition == 100){
                     System.out.println(playersList[i].getPlayerName() + " wins the game");
-                    done = true;
+                    gameFinishes = true;
                     break;
                 }
             }
-            if(done) break;
+            if(gameFinishes) break;
         }
     }
 }
