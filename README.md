@@ -3,6 +3,7 @@
 <li>TicTacToe:- 
 <li>SnakeAndLadder:-(WIP)
 <b>Sample input:-<\b>
+```
 9
 62 5
 33 6
@@ -74,3 +75,4 @@ abc rolled a 5 and moved from 73 to 78
 def rolled a 4 and moved from 28 to 32
 abc rolled a 3 and moved from 78 to 100
 abc wins the game
+```
