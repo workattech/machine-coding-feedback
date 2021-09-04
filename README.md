@@ -1,4 +1,4 @@
 # Machine coding solution
 
-<li>TicTacToe:- <\li>
-<li>SnakeAndLadder:-<\li>
+<li>TicTacToe:- 
+<li>SnakeAndLadder:-
