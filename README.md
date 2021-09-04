@@ -13,6 +13,7 @@ O def
 3 3
 exit
 </pre>
+## Sample output:-
 <pre>
 ---
 ---
