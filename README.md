@@ -1,6 +1,47 @@
 # Machine coding solution
 
 #  TicTacToe:-
+## Sample input:-
+<pre>
+X abc
+O def
+2 2
+1 3
+1 1
+1 2
+2 2
+3 3
+exit
+</pre>
+<pre>
+---
+---
+---
+
+---
+-X-
+---
+
+--O
+-X-
+---
+
+X-O
+-X-
+---
+
+XOO
+-X-
+---
+
+Invalid Move
+
+XOO
+-X-
+--X
+
+abc won the game
+</pre>
 #  SnakeAndLadder:-
 ## Sample input:-
 <pre>
@@ -26,7 +67,9 @@
 2
 abc
 def
-***Sample Output:-***
+</pre>
+## Sample Output:-
+<pre>
 abc rolled a 3 and moved from 0 to 3
 def rolled a 2 and moved from 0 to 37
 abc rolled a 3 and moved from 3 to 6
