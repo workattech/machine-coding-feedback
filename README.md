@@ -1,8 +1,8 @@
 # Machine coding solution
 
-<li> #T icTacToe:- 
-<li> # SnakeAndLadder:-
-*** ## Sample input:-***
+#  TicTacToe:-
+#  SnakeAndLadder:-
+## Sample input:-
 <pre>
 9
 62 5
