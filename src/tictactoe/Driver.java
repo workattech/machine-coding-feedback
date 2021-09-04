@@ -22,8 +22,7 @@ public class Driver {
         NumberOfPlayers=2;
         playerList.add(new Player(sc.next(), sc.next()));//Adding Piece, Name to player
         playerList.add(new Player(sc.next(), sc.next()));//Adding Piece, Name to player
-        Grid g;
-        g = new Grid(3,
+        Grid g = new Grid(3,
                 3);
         int TotalPossibleMoves;
         TotalPossibleMoves = 9;
