@@ -1,8 +1,8 @@
 # Machine coding solution
 
 <li>TicTacToe:- 
-<li>SnakeAndLadder:-(WIP)
-<b>Sample input:-<\b>
+<li>SnakeAndLadder:-
+***Sample input:-***
 ```
 9
 62 5
@@ -26,7 +26,7 @@
 2
 abc
 def
-<b>Sample Output:-<\b>
+***Sample Output:-***
 abc rolled a 3 and moved from 0 to 3
 def rolled a 2 and moved from 0 to 37
 abc rolled a 3 and moved from 3 to 6
