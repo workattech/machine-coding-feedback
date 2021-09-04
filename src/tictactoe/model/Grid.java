@@ -1,4 +1,4 @@
-package ttt.model;
+package tictactoe.model;
 
 public class Grid {
     private final int Row;

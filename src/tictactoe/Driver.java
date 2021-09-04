@@ -1,7 +1,7 @@
-package ttt;
+package tictactoe;
 
-import ttt.model.Player;
-import ttt.model.Grid;
+import tictactoe.model.Player;
+import tictactoe.model.Grid;
 
 import java.util.ArrayList;
 import java.util.InputMismatchException;

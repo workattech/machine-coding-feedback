@@ -1,4 +1,4 @@
-package ttt.model;
+package tictactoe.model;
 
 public class Player {
     private String name;
