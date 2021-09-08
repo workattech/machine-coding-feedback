@@ -40,7 +40,7 @@ public class Driver {
                                 System.exit(0);
                             }
                         }
-                        while (!g.SetGrid(sc.nextInt() - 1, sc.nextInt() - 1, p.getPiece()));
+                        while (!g.setGrid(sc.nextInt() - 1, sc.nextInt() - 1, p.getPiece()));
                     }
                     catch(InputMismatchException e){
                         System.exit(0);

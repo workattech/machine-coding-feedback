@@ -43,17 +43,17 @@ public class Board {
         }
     }
     
-    public void StartGame(){
-        int NumberOfCurrentPlayersPlaying=PlayerList.size();
-        while (NumberOfCurrentPlayersPlaying>1){
+    public void startGame(){
+        int numberOfCurrentPlayersPlaying=PlayerList.size();
+        while (numberOfCurrentPlayersPlaying>1){
             for(Player Player:PlayerList){
                 if(!Player.checkHasWon()){
                     setFinalPosition(Player);
                     if(Player.getPosition()==BoardSize){
-                        NumberOfCurrentPlayersPlaying--;
+                        numberOfCurrentPlayersPlaying--;
                         System.out.println(Player.getName()+" wins the game");
-                        Player.HasWon=true;
-                        if(NumberOfCurrentPlayersPlaying<2)return;
+                        Player.hasWon =true;
+                        if(numberOfCurrentPlayersPlaying<2)return;
                     }
                 }
             }

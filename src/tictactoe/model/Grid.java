@@ -1,16 +1,16 @@
 package tictactoe.model;
 
 public class Grid {
-    private final int Row;
-    private final int Col;
-    private int TotalMoves=0;
-    private final int RandomLargeNumber=1000;
-    String[][] grid= new String[RandomLargeNumber][RandomLargeNumber];
-    public Grid(int Row, int Col) {
-        this.Row = Row;
-        this.Col = Col;
-        InitialiseGrid(Row,Col);
-        PrintGrid();
+    private final int row;
+    private final int col;
+    private int totalMoves =0;
+    private final int randomLargeNumber =1000;
+    String[][] grid= new String[randomLargeNumber][randomLargeNumber];
+    public Grid(int row, int col) {
+        this.row = row;
+        this.col = col;
+        InitialiseGrid(row,col);
+        printGrid();
     }
     public void InitialiseGrid(int Row,int Col){
         for(int i=0;i<Row;i++){
@@ -19,74 +19,74 @@ public class Grid {
             }
         }
     }
-    public void PrintGrid(){
-        for(int i=0;i<Row;i++){
-            for(int j=0;j<Col;j++){
+    public void printGrid(){
+        for(int i = 0; i< row; i++){
+            for(int j = 0; j< col; j++){
                 System.out.print(grid[i][j]);
             }
             System.out.println();
         }
     }
-    public boolean SetGrid(int Row,int Col,String PieceValue){
-        if(IsValidMove(Row,Col)){
-            grid[Row][Col]=PieceValue;
-            PrintGrid();
-            TotalMoves++;
+    public boolean setGrid(int row, int col, String pieceValue){
+        if(isValidMove(row,col)){
+            grid[row][col]=pieceValue;
+            printGrid();
+            totalMoves++;
             return true;
         }else{
             System.out.println("Invalid Move");
             return false;
         }
     }
-    public boolean IsValidMove(int Row,int Col){
-        if(Row>this.Row || Row<0)return false;
-        if(Col>this.Col  || Col<0)return false;
-        return grid[Row][Col].equals("-");
+    public boolean isValidMove(int row, int col){
+        if(row>this.row || row<0)return false;
+        if(col>this.col || col<0)return false;
+        return grid[row][col].equals("-");
     }
     public boolean isPieceRightDiagonalWinner(String Piece){
-        for(int i=0,j=Col-1;i<Row && j>=0;i++,j--){
+        for(int i = 0, j = col -1; i< row && j>=0; i++,j--){
             if(!grid[i][j].equals(Piece))return false;
         }
         return true;
     }
     public boolean isPieceLeftDiagonalWinner(String Piece){
-        for(int i=0,j=0;i<Row && j<Col;i++,j++){
+        for(int i = 0, j = 0; i< row && j< col; i++,j++){
             if(!grid[i][j].equals(Piece))return false;
         }
         return true;
     }
-    public boolean isPieceRowWinner(String Piece){
-        for(int i=0;i<Row;i++){
-            boolean RowFlag=true;
-            for(int j=0;j<Col;j++){
-                if (!grid[i][j].equals(Piece)) {
-                    RowFlag = false;
+    public boolean isPieceRowWinner(String piece){
+        for(int i = 0; i< row; i++){
+            boolean rowFlag=true;
+            for(int j = 0; j< col; j++){
+                if (!grid[i][j].equals(piece)) {
+                    rowFlag = false;
                     break;
                 }
             }
-            if(RowFlag)return true;
+            if(rowFlag)return true;
         }
         return false;
     }
-    public boolean isPieceColumnWinner(String Piece){
-        for(int i=0;i<Col;i++){
-            boolean ColFlag=true;
-            for(int j=0;j<Row;j++){
-                if(!grid[j][i].equals(Piece)){
-                    ColFlag=false;
+    public boolean isPieceColumnWinner(String piece){
+        for(int i = 0; i< col; i++){
+            boolean colFlag=true;
+            for(int j = 0; j< row; j++){
+                if(!grid[j][i].equals(piece)){
+                    colFlag=false;
                     break;
                 }
             }
-            if(ColFlag)return true;
+            if(colFlag)return true;
         }
         return false;
     }
-    public boolean IsPieceWinner(String Piece){
-        return isPieceRightDiagonalWinner(Piece) || isPieceLeftDiagonalWinner(Piece) || isPieceRowWinner(Piece) || isPieceColumnWinner(Piece);
+    public boolean IsPieceWinner(String piece){
+        return isPieceRightDiagonalWinner(piece) || isPieceLeftDiagonalWinner(piece) || isPieceRowWinner(piece) || isPieceColumnWinner(piece);
     }
 
     public int getTotalMoves() {
-        return TotalMoves;
+        return totalMoves;
     }
 
 }

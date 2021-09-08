@@ -3,17 +3,17 @@ package snakeandladder.model;
 public class Player {
     String name;
     int position=0;
-    boolean HasWon=false;
+    boolean hasWon =false;
     public Player(String name) {
         this.name = name;
     }
 
     public boolean checkHasWon() {
-        return HasWon;
+        return hasWon;
     }
 
     public void setHasWon() {
-        HasWon = true;
+        hasWon = true;
     }
 
     public void setPosition(int position) {
