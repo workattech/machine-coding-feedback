@@ -3,56 +3,56 @@ package snakeandladder.model;
 import java.util.*;
 
 public class Board {
-    List<Player> PlayerList;
-    Map<Integer,Snake>SnakeMap;//=new HashMap<>();
-    Map<Integer,Ladder> LadderMap;//=new HashMap<>();
-    int BoardSize;
-    public Board(List<Player> PlayerList, Map<Integer,Snake> SnakeMap, Map<Integer, Ladder> LadderMap,int BoardSize) {
-        this.PlayerList = PlayerList;
-        this.SnakeMap = SnakeMap;
-        this.LadderMap = LadderMap;
-        this.BoardSize=BoardSize;
+    List<Player> playerList;
+    Map<Integer,Snake> snakeMap;//=new HashMap<>();
+    Map<Integer,Ladder> ladderMap;//=new HashMap<>();
+    int boardSize;
+    public Board(List<Player> playerList, Map<Integer,Snake> snakeMap, Map<Integer, Ladder> ladderMap,int boardSize) {
+        this.playerList = playerList;
+        this.snakeMap = snakeMap;
+        this.ladderMap = ladderMap;
+        this.boardSize =boardSize;
     }
-    void checkSnakesAndUpdatePosition(Player Player){
-        while(SnakeMap.get(Player.getPosition())!=null){
-            Player.setPosition(SnakeMap.get(Player.getPosition()).getTail());
+    void checkSnakesAndUpdatePosition(Player player){
+        while(snakeMap.get(player.getPosition())!=null){
+            player.setPosition(snakeMap.get(player.getPosition()).getTail());
         }
     }
-    void checkLaddersAndUpdatePosition(Player Player){
-        while(LadderMap.get(Player.getPosition())!=null){
-            Player.setPosition(LadderMap.get(Player.getPosition()).getEnd());
+    void checkLaddersAndUpdatePosition(Player player){
+        while(ladderMap.get(player.getPosition())!=null){
+            player.setPosition(ladderMap.get(player.getPosition()).getEnd());
         }
     }
-    void setFinalPosition(Player Player){
-        int InitialPosition=Player.getPosition();
-        int NumberOfDice=1;//case of multiple dice
-        int DiceSum=0;
-        for(int i=0;i<NumberOfDice;i++){
+    void setFinalPosition(Player player){
+        int initialPosition=player.getPosition();
+        int numberOfDice=1;//case of multiple dice
+        int diceSum=0;
+        for(int i=0;i<numberOfDice;i++){
             Dice d = new Dice();
-            DiceSum+=d.getDiceRoll();
+            diceSum+=d.getDiceRoll();
         }
-        int FinalPosition=InitialPosition+DiceSum;
-        if(FinalPosition>100){
-            FinalPosition=InitialPosition;
-            System.out.println(Player.getName()+" rolled a "+DiceSum+" and moved from "+InitialPosition+" to "+Player.getPosition());
+        int finalPosition=initialPosition+diceSum;
+        if(finalPosition>100){
+            finalPosition=initialPosition;
+            System.out.println(player.getName()+" rolled a "+diceSum+" and moved from "+initialPosition+" to "+player.getPosition());
         }else{
-            Player.setPosition(FinalPosition);
-            checkSnakesAndUpdatePosition(Player);
-            checkLaddersAndUpdatePosition(Player);
-            System.out.println(Player.getName()+" rolled a "+DiceSum+" and moved from "+InitialPosition+" to "+Player.getPosition());
+            player.setPosition(finalPosition);
+            checkSnakesAndUpdatePosition(player);
+            checkLaddersAndUpdatePosition(player);
+            System.out.println(player.getName()+" rolled a "+diceSum+" and moved from "+initialPosition+" to "+player.getPosition());
         }
     }
     
     public void startGame(){
-        int numberOfCurrentPlayersPlaying=PlayerList.size();
+        int numberOfCurrentPlayersPlaying= playerList.size();
         while (numberOfCurrentPlayersPlaying>1){
-            for(Player Player:PlayerList){
-                if(!Player.checkHasWon()){
-                    setFinalPosition(Player);
-                    if(Player.getPosition()==BoardSize){
+            for(Player player: playerList){
+                if(!player.checkHasWon()){
+                    setFinalPosition(player);
+                    if(player.getPosition()== boardSize){
                         numberOfCurrentPlayersPlaying--;
-                        System.out.println(Player.getName()+" wins the game");
-                        Player.hasWon =true;
+                        System.out.println(player.getName()+" wins the game");
+                        player.hasWon =true;
                         if(numberOfCurrentPlayersPlaying<2)return;
                     }
                 }

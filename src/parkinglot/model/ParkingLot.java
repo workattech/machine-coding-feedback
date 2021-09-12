@@ -134,7 +134,7 @@ public class ParkingLot {
         boolean vehicleExists=false;
         for(int i=0;i<noOfFloors;i++){
             for(int j=0;j<noOfSlots;j++){
-                if(parkingLot[i][j].getTicketId().equals(ticketId) && parkingLot[i][j].isParked()==true){
+                if(parkingLot[i][j].getTicketId().equals(ticketId) && parkingLot[i][j].isParked()){
                     System.out.println("Unparked vehicle with registration Number:"+parkingLot[i][j].getRegistrationNumber()+" and Color:"+parkingLot[i][j].getColor());
                     parkingLot[i][j].setRegistrationNumber("");
                     parkingLot[i][j].setColor("");

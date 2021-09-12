@@ -10,7 +10,7 @@ public class Board {
          boardSideHeight=height;
          boardSideWidth=width;
          board=new String[boardSideHeight][boardSideWidth];
-         initialzeBoard();
+         initializeBoard();
          randomTileInserter();
          randomTileInserter();
          printBoard(height,width);
@@ -46,7 +46,7 @@ public class Board {
     public void setBoard(String[][] board) {
         this.board = board;
     }
-    public void initialzeBoard(){
+    public void initializeBoard(){
         for(int i=0;i<getBoardSideHeight();i++){
             for(int j=0;j<getBoardSideWidth();j++){
                 board[i][j]="-";

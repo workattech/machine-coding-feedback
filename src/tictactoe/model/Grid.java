@@ -9,10 +9,10 @@ public class Grid {
     public Grid(int row, int col) {
         this.row = row;
         this.col = col;
-        InitialiseGrid(row,col);
+        initialiseGrid(row,col);
         printGrid();
     }
-    public void InitialiseGrid(int Row,int Col){
+    public void initialiseGrid(int Row, int Col){
         for(int i=0;i<Row;i++){
             for(int j=0;j<Col;j++){
                 grid[i][j]="-";
@@ -81,7 +81,7 @@ public class Grid {
         }
         return false;
     }
-    public boolean IsPieceWinner(String piece){
+    public boolean isPieceWinner(String piece){
         return isPieceRightDiagonalWinner(piece) || isPieceLeftDiagonalWinner(piece) || isPieceRowWinner(piece) || isPieceColumnWinner(piece);
     }
 
