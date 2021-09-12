@@ -7,19 +7,19 @@ import com.workAtTech.snakeAndLadderApp.model.Snake;
 
 import java.util.*;
 
-public class SnakeAndLadderAppLogic {
+public class SnakeAndLadderAppService {
     private static final int DEFAULT_BOARD_SIZE = 100; //Rule1 : The board will have 100 cells numbered from 1 to 100.
     private static final int DEFAULT_NO_OF_DICES = 1;
     private Board board;
     private Queue<Player> players; // Players will be added one by one hence used queue
     private int numOfDices;
-    private DiceRoll DiceRollObj;
+    private DiceService diceServiceObj;
     private int numberOfPlayers;
 
-    public SnakeAndLadderAppLogic() {
+    public SnakeAndLadderAppService() {
         this.board = new Board(DEFAULT_BOARD_SIZE);
         this.players = new LinkedList<Player>();
-        this.numOfDices = SnakeAndLadderAppLogic.DEFAULT_NO_OF_DICES;
+        this.numOfDices = SnakeAndLadderAppService.DEFAULT_NO_OF_DICES;
     }
 
     public void setPlayers(List<Player> players) {
@@ -43,8 +43,8 @@ public class SnakeAndLadderAppLogic {
 
     public void startApp() {
         do {
-            DiceRollObj = new DiceRoll();
-            int diceValue = DiceRollObj.roll(); //Rule 4: Each player rolls the dice when their turn comes.
+            diceServiceObj = new DiceService();
+            int diceValue = diceServiceObj.roll(); //Rule 4: Each player rolls the dice when their turn comes.
             Player playerCurrentPosition = players.poll(); //can use remove() but it will throw NoSuchElementException when queue is empty
             movedPlayer(playerCurrentPosition, diceValue);
             if (checkPlayerWon(playerCurrentPosition)) {

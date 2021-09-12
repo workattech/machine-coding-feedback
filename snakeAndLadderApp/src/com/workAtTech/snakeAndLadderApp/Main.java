@@ -33,10 +33,10 @@ public class Main {
             players.add(new Player(scanner.next()));
         }
 
-        SnakeAndLadderAppLogic snakeAndLadderLogicObj = new SnakeAndLadderAppLogic();
-        snakeAndLadderLogicObj.setPlayers(players);
-        snakeAndLadderLogicObj.setSnakes(snakes);
-        snakeAndLadderLogicObj.setLadders(ladders);
-        snakeAndLadderLogicObj.startApp();
+        SnakeAndLadderAppService snakeAndLadderServiceObj = new SnakeAndLadderAppService();
+        snakeAndLadderServiceObj.setPlayers(players);
+        snakeAndLadderServiceObj.setSnakes(snakes);
+        snakeAndLadderServiceObj.setLadders(ladders);
+        snakeAndLadderServiceObj.startApp();
     }
 }
