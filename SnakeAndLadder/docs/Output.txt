@@ -1,0 +1,84 @@
+=> copied from command line.
+Enter the size of the board:
+10
+Enter the number of snakes: 9
+62 5
+33 6
+49 9
+88 16
+41 20
+56 53
+98 64
+93 73
+95 75
+Enter the number of ladders: 8
+2 37
+27 46
+10 32
+51 68
+61 79
+65 84
+71 91
+81 100
+Enter the number of players: 2
+Raghav
+Gaurav
+Raghav rolled a 1 and moved from 0 to 1
+Gaurav rolled a 1 and moved from 0 to 1
+Raghav rolled a 5 and moved from 1 to 6
+Gaurav rolled a 1 and moved from 1 to 37
+Raghav rolled a 6 and moved from 6 to 12
+Gaurav rolled a 2 and moved from 37 to 39
+Raghav rolled a 5 and moved from 12 to 17
+Gaurav rolled a 4 and moved from 39 to 43
+Raghav rolled a 5 and moved from 17 to 22
+Gaurav rolled a 4 and moved from 43 to 47
+Raghav rolled a 4 and moved from 22 to 26
+Gaurav rolled a 6 and moved from 47 to 53
+Raghav rolled a 3 and moved from 26 to 29
+Gaurav rolled a 5 and moved from 53 to 58
+Raghav rolled a 2 and moved from 29 to 31
+Gaurav rolled a 2 and moved from 58 to 60
+Raghav rolled a 4 and moved from 31 to 35
+Gaurav rolled a 1 and moved from 60 to 79
+Raghav rolled a 4 and moved from 35 to 39
+Gaurav rolled a 6 and moved from 79 to 85
+Raghav rolled a 2 and moved from 39 to 20
+Gaurav rolled a 2 and moved from 85 to 87
+Raghav rolled a 4 and moved from 20 to 24
+Gaurav rolled a 1 and moved from 87 to 16
+Raghav rolled a 6 and moved from 24 to 30
+Gaurav rolled a 3 and moved from 16 to 19
+Raghav rolled a 6 and moved from 30 to 36
+Gaurav rolled a 2 and moved from 19 to 21
+Raghav rolled a 1 and moved from 36 to 37
+Gaurav rolled a 2 and moved from 21 to 23
+Raghav rolled a 3 and moved from 37 to 40
+Gaurav rolled a 1 and moved from 23 to 24
+Raghav rolled a 4 and moved from 40 to 44
+Gaurav rolled a 2 and moved from 24 to 26
+Raghav rolled a 6 and moved from 44 to 50
+Gaurav rolled a 6 and moved from 26 to 32
+Raghav rolled a 2 and moved from 50 to 52
+Gaurav rolled a 5 and moved from 32 to 37
+Raghav rolled a 5 and moved from 52 to 57
+Gaurav rolled a 2 and moved from 37 to 39
+Raghav rolled a 3 and moved from 57 to 60
+Gaurav rolled a 5 and moved from 39 to 44
+Raghav rolled a 2 and moved from 60 to 5
+Gaurav rolled a 3 and moved from 44 to 47
+Raghav rolled a 2 and moved from 5 to 7
+Gaurav rolled a 4 and moved from 47 to 68
+Raghav rolled a 1 and moved from 7 to 8
+Gaurav rolled a 2 and moved from 68 to 70
+Raghav rolled a 3 and moved from 8 to 11
+Gaurav rolled a 1 and moved from 70 to 91
+Raghav rolled a 1 and moved from 11 to 12
+Gaurav rolled a 1 and moved from 91 to 92
+Raghav rolled a 4 and moved from 12 to 16
+Gaurav rolled a 5 and moved from 92 to 97
+Raghav rolled a 1 and moved from 16 to 17
+can't move as destination is more than possible
+Raghav rolled a 6 and moved from 17 to 23
+Gaurav rolled a 3 and moved from 97 to 100
+Gaurav Won the Game

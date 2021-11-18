@@ -1,0 +1,42 @@
+/**
+ * Snake and Ladder Problem
+ *
+ * Classes
+ *      => Snake
+ *          Data Member
+ *              => start position
+ *              => end position
+ *          Methods
+ *              => boolean checkSnakeAtLocation(int startLoc)
+ *      => Ladder
+ *          Data Member
+ *              => start position
+ *              => end position
+ *          Methods
+ *              => boolean checkLadderAtLocation(int startLoc)
+ *      => Board
+ *          Data Member
+ *              => int sizeOfTheBoard =>
+ *              => private member => total number of cells (size*size) => assuming square.(optional requirement 2)
+ *              => List<Snake> snakes;
+ *              => List<Ladder> ladders;
+ *      => Player
+ *          Data Member
+ *              => Player Name
+ *              => Player current position
+ *          Methods
+ *              => boolean updatePosition(int x) => private
+ *                  Implement this method with extra care
+ *                      There may be a snake or a ladder after a particular jump
+ *                      using a ladder of fall down using a snake.
+ *
+ *              => boolean dieRoll()
+ *                  => Can have a max value field (To cover optional requirement 1)
+ *                  => This can internally call the update position method.
+ *                  => Multiple die rolls based on whether enabled or not => (Optional requirement 4)
+ *     => Programmatically generate snakes and ladders =>
+ *          This is using the generation code itself.
+ *
+ *     1:30 - 1:40 (Design all the basic classes)
+ *     1:40 - 2:00 (Implement critical methods)
+ */
