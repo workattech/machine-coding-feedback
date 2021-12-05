@@ -1,7 +1,5 @@
 package com.game2048;
 
-import com.game2048.models.Board;
-
 import java.util.Scanner;
 
 public class Driver {
@@ -40,10 +38,10 @@ public class Driver {
             isGameOver = boardManager.boardService.isGameOver();
             isGameWon = boardManager.boardService.isGameWon(DEFAULT_WINNING_VALUE);
         }
-        if(isGameWon) {
+        if (isGameWon) {
             System.out.println("Congratulations");
         }
-        if(isGameOver) {
+        if (isGameOver) {
             System.out.println("Game over");
         }
     }

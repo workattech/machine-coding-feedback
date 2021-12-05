@@ -19,22 +19,6 @@ public class BoardService {
         tileService = new TileService();
     }
 
-    public int getBoardRows() {
-        return boardRows;
-    }
-
-    public void setBoardRows(int boardRows) {
-        this.boardRows = boardRows;
-    }
-
-    public int getBoardColumns() {
-        return boardColumns;
-    }
-
-    public void setBoardColumns(int boardColumns) {
-        this.boardColumns = boardColumns;
-    }
-
     public void printBoard() {
         for (int i = 0; i < this.boardRows; i++) {
             for (int j = 0; j < this.boardColumns; j++) {
@@ -54,9 +38,9 @@ public class BoardService {
             int randomBoardRow = randomBoardIndexGenerator(boardRows);
             int randomBoardColumn = randomBoardIndexGenerator(boardColumns);
             if (board[randomBoardRow - 1][randomBoardColumn - 1].equals("-")) {
-                if(flagSetTwo.equals("2")) {
+                if (flagSetTwo.equals("2")) {
                     board[randomBoardRow - 1][randomBoardColumn - 1] = "2";
-                }else {
+                } else {
                     board[randomBoardRow - 1][randomBoardColumn - 1] = tileService.tile.getTile(); // tileService will give any random string in power of two
                 }
                 isRandomFileInserted = true;
@@ -157,7 +141,6 @@ public class BoardService {
                 }
             }
         }
-
     }
 
     public void mergeTilesInRightDirection() {
