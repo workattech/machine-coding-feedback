@@ -46,7 +46,7 @@ public class SnakeAndLadderAppService {
             diceServiceObj = new DiceService();
             int diceValue = diceServiceObj.roll(); //Rule 4: Each player rolls the dice when their turn comes.
             Player playerCurrentPosition = players.poll(); //can use remove() but it will throw NoSuchElementException when queue is empty
-            movedPlayer(playerCurrentPosition, diceValue);
+            movePlayer(playerCurrentPosition, diceValue);
             if (checkPlayerWon(playerCurrentPosition)) {
                 System.out.println(playerCurrentPosition.getName() + " wins the game");
                 board.getPlayerPieces().remove(playerCurrentPosition.getId());
@@ -66,7 +66,7 @@ public class SnakeAndLadderAppService {
      **Rule 7: After the dice roll, if a piece is supposed to move outside position 100, it does not move.
      **Rule 8: The board also contains some snakes and ladders.
      */
-    private void movedPlayer(Player player, int diceValue) {
+    private void movePlayer(Player player, int diceValue) {
         int oldPosition = board.getPlayerPieces().get(player.getId());
         int newPosition = oldPosition + diceValue;
         int boardSize = board.getBoardSize();
