@@ -29,7 +29,7 @@ public class ParkingLotService {
             for (int j = 0; j < numOfSlotsPerFloor; j++) {
                 int res = i + 1;
                 int resj = j + 1;
-                vehiclesInParkingLot[i][j].setVehicleTicketId(DEFAULT_PARKING_LOT_ID + "_" + res + "_" + resj);
+                vehiclesInParkingLot[i][j].setTicketId(DEFAULT_PARKING_LOT_ID + "_" + res + "_" + resj);
             }
         }
     }
@@ -39,11 +39,11 @@ public class ParkingLotService {
             for (int j = 0; j < numOfSlotsPerFloor; j++) {
                 vehiclesInParkingLot[i][j] = new Vehicle();
                 if (j == 0) {
-                    vehiclesInParkingLot[i][j].setVehicleType(VehicleType.TRUCK.name());
+                    vehiclesInParkingLot[i][j].setType(VehicleType.TRUCK.name());
                 } else if (j == 1 || j == 2) {
-                    vehiclesInParkingLot[i][j].setVehicleType(VehicleType.BIKE.name());
+                    vehiclesInParkingLot[i][j].setType(VehicleType.BIKE.name());
                 } else {
-                    vehiclesInParkingLot[i][j].setVehicleType(VehicleType.CAR.name());
+                    vehiclesInParkingLot[i][j].setType(VehicleType.CAR.name());
                 }
             }
         }
@@ -86,9 +86,9 @@ public class ParkingLotService {
                 if (!isBikeParked && !vehiclesInParkingLot[i][j].isParked()) {
                     isBikeParked = true;
                     vehiclesInParkingLot[i][j].setParked(true);
-                    vehiclesInParkingLot[i][j].setVehicleRegistrationNumber(registration);
-                    vehiclesInParkingLot[i][j].setVehicleColor(color);
-                    System.out.println("Parked vehicle. Ticket ID:" + vehiclesInParkingLot[i][j].getVehicleTicketId());
+                    vehiclesInParkingLot[i][j].setRegistrationNumber(registration);
+                    vehiclesInParkingLot[i][j].setColor(color);
+                    System.out.println("Parked vehicle. Ticket ID:" + vehiclesInParkingLot[i][j].getTicketId());
                 }
             }
         }
@@ -104,9 +104,9 @@ public class ParkingLotService {
                 if (!isCarParked && !vehiclesInParkingLot[i][j].isParked()) {
                     isCarParked = true;
                     vehiclesInParkingLot[i][j].setParked(true);
-                    vehiclesInParkingLot[i][j].setVehicleRegistrationNumber(registration);
-                    vehiclesInParkingLot[i][j].setVehicleColor(color);
-                    System.out.println("Parked vehicle. Ticket ID:" + vehiclesInParkingLot[i][j].getVehicleTicketId());
+                    vehiclesInParkingLot[i][j].setRegistrationNumber(registration);
+                    vehiclesInParkingLot[i][j].setColor(color);
+                    System.out.println("Parked vehicle. Ticket ID:" + vehiclesInParkingLot[i][j].getTicketId());
                 }
             }
         }
@@ -295,9 +295,9 @@ public class ParkingLotService {
                 if (!isTruckParked && !vehiclesInParkingLot[i][j].isParked()) {
                     isTruckParked = true;
                     vehiclesInParkingLot[i][j].setParked(true);
-                    vehiclesInParkingLot[i][j].setVehicleRegistrationNumber(registration);
-                    vehiclesInParkingLot[i][j].setVehicleColor(color);
-                    System.out.println("Parked vehicle. Ticket ID:" + vehiclesInParkingLot[i][j].getVehicleTicketId());
+                    vehiclesInParkingLot[i][j].setRegistrationNumber(registration);
+                    vehiclesInParkingLot[i][j].setColor(color);
+                    System.out.println("Parked vehicle. Ticket ID:" + vehiclesInParkingLot[i][j].getTicketId());
                 }
             }
         }
@@ -313,10 +313,10 @@ public class ParkingLotService {
         int floorOfParkedVehicle = Integer.valueOf(parkedVehicleDetails[1]);
         int slotOfParkedVehicle = Integer.valueOf(parkedVehicleDetails[2]);
         if ((floorOfParkedVehicle <= numOfFloor && slotOfParkedVehicle <= numOfSlots) && vehiclesInParkingLot[floorOfParkedVehicle - 1][slotOfParkedVehicle - 1].isParked()) {
-            System.out.println("Unparked vehicle with registration Number:" + vehiclesInParkingLot[floorOfParkedVehicle - 1][slotOfParkedVehicle - 1].getVehicleRegistrationNumber() + " and Color:" + vehiclesInParkingLot[floorOfParkedVehicle - 1][slotOfParkedVehicle - 1].getVehicleColor());
+            System.out.println("Unparked vehicle with registration Number:" + vehiclesInParkingLot[floorOfParkedVehicle - 1][slotOfParkedVehicle - 1].getRegistrationNumber() + " and Color:" + vehiclesInParkingLot[floorOfParkedVehicle - 1][slotOfParkedVehicle - 1].getColor());
             vehiclesInParkingLot[floorOfParkedVehicle - 1][slotOfParkedVehicle - 1].setParked(false);
-            vehiclesInParkingLot[floorOfParkedVehicle - 1][slotOfParkedVehicle - 1].setVehicleRegistrationNumber("");
-            vehiclesInParkingLot[floorOfParkedVehicle - 1][slotOfParkedVehicle - 1].setVehicleColor("");
+            vehiclesInParkingLot[floorOfParkedVehicle - 1][slotOfParkedVehicle - 1].setRegistrationNumber("");
+            vehiclesInParkingLot[floorOfParkedVehicle - 1][slotOfParkedVehicle - 1].setColor("");
             isVehicleUnParked = true;
         }
         if (!isVehicleUnParked) {
