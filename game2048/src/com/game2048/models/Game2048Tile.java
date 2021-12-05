@@ -4,7 +4,7 @@ public class Game2048Tile {
     private String tile;
 
     public Game2048Tile(int tileNumber) {
-        this.tile = ""+tileNumber;
+        this.tile = "" + tileNumber;
     }
 
     public String getTile() {

@@ -8,24 +8,7 @@ public class BoardManager {
     public BoardManager(int boardRows, int boardColumns) {
         this.boardRows = boardRows;
         this.boardColumns = boardColumns;
-        boardService = new BoardService(boardRows,boardColumns);
-
-    }
-
-    public int getBoardRows() {
-        return boardRows;
-    }
-
-    public void setBoardRows(int boardRows) {
-        this.boardRows = boardRows;
-    }
-
-    public int getBoardColumns() {
-        return boardColumns;
-    }
-
-    public void setBoardColumns(int boardColumns) {
-        this.boardColumns = boardColumns;
+        boardService = new BoardService(boardRows, boardColumns);
     }
 
     public void makeLeftDirectionMoves() {
