@@ -40,7 +40,7 @@ Example: Two tiles numbered 4 will merge to form a tile numbered 8. The merging 
 - The game is lost if there are no possible moves left: No empty tile and no adjacent tiles with the same number.
 - Try out the game [here](https://play2048.co/) for further clarification.
 
-Requirements
+## Requirements
 - Create a command-line application for the above game with the following requirements:
 
 - Initialize the game with two tiles numbered 2 at random positions.
