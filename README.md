@@ -1,5 +1,10 @@
-# mock-machine-coding-1
-Welcome to the 1st Mock Machine Coding Round by workat.tech.
+# Machine coding question link:-
 
-Please visit [this link](https://workat.tech/machine-coding/practice/snake-and-ladder-problem-zgtac9lxwntg) to participate.
+###  TicTacToe:- https://workat.tech/machine-coding/practice/design-tic-tac-toe-smyfi9x064ry
+###  SnakeAndLadder:- https://workat.tech/machine-coding/practice/snake-and-ladder-problem-zgtac9lxwntg
+###  ParkingLotDesign:- https://workat.tech/machine-coding/practice/design-parking-lot-qm6hwq4wkhp8
+###  2048:- https://workat.tech/machine-coding/practice/design-2048-game-osycd22zpn1y#
+### InMemoryKeyValueStore(incomplete as of 1 Jan 2022): https://workat.tech/machine-coding/practice/design-key-value-store-6gz6cq124k65
+
+
 
