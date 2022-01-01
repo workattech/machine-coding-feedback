@@ -174,7 +174,7 @@ public class Board {
         return true;
     }
     public int randomNumberGenerator(int val){
-            return (int)(Math.random()*(val)+1);//used to get random number in range[1,6]
+            return (int)(Math.random()*(val)+1);//used to get random number in range[1,val]
 
     }
     public void printBoard(int height,int width){
