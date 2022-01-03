@@ -1,4 +1,4 @@
-package tictactoe.tictactoePackage.models;
+package tictactoe.models;
 
 public class Board {
 
@@ -47,7 +47,7 @@ public class Board {
         return true;
     }
 
-    public boolean HasPlayerWonTheGame(int currentRow, int currentColumn){
+    public boolean hasPlayerWonTheGame(int currentRow, int currentColumn){
 
         boolean status = true;
         for(int i=0; i<sizeOfBoard;i++){

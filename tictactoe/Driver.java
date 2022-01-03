@@ -1,7 +1,7 @@
-package tictactoe.tictactoePackage;
+package tictactoe;
 
-import tictactoe.tictactoePackage.models.Board;
-import tictactoe.tictactoePackage.models.Player;
+import tictactoe.models.Board;
+import tictactoe.models.Player;
 
 import java.util.*;
 import java.lang.*;
@@ -46,7 +46,7 @@ public class Driver {
             if(board.isPieceAtValidCell(rowNumber,colNumber)){
                 board.setPieceAtBoard(rowNumber, colNumber, playersList[currentPlayer].getPiece());
                 board.printBoard();
-                if(board.HasPlayerWonTheGame(rowNumber, colNumber)){
+                if(board.hasPlayerWonTheGame(rowNumber, colNumber)){
                     System.out.println(playersList[currentPlayer].getName() + " won the game");
                     isGameInProgress = false;
                     continue;

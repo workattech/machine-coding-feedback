@@ -1,4 +1,4 @@
-package tictactoe.tictactoePackage.models;
+package tictactoe.models;
 
 public class Player {
     private String name;
