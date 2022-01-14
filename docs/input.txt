@@ -1,0 +1,9 @@
+add_player X Gaurav
+add_player O Sagar
+move 2 2
+move 1 3
+move 1 1
+move 1 2
+move 2 2
+move 3 3
+exit
