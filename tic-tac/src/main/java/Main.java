@@ -20,7 +20,9 @@ public class Main {
         this.arr = arr;
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         System.out.println("first java program");
+        SnakeAndLadder snakeAndLadder = new SnakeAndLadder();
+        snakeAndLadder.startGame();
     }
 }
