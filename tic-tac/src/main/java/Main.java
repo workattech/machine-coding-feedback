@@ -1,4 +1,6 @@
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Main {
     private Integer a;
@@ -21,6 +23,9 @@ public class Main {
     }
 
     public static void main(String[] args) throws Exception {
+        Map<Temp, Integer> mp = new HashMap<>();
+        mp.put(new Temp(3), null);
+        mp.put(null, null);
         System.out.println("first java program");
         SnakeAndLadder snakeAndLadder = new SnakeAndLadder();
         snakeAndLadder.startGame();

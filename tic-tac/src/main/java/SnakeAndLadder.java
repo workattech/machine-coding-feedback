@@ -1,7 +1,5 @@
 import java.util.*;
 
-import static java.lang.Math.random;
-
 public class SnakeAndLadder {
     private Map<Integer, Integer> startToEndLadderMap;
     private Map<Integer, Integer> startToEndSnakeMap;
@@ -31,7 +29,7 @@ public class SnakeAndLadder {
         }
         int numberOfPlayers = sc.nextInt();
         for(int i=0;i<numberOfPlayers;++i) {
-            String playerName = sc.nextLine();
+            String playerName = sc.next();
             playerList.add(playerName);
             playerToPositionMap.put(playerName, 0);
         }
@@ -46,7 +44,8 @@ public class SnakeAndLadder {
                 if (playerPosition == null) {
                     throw new Exception(plyName + " not found");
                 }
-                int randomDiceValue = (int) ((random() * (MAX_DICE_FACE_VALUE - MIN_DICE_FACE_VALUE + 1)) + MIN_DICE_FACE_VALUE);
+                final Random random = new Random();
+                int randomDiceValue = MIN_DICE_FACE_VALUE + random.nextInt(6);
                 int finalPosition = getPlayerFinalPosition(playerPosition, randomDiceValue);
                 System.out.println(String.format(
                         "%s rolled a %d and moved from %d to %d",
