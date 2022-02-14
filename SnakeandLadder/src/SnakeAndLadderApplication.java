@@ -12,7 +12,7 @@ public class SnakeAndLadderApplication {
 		
 		Board b = new Board();
 		BoardService bs = new BoardService();
-		PlayerService ps = new PlayerService();
+		Dice dice = new Dice();
 		
 		Scanner sc = new Scanner(System.in);
 		
@@ -76,7 +76,12 @@ public class SnakeAndLadderApplication {
         while(true) {
         	
         	int prevPosition = players[turn].getPosition(); 
-        	int diceNum = ps.rollADice(players[turn]);
+        	int diceNum = dice.rollDice();		
+        	if(players[turn].getPosition()+diceNum <= 100) {
+    			
+           		players[turn].setPosition(players[turn].getPosition()+diceNum);
+    		}
+    		
         	int finalPos = bs.playerPosition(players[turn].getPosition(), b);
         	
         	if(finalPos == 100) {
