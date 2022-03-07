@@ -1,5 +1,6 @@
-package entities
+package src.entities
 
+import src.DICE_MAX_VALUE
 import kotlin.random.Random
 
 class Dice {

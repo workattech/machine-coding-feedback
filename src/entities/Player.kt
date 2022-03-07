@@ -1,4 +1,4 @@
-package entities
+package src.entities
 
 class Player(val name : String) {
 

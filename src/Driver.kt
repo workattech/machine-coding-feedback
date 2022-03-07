@@ -1,4 +1,6 @@
-import entities.*
+package src
+
+import src.entities.*
 import java.util.*
 import kotlin.system.exitProcess
 
@@ -7,9 +9,13 @@ fun main(args: Array<String>) {
     val snakes = LinkedList<Snake>()
     val ladders = LinkedList<Ladder>()
     val players = LinkedList<Player>()
+    val boardSize: Int?
 
     try {
-//        println("Enter number of Snakes");
+        println("Enter board size")
+        boardSize = readLine()?.toInt()
+
+//        println("Enter number of Snakes")
         var noOfSnakes: Int = readLine()?.toInt()!!
 
         while (noOfSnakes-- > 0) {
@@ -32,6 +38,16 @@ fun main(args: Array<String>) {
             players.add(Player(name))
         }
 
+        val board: Board =
+            if (boardSize != null) {
+                Board(snakes, ladders, boardSize)
+            } else {
+                Board(snakes, ladders)
+            }
+
+        val game = Game(board, players)
+        game.play()
+
     } catch (e: NumberFormatException) {
         println("Invalid Input Entered. Try Again!!")
         exitProcess(0)
@@ -39,9 +55,4 @@ fun main(args: Array<String>) {
         println(e.message)
         exitProcess(0)
     }
-
-//    println("Creating Board")
-    val board = Board(BOARD_SIZE, snakes, ladders)
-    val game = Game(board, players)
-    game.play()
 }

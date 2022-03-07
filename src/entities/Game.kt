@@ -1,4 +1,4 @@
-package entities
+package src.entities
 
 import java.util.Queue
 
@@ -7,7 +7,7 @@ class Game(private val board: Board,
 
     fun play() {
 
-        val dice = board.getDice()
+        val dice = board.dice
         while (players.size > 1) {
             val currPlayer = players.poll()
             val numberRolled = dice.rollDice()
@@ -17,7 +17,7 @@ class Game(private val board: Board,
 
             println(currPlayer.name + " rolled a " + numberRolled + " and moved from " + currPosition + " to " + newPosition)
 
-            if (newPosition == BOARD_SIZE){
+            if (newPosition == board.getSize()){
                 println(currPlayer.name + " wins the game")
             }
             else{
@@ -26,5 +26,4 @@ class Game(private val board: Board,
             }
         }
     }
-
 }
