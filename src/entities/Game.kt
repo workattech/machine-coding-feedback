@@ -13,7 +13,7 @@ class Game(private val board: Board,
             val numberRolled = dice.rollDice()
 
             val currPosition = currPlayer.getPosition()
-            val newPosition = board.calculateNewPosition(currPosition, numberRolled)
+            val newPosition = calculateNewPosition(currPosition, numberRolled)
 
             println(currPlayer.name + " rolled a " + numberRolled + " and moved from " + currPosition + " to " + newPosition)
 
@@ -25,5 +25,23 @@ class Game(private val board: Board,
                 players.offer(currPlayer)
             }
         }
+    }
+
+    private fun calculateNewPosition(currPosition: Int, numberRolled: Int): Int {
+        val newPos = currPosition + numberRolled
+        if (newPos > board.getSize())
+            return currPosition
+
+        //Check if there's a snake at newPos
+        board.snakeMap[newPos]?.let {
+            return it.tail
+        }
+
+        //Check if there's a ladder at newPos
+        board.ladderMap[newPos]?.let {
+            return it.end
+        }
+
+        return newPos
     }
 }

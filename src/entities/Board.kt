@@ -10,9 +10,8 @@ class Board(
 ) {
 
     val dice = Dice()
-
-    private val snakeMap = hashMapOf<Int, Snake>()
-    private val ladderMap = hashMapOf<Int, Ladder>()
+    val snakeMap = hashMapOf<Int, Snake>()
+    val ladderMap = hashMapOf<Int, Ladder>()
 
     init {
         validateBoard(snakes, ladders)
@@ -41,24 +40,5 @@ class Board(
 
     fun getSize(): Int {
         return size
-    }
-
-    fun calculateNewPosition(currPosition: Int, numberRolled: Int): Int {
-
-        val newPos = currPosition + numberRolled
-        if (newPos > size)
-            return currPosition
-
-        //Check if there's a snake at newPos
-        snakeMap[newPos]?.let {
-            return it.tail
-        }
-
-        //Check if there's a ladder at newPos
-        ladderMap[newPos]?.let {
-            return it.end
-        }
-
-        return newPos
     }
 }
