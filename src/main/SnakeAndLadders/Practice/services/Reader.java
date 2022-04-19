@@ -1,6 +1,6 @@
-package SnakeAndLadders.Practice.Services;
+package SnakeAndLadders.Practice.services;
 
-import SnakeAndLadders.Practice.Model.*;
+import SnakeAndLadders.Practice.model.*;
 
 import java.util.*;
 
@@ -23,13 +23,13 @@ class ReadSnake extends ReadInput {
     @Override
     protected void readInput() {
         Scanner scanner = new Scanner(System.in);
-        Map<Integer,Snakes> snakesList = new HashMap<>();
+        Map<Integer, Snake> snakesList = new HashMap<>();
         int noOfSnakes = scanner.nextInt();
         int start,end;
         for(int i=0;i<noOfSnakes;i++) {
             start = scanner.nextInt();
             end = scanner.nextInt();
-            snakesList.put(start,new Snakes(start,end));
+            snakesList.put(start,new Snake(start,end));
         }
         board.setSnakes(snakesList);
     }
@@ -44,13 +44,13 @@ class ReadLadders extends ReadInput {
     @Override
     protected void readInput() {
         Scanner scanner = new Scanner(System.in);
-        Map<Integer,Ladders> laddersList = new HashMap<>();
+        Map<Integer, Ladder> laddersList = new HashMap<>();
         int noOfLadders = scanner.nextInt();
         int start,end;
         for(int i=0;i<noOfLadders;i++) {
             start = scanner.nextInt();
             end = scanner.nextInt();
-            laddersList.put(start,new Ladders(start,end));
+            laddersList.put(start,new Ladder(start,end));
         }
         board.setLadders(laddersList);
     }
@@ -65,12 +65,12 @@ class ReadPlayers extends ReadInput {
     @Override
     protected void readInput() {
         Scanner scanner = new Scanner(System.in);
-        List<Players>playersList = new ArrayList<>();
+        List<Player>playersList = new ArrayList<>();
         int noOfPlayers = scanner.nextInt();
         String name;
         for(int i=0;i<noOfPlayers;i++) {
             name = scanner.next();
-            playersList.add(new Players(0,name));
+            playersList.add(new Player(0,name));
         }
         board.setPlayers(playersList);
     }

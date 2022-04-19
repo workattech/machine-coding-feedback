@@ -1,11 +1,11 @@
-package SnakeAndLadders.Practice.Driver;
+package SnakeAndLadders.Practice.driver;
 
-import SnakeAndLadders.Practice.Model.Board;
-import SnakeAndLadders.Practice.Model.Dice;
-import SnakeAndLadders.Practice.Model.INPUT_TYPE;
-import SnakeAndLadders.Practice.Model.SingleDiceRoll;
-import SnakeAndLadders.Practice.Services.BoardGame;
-import SnakeAndLadders.Practice.Services.Reader;
+import SnakeAndLadders.Practice.model.Board;
+import SnakeAndLadders.Practice.model.Dice;
+import SnakeAndLadders.Practice.model.INPUT_TYPE;
+import SnakeAndLadders.Practice.model.SingleDiceRoll;
+import SnakeAndLadders.Practice.services.BoardGame;
+import SnakeAndLadders.Practice.services.Reader;
 
 import java.util.Scanner;
 

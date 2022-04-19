@@ -1,4 +1,4 @@
-package SnakeAndLadders.Practice.Model;
+package SnakeAndLadders.Practice.model;
 
 public class SingleDiceRoll implements Dice {
     private int min = 1;

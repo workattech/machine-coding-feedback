@@ -1,4 +1,4 @@
-package SnakeAndLadders.Practice.Model;
+package SnakeAndLadders.Practice.model;
 
 public enum INPUT_TYPE {
         SNAKE,

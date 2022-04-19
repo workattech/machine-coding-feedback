@@ -1,10 +1,10 @@
-package SnakeAndLadders.Practice.Model;
+package SnakeAndLadders.Practice.model;
 
-public class Players {
+public class Player {
     private int position;
     private String name;
 
-    public Players(int position, String name) {
+    public Player(int position, String name) {
         this.position = position;
         this.name = name;
     }
