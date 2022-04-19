@@ -1,7 +1,7 @@
 import java.util.*;
 
-import Models.*;
-import Services.SnakeAndLadderGameService;
+import models.*;
+import services.SnakeAndLadderGameService;
 
 public class Driver {
     public static void main(String args[]) {
@@ -66,13 +66,8 @@ public class Driver {
                 System.out.println("Please Enter 'Yes' or 'No'");
             }
         }
+        gameService.startGame();
 
-        Queue<Player> leaderBoard = gameService.startGame();
-        System.out.println("------------Leader Board------------");
-        while(leaderBoard.size() != 0) {
-            Player p = leaderBoard.poll();
-            System.out.println(p.getStatus() + "-----" + p.getName() + "----" + p.getRank() + "-----" + p.getPosition() + "-----");
-        }
         return;
     }
 }

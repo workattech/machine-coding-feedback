@@ -1,8 +1,8 @@
-package Services;
+package services;
 
 import java.util.*;
 
-import Models.*;
+import models.*;
 
 public class BoardService {
     private Board board;
@@ -15,7 +15,7 @@ public class BoardService {
         return this.board.getSize();
     }
 
-    boolean validPosition(int position) {
+    boolean isValidPosition(int position) {
         return position <= this.board.getSize();
     }
 

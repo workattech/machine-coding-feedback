@@ -1,4 +1,4 @@
-package Models;
+package models;
 
 public class PlayerStatus {
     public static String PLAYING = "PLAYING";

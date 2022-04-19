@@ -1,8 +1,8 @@
-package Services;
+package services;
 
 import java.util.*;
 
-import Models.*;
+import models.*;
 
 public class SnakeAndLadderGameService {
     final private static int DEFAULT_NUMBER_OF_DICE = 1;
@@ -43,7 +43,7 @@ public class SnakeAndLadderGameService {
         this.endGameAfterFirstWinner = endGameAfterFirstWinner;
     }
 
-    public Queue<Player> startGame() {
+    public void startGame() {
         while(!this.isGameOver()) {
             Player playerWithTurn = this.getPlayerWithTurn();
             int initialPosition = playerWithTurn.getPosition();
@@ -56,7 +56,16 @@ public class SnakeAndLadderGameService {
             }
         }
         markRemainingPlayersAsLost();
-        return this.players;
+        showLeaderBoard();
+    }
+
+    private void showLeaderBoard() {
+        System.out.println("------------Leader Board------------");
+        while(this.players.size() != 0) {
+            Player p = this.players.poll();
+            System.out.println(p.getStatus() + "-----" + p.getName() + "----" + p.getRank() + "-----" + p.getPosition() + "-----");
+        }
+        return;
     }
 
     private void markRemainingPlayersAsLost() {
@@ -82,7 +91,7 @@ public class SnakeAndLadderGameService {
 
     private void movePlayerBy(int diceValue, Player player) {
         int newPosition = player.getPosition() + diceValue;
-        if(!boardService.validPosition(newPosition)) {
+        if(!boardService.isValidPosition(newPosition)) {
             return;
         }
         while(boardService.isSnakeOrLadderAt(newPosition)) {

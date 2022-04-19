@@ -1,4 +1,4 @@
-package Services;
+package services;
 
 class DiceService {
     final private int DEFAULT_NUMBER_OF_SIDES_OF_DICE = 6;

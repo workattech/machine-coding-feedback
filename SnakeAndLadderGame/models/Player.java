@@ -1,7 +1,7 @@
-package Models;
+package models;
 
 import java.util.*;
-import Models.PlayerStatus;
+import models.PlayerStatus;
 
 public class Player {
     private String name, status;

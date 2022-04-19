@@ -1,8 +1,8 @@
-package Models;
+package models;
 
 import java.util.*;
 
-import Models.*;
+import models.*;
 
 public class Board {
     final private static int DEFAULT_BOARD_SIZE = 100;
