@@ -7,37 +7,41 @@ import java.util.Scanner;
 
 public class Driver {
 
-    private static final String EXIT_COMMAND="exit";
+    private static final String EXIT_COMMAND = "exit";
 
     public static void main(String[] args) {
 
         Board board = new Board();
         PrinterService printerService = new PrinterService(board);
-        BoardService boardService = new BoardService(board,printerService);
+        BoardService boardService = new BoardService(board, printerService);
 
-        boardService.IntiliazeBlackPieces();
-        boardService.IntiliazeWhitePieces();
+        boardService.initiliazeBlackPieces();
+        boardService.initiliazeWhitePieces();
 
         printerService.printBoard();
 
         Scanner sc = new Scanner(System.in);
-        String input="";
-        String startPos,endPos;
-        PlayerColour players[] = {PlayerColour.WHITE,PlayerColour.BLACK};
+
+
+        String input = "";
+        String startPos, endPos;
+        PlayerColour players[] = {PlayerColour.WHITE, PlayerColour.BLACK};
         int turn = 0;
         PlayerColour playerColour;
 
-        while(!input.equals(EXIT_COMMAND)) {
+        while (!input.equals(EXIT_COMMAND)) {
+            playerColour = players[turn % 2];
+
+
             input = sc.nextLine();
-            playerColour = players[turn%2];
             String[] command = input.split(" ");
-            if(command[0].equals(EXIT_COMMAND))break;
+            if (command[0].equals(EXIT_COMMAND)) break;
             startPos = command[0];
             endPos = command[1];
-            if( boardService.move(startPos,endPos,playerColour) ) {
+            if (boardService.move(startPos, endPos, playerColour)) {
                 printerService.printBoard();
                 turn++;
-            }else {
+            } else {
                 printerService.printInvalidMove();
             }
 
@@ -46,7 +50,6 @@ public class Driver {
 
 
     }
-
 
 
 }

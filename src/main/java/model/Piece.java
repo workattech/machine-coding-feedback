@@ -5,13 +5,15 @@ import java.util.List;
 public abstract class Piece {
     private PlayerColour playerColour;
     private int currentPos;
+    private String symbol;
 
-    public Piece(PlayerColour playerColour, int currentPos) {
+    public Piece(PlayerColour playerColour, int currentPos, String symbol) {
         this.playerColour = playerColour;
         this.currentPos = currentPos;
+        this.symbol = symbol;
     }
 
-    public abstract List<Integer> getPath(String position);
+    public abstract List<Integer> getPath(String position, Boolean canKillOpponent);
 
     abstract boolean validate();
 
@@ -29,5 +31,13 @@ public abstract class Piece {
 
     public void setCurrentPos(int currentPos) {
         this.currentPos = currentPos;
+    }
+
+    public String getSymbol() {
+        return symbol;
+    }
+
+    public void setSymbol(String symbol) {
+        this.symbol = symbol;
     }
 }
