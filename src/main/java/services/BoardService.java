@@ -125,12 +125,13 @@ public class BoardService {
         Piece pieceAtStartPos = getPieceAtPosition(startPos);
         Piece pieceAtEndPos = getPieceAtPosition(endPos);
         Boolean canKillOpponentAtEndingPosition = false;
+        if(pieceAtStartPos==null) return false;
         if (pieceAtEndPos != null)
             canKillOpponentAtEndingPosition = pieceAtStartPos.getPlayerColour() != pieceAtEndPos.getPlayerColour();
 
         List<Integer> path;
         int endingPosition = getTransformedCoordinate(endPos);
-        if (pieceAtStartPos != null && pieceAtStartPos.getPlayerColour() != playerColour) {
+        if (pieceAtStartPos.getPlayerColour() != playerColour) {
             return false;
         }
 

@@ -31,8 +31,6 @@ public class Driver {
 
         while (!input.equals(EXIT_COMMAND)) {
             playerColour = players[turn % 2];
-
-
             input = sc.nextLine();
             String[] command = input.split(" ");
             if (command[0].equals(EXIT_COMMAND)) break;
