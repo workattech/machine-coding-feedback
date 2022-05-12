@@ -1,6 +1,6 @@
 package service;
 
-import domain.Expense;
+import domain.ExpenseType;
 import domain.RequestObject;
 import domain.User;
 
@@ -48,11 +48,11 @@ public class SplitWiseService {
             return;
         }
 
-        if (Expense.EQUAL.getExpenseName().equalsIgnoreCase(requestObject.getExpenseType())) {
+        if (ExpenseType.EQUAL.getExpenseName().equalsIgnoreCase(requestObject.getExpenseType())) {
             splitEqualAmount(requestObject);
-        } else if (Expense.EXACT.getExpenseName().equalsIgnoreCase(requestObject.getExpenseType())) {
+        } else if (ExpenseType.EXACT.getExpenseName().equalsIgnoreCase(requestObject.getExpenseType())) {
             splitExactAmount(requestObject);
-        } else if (Expense.PERCENT.getExpenseName().equalsIgnoreCase(requestObject.getExpenseType())) {
+        } else if (ExpenseType.PERCENT.getExpenseName().equalsIgnoreCase(requestObject.getExpenseType())) {
             splitPercentAmount(requestObject);
         }
     }

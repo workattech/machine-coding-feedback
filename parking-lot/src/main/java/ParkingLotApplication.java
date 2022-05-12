@@ -1,15 +1,26 @@
+import domain.ParkingLotFloor;
 import service.ParkingLotService;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Scanner;
-import java.util.Set;
+import java.util.*;
 
 public class ParkingLotApplication {
     public static void main(String[] arg) {
         System.out.println("Parking lot application started");
 
         ParkingLotService parkingLotService = null;
+
+        SortedSet<ParkingLotFloor> parkingLotFloorSortedSet
+                = new TreeSet<>(new Comparator<ParkingLotFloor>() {
+            @Override
+            public int compare(ParkingLotFloor o1, ParkingLotFloor o2) {
+                if (!Objects.equals(o1.getFloorNo(), o2.getFloorNo())) {
+                    return o1.getFloorNo() - o2.getFloorNo();
+                }
+                return -1;
+            }
+        });
+
+        Set<ParkingLotFloor> parkingLotFloorSet = new HashSet<>();
 
         Set<Integer> set = new HashSet<>(new ArrayList<>());
         System.out.println(set.size());

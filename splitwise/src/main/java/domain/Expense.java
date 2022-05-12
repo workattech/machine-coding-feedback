@@ -1,17 +1,13 @@
-package domain;
+package splitwise.src.main.java.domain;
 
-public enum Expense {
-    EQUAL("EQUAL"),
-    EXACT("EXACT"),
-    PERCENT("PERCENT");
+import domain.ExpenseType;
+import domain.User;
 
-    private final String expenseName;
+import java.util.List;
 
-    Expense(String expenseName) {
-        this.expenseName = expenseName;
-    }
-
-    public String getExpenseName() {
-        return expenseName;
-    }
+public class Expense {
+    private ExpenseType expenseType;
+    private Double transactionAmount;
+    private User transactingUser;
+    private List<User> beneficiaryUserList;
 }
