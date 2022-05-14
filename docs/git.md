@@ -68,13 +68,13 @@ These commands have been taken from Atlassian's website.
 
 # Push local changes to remote
 Execute these commands on the terminal:
-- ```cd mock-machine-coding-1```
+- ```cd machine-coding-feedback```
 - ```git add .```
 - ```git commit -m "solved the problem"```
 - ```git push```
 
 # PR
-- Open the repository in your profile. The URL would be of this format: ```https://github.com/<your-username>/mock-machine-coding-1```
+- Open the repository in your profile. The URL would be of this format: ```https://github.com/<your-username>/machine-coding-feedback```
 - Click on "New Pull Request".
 ![pr](./pr.png)
 - Then click on "Create pull request" in the page that opened.
