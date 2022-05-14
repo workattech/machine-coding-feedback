@@ -1,2 +1,10 @@
+**/*.class
+**/*.out
+**/*.pyo
+**/__pycache__
+tests/out
+
 .idea
 .DS_Store
+.*
+!.gitignore
