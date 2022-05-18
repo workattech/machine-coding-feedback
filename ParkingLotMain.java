@@ -14,7 +14,7 @@ public class ParkingLotMain {
         CommandManagement commandManager = new CommandManagement();
         List<ParkingLot> parkingLotList = new ArrayList<>();
         ParkingLotManager parkingLotManager = null;
-        File file = new File("/Users/varsha.lalwani/personal/machine-coding-feedback/input.txt");
+        File file = new File("input.txt");
         BufferedReader br = new BufferedReader(new FileReader(file));
         String command;
         while ((command = br.readLine()) != null) {

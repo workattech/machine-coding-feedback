@@ -14,7 +14,7 @@ public class CommandManagement {
     }
 
     public Integer getCommandType(String command) {
-        String[] splited = command.split("\\s+");
+        String[] splited = command.split(" ");
         if (Objects.equals(splited[0], "create_parking_lot")) {
             return 1;
         } else if (Objects.equals(splited[0], "park_vehicle")) {
@@ -28,18 +28,18 @@ public class CommandManagement {
     }
 
     public ParkingLot createParkingLot(String command) {
-        String[] splited = command.split("\\s+");
+        String[] splited = command.split(" ");
         return new ParkingLot(splited[1], Integer.valueOf(splited[2]), Integer.valueOf(splited[3]));
     }
 
     public void parkVehicle(String command, ParkingLotManager parkingLotManager) {
-        String[] splited = command.split("\\s+");
+        String[] splited = command.split(" ");
         Vehicle vehicle = new Vehicle(splited[3], splited[2], VehicleType.valueOf(splited[1]));
         parkingLotManager.parkVehicle(vehicle);
     }
 
     public void unparkVehicle(String command, ParkingLotManager parkingLotManager) {
-        String[] splited = command.split("\\s+");
+        String[] splited = command.split(" ");
         String[] splited2 = splited[1].split("_");
         ParkingSlot parkingSlot = new ParkingSlot(splited2[0], Integer.valueOf(splited2[1]),
                 Integer.valueOf(splited2[2]));
@@ -47,7 +47,7 @@ public class CommandManagement {
     }
 
     public void display(String command, ParkingLotManager parkingLotManager) {
-        String[] splited = command.split("\\s+");
+        String[] splited = command.split(" ");
         if (Objects.equals(splited[1], "free_count")){
             parkingLotManager.displayFreeCount(VehicleType.valueOf(splited[2]));
         } else if(Objects.equals(splited[1], "free_slots")) {

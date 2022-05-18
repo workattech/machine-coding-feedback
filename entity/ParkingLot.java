@@ -9,7 +9,6 @@ public class ParkingLot {
 
     Integer numOfSlotsPerFloor;
 
-
     public ParkingLot(String parkingLotId, Integer numOfFLoors, Integer numOfSlotsPerFloor) {
         this.parkingLotId = parkingLotId;
         this.numOfFLoors = numOfFLoors;
