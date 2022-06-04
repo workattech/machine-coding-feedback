@@ -1,0 +1,63 @@
+9
+62 5
+33 6
+49 9
+88 16
+41 20
+56 53
+98 64
+93 73
+95 75
+8
+2 37
+27 46
+10 32
+51 68
+61 79
+65 84
+71 91
+81 100
+2
+Gaurav
+Sagar
+Gaurav rolled a 1 and moved from 0 to 1
+Sagar rolled a 5 and moved from 0 to 5
+Gaurav rolled a 5 and moved from 1 to 6
+Sagar rolled a 3 and moved from 5 to 8
+Gaurav rolled a 2 and moved from 6 to 8
+Sagar rolled a 5 and moved from 8 to 13
+Gaurav rolled a 6 and moved from 8 to 14
+Sagar rolled a 2 and moved from 13 to 15
+Gaurav rolled a 4 and moved from 14 to 18
+Sagar rolled a 5 and moved from 15 to 20
+Gaurav rolled a 3 and moved from 18 to 21
+Sagar rolled a 1 and moved from 20 to 21
+Gaurav rolled a 1 and moved from 21 to 22
+Sagar rolled a 4 and moved from 21 to 25
+Gaurav rolled a 2 and moved from 22 to 24
+Sagar rolled a 4 and moved from 25 to 29
+Gaurav rolled a 3 and moved from 24 to 46
+Sagar rolled a 5 and moved from 29 to 34
+Gaurav rolled a 6 and moved from 46 to 52
+Sagar rolled a 5 and moved from 34 to 39
+Gaurav rolled a 3 and moved from 52 to 55
+Sagar rolled a 6 and moved from 39 to 45
+Gaurav rolled a 3 and moved from 55 to 58
+Sagar rolled a 3 and moved from 45 to 48
+Gaurav rolled a 2 and moved from 58 to 60
+Sagar rolled a 6 and moved from 48 to 54
+Gaurav rolled a 3 and moved from 60 to 63
+Sagar rolled a 3 and moved from 54 to 57
+Gaurav rolled a 3 and moved from 63 to 66
+Sagar rolled a 4 and moved from 57 to 79
+Gaurav rolled a 2 and moved from 66 to 68
+Sagar rolled a 4 and moved from 79 to 83
+Gaurav rolled a 3 and moved from 68 to 91
+Sagar rolled a 6 and moved from 83 to 89
+Gaurav rolled a 6 and moved from 91 to 97
+Sagar rolled a 3 and moved from 89 to 92
+Gaurav rolled a 5 and remains at same position
+Sagar rolled a 3 and moved from 92 to 75
+Gaurav rolled a 4 and remains at same position
+Sagar rolled a 6 and moved from 75 to 100
+Sagar wins the game
