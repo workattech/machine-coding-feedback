@@ -5,15 +5,15 @@ public class Player {
     private String Name;
     private int currentPosition;
 
-    public String getName() {
+    String getName() {
         return Name;
     }
 
-    public int getCurrentPosition() {
+    int getCurrentPosition() {
         return currentPosition;
     }
 
-    public void setCurrentPosition(int currentPosition) {
+    void setCurrentPosition(int currentPosition) {
         this.currentPosition = currentPosition;
     }
 
@@ -22,14 +22,17 @@ public class Player {
         this.currentPosition = currentPosition;
     }
 
-    public void makeMove(Die die)
+    int makeMove(Die die)
     {
-        die.roll();
-    }
-
-    public boolean checkWinner(Board board)
-    {
-        return (this.currentPosition == board.getSize());
+        int iterations = 0, moves = 0;
+        while (moves == 0 || (die.getCurrentFace()== 6 && iterations < 3))
+        {
+            die.roll();
+            moves += die.getCurrentFace();
+            iterations++;
+            System.out.println(this.Name+" rolled a "+die.getCurrentFace());
+        }
+        return (iterations==3 && moves%6==0)?0:moves;
     }
 
 }

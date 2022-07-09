@@ -1,51 +1,47 @@
 package com.app.models;
 
-import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Objects;
 
-public class Board {
+class Board {
     private int Size;
-    private List<Snake> snakes;
-    private List<Ladder> ladders;
+    private Map<Integer, Cell> cells;
 
     int getSize() {
         return Size;
     }
 
-    public Board(int size, List<Snake> snakes, List<Ladder> ladders) {
+    Board(int size, List<Jump> snakes, List<Jump> ladders) {
         Size = size;
-        this.snakes = snakes;
-        this.ladders = ladders;
+        cells = new HashMap<>();
+        for (Jump snake:snakes)
+        {
+            cells.put(snake.getStartPosition(), new Cell(snake.getStartPosition(), snake.getEndPosition()));
+        }
+        for (Jump ladder:ladders)
+        {
+            cells.put(ladder.getStartPosition(), new Cell(ladder.getStartPosition(), ladder.getEndPosition()));
+        }
+
     }
 
-    public int updatePlayerPosition(int currentPosition, int movements)
+    int updatePlayerPosition(int currentPosition, int movements)
     {
         int newPosition = currentPosition + movements;
-        int position = newPosition;
-        newPosition = this.checkHeadAndGetSnakeTailPosition(newPosition);
-        newPosition = this.checkStartAndGetLadderEndPosition(newPosition);
+        newPosition = this.checkAndGetEndPosition(newPosition);
         return newPosition > this.Size ? currentPosition:newPosition;
     }
 
-    private int checkHeadAndGetSnakeTailPosition(int position)
+    private int checkAndGetEndPosition(int position)
     {
-        for (Snake snake: this.snakes)
+        Cell cell = this.cells.get(position);
+        if (Objects.nonNull(cell))
         {
-            if (snake.headPosition == position)
-            {
-                return checkHeadAndGetSnakeTailPosition(snake.tailPosition);
-            }
+            return checkAndGetEndPosition(cell.getEndPosition());
         }
         return position;
     }
 
-    private int checkStartAndGetLadderEndPosition(int position)
-    {
-        for (Ladder ladder: this.ladders)
-        {
-            if (ladder.startPosition == position)
-                return checkStartAndGetLadderEndPosition(ladder.endPosition);
-        }
-        return position;
-    }
 }
