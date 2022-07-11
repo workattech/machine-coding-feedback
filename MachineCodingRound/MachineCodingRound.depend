@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1567859660 source:c:\users\wajid.zaman\videos\new folder\fitso\mock-machine-coding-1\machinecodinground\main.cpp
+	<iostream>
+	<bits/stdc++.h>
+
+1567853791 c:\users\wajid.zaman\videos\new folder\fitso\mock-machine-coding-1\machinecodinground\include\wajid.h
+	<bits/stdc++.h>
+
+1567853427 source:c:\users\wajid.zaman\videos\new folder\fitso\mock-machine-coding-1\machinecodinground\src\wajid.cpp
+	"wajid.h"
+
+1567864699 source:c:\users\wajid.zaman\music\ff.cpp
+	<bits/stdc++.h>
+
