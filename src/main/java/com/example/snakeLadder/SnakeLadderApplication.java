@@ -6,10 +6,10 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
 @EnableScheduling
-public class SnakeLadderMain {
+public class SnakeLadderApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SnakeLadderMain.class, args);
+        SpringApplication.run(SnakeLadderApplication.class, args);
     }
 
 }

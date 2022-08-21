@@ -1,10 +1,10 @@
-package com.example.cvm;
+package com.example.snakeLadder;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class CvmApplicationTests {
+class SnakeLadderApplicationTests {
 
 	@Test
 	void contextLoads() {
