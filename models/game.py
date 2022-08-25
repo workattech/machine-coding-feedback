@@ -1,4 +1,3 @@
-import logging
 from models.player import Player
 from models.board import Board
 import random
