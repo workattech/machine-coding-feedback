@@ -1,0 +1,1 @@
+To run :- g++ *.cpp -o main; ./main;

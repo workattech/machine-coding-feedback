@@ -1,9 +1,0 @@
-#pragma once
-#include "./Class/User.cpp"
-#include "./Class/ExpenseTable.cpp"
-#include "./Class/Printer.cpp"
-#include "./Class/Expenses.cpp"
-#include "./Class/UserIdAndUserMap.cpp"
-#include "./Class/Splitwise.cpp"
-#include "./Class/Command.cpp"
-#include "./Class/constants.cpp"

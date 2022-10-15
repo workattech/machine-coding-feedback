@@ -27,25 +27,26 @@ public:
     
     void addExpenses(vector<string> &cmd){
         int numOfOwner = stoi(cmd[3]);
-        string type = cmd[4 + numOfOwner];
+        string typeOfLending = cmd[4 + numOfOwner];
         Expenses expenses;
-        if(type == EQUAL)
+        if(typeOfLending == EQUAL)
             expenses.equalExpenses(userIdAndUserMap, cmd);
-        else if(type == EXACT)
+        else if(typeOfLending == EXACT)
             expenses.exactExpenses(userIdAndUserMap, cmd);
-        else if(type == PERCENT)
+        else if(typeOfLending == PERCENT)
             expenses.percentExpenses(userIdAndUserMap, cmd);
         expenseTable.addExpenses(&expenses);
     }
+
     void processCommand(string s){
         vector<string> cmd = command.process(s);
-        if(cmd[0] == SHOW){
+        const string typeOfCommand = cmd[0];
+        if(typeOfCommand == SHOW){
             if(cmd.size() == 1) this->showExpenses();
             else this->showExpenses(cmd[1]);
             cout << "\n";
         }
-        else if(cmd[0] == EXPENSE){
+        else if(typeOfCommand == EXPENSE)
             this->addExpenses(cmd);
-        }
     }
 };
