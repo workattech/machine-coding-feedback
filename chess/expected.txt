@@ -1,0 +1,113 @@
+BR BN BB BQ BK BB BN BR
+BP BP BP BP BP BP BP BP
+-- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- --
+WP WP WP WP WP WP WP WP
+WR WN WB WQ WK WB WN WR
+
+BR BN BB BQ BK BB BN BR
+BP BP BP BP BP BP BP BP
+-- -- -- -- -- -- -- --
+-- -- -- -- -- -- -- --
+-- -- -- -- WP -- -- --
+-- -- -- -- -- -- -- --
+WP WP WP WP -- WP WP WP
+WR WN WB WQ WK WB WN WR
+
+BR BN BB BQ BK BB BN BR
+BP BP BP BP -- BP BP BP
+-- -- -- -- -- -- -- --
+-- -- -- -- BP -- -- --
+-- -- -- -- WP -- -- --
+-- -- -- -- -- -- -- --
+WP WP WP WP -- WP WP WP
+WR WN WB WQ WK WB WN WR
+
+BR BN BB BQ BK BB BN BR
+BP BP BP BP -- BP BP BP
+-- -- -- -- -- -- -- --
+-- -- -- -- BP -- -- --
+-- -- WB -- WP -- -- --
+-- -- -- -- -- -- -- --
+WP WP WP WP -- WP WP WP
+WR WN WB WQ WK -- WN WR
+
+BR -- BB BQ BK BB BN BR
+BP BP BP BP -- BP BP BP
+-- -- BN -- -- -- -- --
+-- -- -- -- BP -- -- --
+-- -- WB -- WP -- -- --
+-- -- -- -- -- -- -- --
+WP WP WP WP -- WP WP WP
+WR WN WB WQ WK -- WN WR
+
+BR -- BB BQ BK BB BN BR
+BP BP BP BP -- BP BP BP
+-- -- BN -- -- -- -- --
+-- -- -- -- BP -- -- WQ
+-- -- WB -- WP -- -- --
+-- -- -- -- -- -- -- --
+WP WP WP WP -- WP WP WP
+WR WN WB -- WK -- WN WR
+
+BR -- BB BQ BK BB -- BR
+BP BP BP BP -- BP BP BP
+-- -- BN -- -- BN -- --
+-- -- -- -- BP -- -- WQ
+-- -- WB -- WP -- -- --
+-- -- -- -- -- -- -- --
+WP WP WP WP -- WP WP WP
+WR WN WB -- WK -- WN WR
+
+BR -- BB BQ BK BB -- BR
+BP BP BP BP -- WQ BP BP
+-- -- BN -- -- BN -- --
+-- -- -- -- BP -- -- --
+-- -- WB -- WP -- -- --
+-- -- -- -- -- -- -- --
+WP WP WP WP -- WP WP WP
+WR WN WB -- WK -- WN WR
+
+Invalid Move
+Invalid Move
+Invalid Move
+Invalid Move
+Invalid Move
+Invalid Move
+BR -- BB BQ BK BB BR --
+BP BP BP BP -- WQ BP BP
+-- -- BN -- -- BN -- --
+-- -- -- -- BP -- -- --
+-- -- WB -- WP -- -- --
+-- -- -- -- -- -- -- --
+WP WP WP WP -- WP WP WP
+WR WN WB -- WK -- WN WR
+
+BR -- BB BQ BK BB BR --
+BP BP BP BP -- WQ BP BP
+-- -- BN -- -- BN -- --
+-- -- -- -- BP -- -- --
+-- -- WB -- WP WP -- --
+-- -- -- -- -- -- -- --
+WP WP WP WP -- -- WP WP
+WR WN WB -- WK -- WN WR
+
+BR -- BB BQ BK BB BR --
+BP BP BP BP -- WQ BP BP
+-- -- BN -- -- BN -- --
+-- -- -- -- -- -- -- --
+-- -- WB -- WP BP -- --
+-- -- -- -- -- -- -- --
+WP WP WP WP -- -- WP WP
+WR WN WB -- WK -- WN WR
+
+BR -- BB BQ WQ BB BR --
+BP BP BP BP -- -- BP BP
+-- -- BN -- -- BN -- --
+-- -- -- -- -- -- -- --
+-- -- WB -- WP BP -- --
+-- -- -- -- -- -- -- --
+WP WP WP WP -- -- WP WP
+WR WN WB -- WK -- WN WR
