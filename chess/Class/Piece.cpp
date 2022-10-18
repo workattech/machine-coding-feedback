@@ -6,13 +6,6 @@ using namespace std;
 
 
 class Piece{
-public:
-    string color;
-    string type;
-    Piece(string color, string type){
-        this->color = color;
-        this->type = type;
-    }
 
     bool pawnMove(vector<vector<Piece*>> &board, pair<int,int> &curCell, pair<int,int> &nextCell){
         int curRow = curCell.first, curCol = curCell.second;
@@ -164,7 +157,15 @@ public:
         }
         return false;
     }
-    
+
+public:
+    string color;
+    string type;
+    Piece(string color, string type){
+        this->color = color;
+        this->type = type;
+    }
+
     bool move(vector<vector<Piece*>> &board, pair<int,int> &curCell, pair<int,int> &nextCell){
         if(this->type == P) return pawnMove(board, curCell, nextCell);
         if(this->type == R) return rookMove(board, curCell, nextCell);

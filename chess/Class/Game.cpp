@@ -85,11 +85,13 @@ public:
         this->nextCell = moveConverter(nextCell);
     }
 
-
     bool isValidAndMove(){
         int curRow = this->curCell.first, curCol = this->curCell.second;
+        int nextRow = this->nextCell.first, nextCol = this->nextCell.second;
         Piece *curPiece = this->board[curRow][curCol];
         if(curPiece == NULL || curPiece->color != this->curPlayer)
+            return false;
+        if(board[nextRow][nextCol] != NULL and board[nextRow][nextCol]->color == curPiece->color)
             return false;
         return curPiece->move(this->board, this->curCell, this->nextCell);
     }
