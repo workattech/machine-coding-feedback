@@ -6,7 +6,7 @@ import main.java.PhoneBook.Model.User;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import test.java.PhoneBook.Base;
+import test.java.PhoneBook.Base.Base;
 
 import java.util.HashMap;
 
@@ -24,7 +24,7 @@ public class UpdateUserLastNameTest extends Base {
       Assert.assertEquals(Boolean.TRUE, phoneBook.add(user));
       users.put(user.getUserId(), user);
     }
-    System.out.println("INFO User added count of users:- " + usersList.size());
+    log("INFO User added count of users:- " + usersList.size());
   }
 
   @Test(testName = "Update user last name and complete search for updated field and old field")

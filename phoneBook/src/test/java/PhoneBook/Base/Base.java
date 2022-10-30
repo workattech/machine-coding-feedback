@@ -1,4 +1,4 @@
-package test.java.PhoneBook;
+package test.java.PhoneBook.Base;
 
 import main.java.PhoneBook.Model.User;
 import main.java.PhoneBook.PhoneBook;

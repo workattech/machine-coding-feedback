@@ -6,11 +6,10 @@ import main.java.PhoneBook.Model.User;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import test.java.PhoneBook.Base;
+import test.java.PhoneBook.Base.Base;
 
 import java.util.HashMap;
 
-import static main.java.PhoneBook.Constant.Fields.FIRST_NAME;
 import static main.java.PhoneBook.Constant.Fields.PHONE_NUMBER;
 import static main.java.PhoneBook.Constant.SearchType.COMPLETE_SEARCH;
 import static main.java.PhoneBook.Constant.SearchType.PARTIAL_SEARCH;
@@ -27,7 +26,7 @@ public class UpdateUserPhoneNumber extends Base {
       Assert.assertEquals(Boolean.TRUE, phoneBook.add(user));
       users.put(user.getUserId(), user);
     }
-    System.out.println("INFO User added count of users:- " + usersList.size());
+    log("User added count of users:- " + usersList.size());
   }
 
   @Test(testName = "Update user phone number and complete search for updated field and old field")

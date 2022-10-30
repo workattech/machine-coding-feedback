@@ -6,7 +6,7 @@ import main.java.PhoneBook.Model.User;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import test.java.PhoneBook.Base;
+import test.java.PhoneBook.Base.Base;
 
 import java.util.HashMap;
 

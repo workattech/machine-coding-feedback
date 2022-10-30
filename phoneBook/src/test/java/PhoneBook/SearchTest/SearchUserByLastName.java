@@ -6,7 +6,7 @@ import main.java.PhoneBook.Model.User;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import test.java.PhoneBook.Base;
+import test.java.PhoneBook.Base.Base;
 
 import static main.java.PhoneBook.Constant.Fields.LAST_NAME;
 import static main.java.PhoneBook.Constant.SearchType.COMPLETE_SEARCH;
@@ -17,7 +17,7 @@ public class SearchUserByLastName extends Base {
   public void beforeClass(){
     for (User user : usersList)
       Assert.assertEquals(Boolean.TRUE, phoneBook.add(user));
-    System.out.println("INFO User added count of users:- " + usersList.size());
+    log("User added count of users:- " + usersList.size());
   }
 
   @Test(testName = "Search for user by last name search type complete search")
