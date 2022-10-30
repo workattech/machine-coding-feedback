@@ -18,11 +18,12 @@ public class SearchUserByFirstName extends Base {
   public void beforeClass(){
     for (User user : usersList)
       Assert.assertEquals(Boolean.TRUE, phoneBook.add(user));
-    System.out.println("INFO User added count of users:- " + usersList.size());
+    log("User added count of users:- " + usersList.size());
   }
 
   @Test(testName = "Search for user by first name search type complete search")
   public void searchComplete() {
+    log("Searching for user first name in phone. Search type COMPLETE");
     for(User user : usersList){
       SearchRequest searchRequest = new SearchRequest(COMPLETE_SEARCH.name(), FIRST_NAME.name(), user.getFirstName());
       SearchResponse searchResponse = phoneBook.search(searchRequest);
@@ -31,6 +32,7 @@ public class SearchUserByFirstName extends Base {
   }
   @Test(testName = "Search for user by first name search type partial search")
   public void searchPartial() {
+    log("Searching for user first name in phone. Search type PARTIAL");
     for(User user : usersList){
       SearchRequest searchRequest = new SearchRequest(PARTIAL_SEARCH.name(), FIRST_NAME.name(), utils.getRandomPrefix(user.getFirstName()));
       SearchResponse searchResponse = phoneBook.search(searchRequest);

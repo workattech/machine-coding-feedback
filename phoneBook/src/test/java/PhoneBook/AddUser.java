@@ -10,6 +10,6 @@ public class AddUser extends Base {
     public void AddUsers(){
         for (User user : usersList)
             Assert.assertEquals(Boolean.TRUE, phoneBook.add(user));
-        System.out.println("INFO User added count of users:- " + usersList.size());
+        log("User added count of users:- " + usersList.size());
     }
 }

@@ -51,9 +51,7 @@ public class PhoneBook implements PhoneBookInterface {
         Node searchedField = fields.get(field);
         List<String> userIds = searchedField.search(searchRequest.getSearchType(), searchRequest.getQuery());
         List<User> users = new ArrayList<>();
-        userIds.forEach(userId -> {
-            users.add(DB.get(userId));
-        });
+        userIds.forEach(userId -> users.add(DB.get(userId)));
         return new SearchResponse(users);
     }
 }

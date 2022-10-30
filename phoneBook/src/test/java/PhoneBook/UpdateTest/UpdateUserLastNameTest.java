@@ -27,8 +27,9 @@ public class UpdateUserLastNameTest extends Base {
     System.out.println("INFO User added count of users:- " + usersList.size());
   }
 
-  @Test
+  @Test(testName = "Update user last name and complete search for updated field and old field")
   public void updateLastNameVerifyByCompleteSearch(){
+    log("Update user last name and complete search for updated field and old field");
     users.forEach( (userId, oldUser) -> {
       String newLastName;
       // as names are created randomly there is still a chance they can collide
@@ -52,8 +53,9 @@ public class UpdateUserLastNameTest extends Base {
     });
   }
 
-  @Test
+  @Test(testName = "Update user last name and partial search for updated field and old field")
   public void updateLastNameVerifyByPartialSearch(){
+    log("Update user last name and partial search for updated field and old field");
     users.forEach( (userId, oldUser) -> {
       String newLastName;
       // as names are created randomly there is still a chance they can collide

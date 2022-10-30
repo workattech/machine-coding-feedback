@@ -20,4 +20,9 @@ public class Base {
     for(int i = 0 ; i < userCount ; ++i)
       usersList.add(utils.randomUserGen());
   }
+
+  public void log(String message){
+    System.out.println("INFO :- " + message);
+  }
+
 }

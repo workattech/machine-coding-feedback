@@ -30,8 +30,9 @@ public class UpdateUserPhoneNumber extends Base {
     System.out.println("INFO User added count of users:- " + usersList.size());
   }
 
-  @Test
+  @Test(testName = "Update user phone number and complete search for updated field and old field")
   public void updateFirstNameVerifyByCompleteSearch(){
+    log("Update user phone number and complete search for updated field and old field");
     users.forEach( (userId, oldUser) -> {
       String newPhoneNumber;
       // as names are created randomly there is still a chance they can collide
@@ -55,8 +56,9 @@ public class UpdateUserPhoneNumber extends Base {
     });
   }
 
-  @Test
+  @Test(testName = "Update user phone number and partial search for updated field and old field")
   public void updateFirstNameVerifyByPartialSearch(){
+    log("Update user phone number and partial search for updated field and old field");
     users.forEach( (userId, oldUser) -> {
       String newPhoneNumber;
       // as names are created randomly there is still a chance they can collide

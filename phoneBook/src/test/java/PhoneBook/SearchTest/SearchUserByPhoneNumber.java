@@ -22,6 +22,7 @@ public class SearchUserByPhoneNumber extends Base {
 
   @Test(testName = "Search for user by phone number search type complete search")
   public void searchComplete() {
+    log("Searching for user phone in phone. Search type COMPLETE");
     for(User user : usersList){
       SearchRequest searchRequest = new SearchRequest(COMPLETE_SEARCH.name(), PHONE_NUMBER.name(), user.getPhoneNumber());
       SearchResponse searchResponse = phoneBook.search(searchRequest);
@@ -30,6 +31,8 @@ public class SearchUserByPhoneNumber extends Base {
   }
   @Test(testName = "Search for user by phone number search type partial search")
   public void searchPartial() {
+    log("Searching for user phone in phone. Search type PARTIAL");
+
     for(User user : usersList){
       SearchRequest searchRequest = new SearchRequest(PARTIAL_SEARCH.name(), PHONE_NUMBER.name(), utils.getRandomPrefix(user.getPhoneNumber()));
       SearchResponse searchResponse = phoneBook.search(searchRequest);
