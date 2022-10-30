@@ -27,11 +27,9 @@ public class User {
     public String getUserId() {
         return userId;
     }
-
     public String getFirstName() {
         return firstName;
     }
-
     public String getLastName() {
         return lastName;
     }
@@ -49,5 +47,9 @@ public class User {
                 return this.getLastName();
         }
         return null;
+    }
+
+    public void print(){
+        System.out.println(this.userId + " " + this.firstName + " " + this.lastName + " " + this.phoneNumber);
     }
 }

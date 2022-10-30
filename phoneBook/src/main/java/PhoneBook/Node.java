@@ -38,10 +38,10 @@ public class Node {
         if(fieldValueNew.equals(fieldValueOld))
             return true;
         Node node = this;
-        String parameterOld = fieldValueOld.toLowerCase();
+        String oldParameter = fieldValueOld.toLowerCase();
         String newParameter = fieldValueNew.toLowerCase();
-        for(int i = 0 ; i < parameterOld.length() ; ++i){
-            char c = parameterOld.charAt(i);
+        for(int i = 0 ; i < oldParameter.length() ; ++i){
+            char c = oldParameter.charAt(i);
             if(!node.children.containsKey(c))
                 return false;
             node = node.children.get(c);
@@ -52,7 +52,7 @@ public class Node {
         if(!node.userIdsComplete.contains(userId))
             return false;
         node.userIdsComplete.remove(userId);
-        return add(userId, newParameter);
+        return add(userId, fieldValueNew);
     }
 
     public List<String> search(String searchType, String query){

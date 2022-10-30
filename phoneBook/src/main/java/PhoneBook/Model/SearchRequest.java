@@ -6,7 +6,6 @@ import main.java.PhoneBook.Constant.SearchType;
 public class SearchRequest {
     String searchType;
     String searchField;
-
     String query;
 
     public SearchRequest(String searchType, String searchField, String query) {
