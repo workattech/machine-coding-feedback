@@ -1,4 +1,4 @@
-package test.java.PhoneBook;
+package test.java.PhoneBook.AddTest;
 
 import main.java.PhoneBook.Model.User;
 import org.testng.Assert;
