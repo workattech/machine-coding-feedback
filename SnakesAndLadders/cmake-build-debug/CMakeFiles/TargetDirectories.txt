@@ -1,0 +1,3 @@
+C:/Users/cs160/OneDrive/Desktop/mock-machine-coding-1/SnakesAndLadders/cmake-build-debug/CMakeFiles/SnakesAndLadders.dir
+C:/Users/cs160/OneDrive/Desktop/mock-machine-coding-1/SnakesAndLadders/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/cs160/OneDrive/Desktop/mock-machine-coding-1/SnakesAndLadders/cmake-build-debug/CMakeFiles/rebuild_cache.dir
