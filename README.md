@@ -4,8 +4,8 @@ Author : [Md Sharique Eliyas](https://github.com/mdshariqueeliyas)
 
 How to build and run code
  - Clone the repo and switch to root of the repo
- - `find . -name "*.java" | xargs javac -d target ` this will generate all `.class` files in `target` directory
- - Switch to target directory and run ` java io.shaeli.machinecoding.snakeandladder.Driver < ../src/main/resources/input.txt`
+ - run ```find . -name "*.java" | xargs javac -d target``` this will generate all `.class` files in `target` directory
+ - Switch to target directory and run ```java io.shaeli.machinecoding.snakeandladder.Driver < ../src/main/resources/input.txt```
  - You can update src/main/resources/input.txt file to update board size, number of players, snake and ladders
- - Or you can directly run ` java io.shaeli.machinecoding.snakeandladder.Driver` and this will ask for all the configurations of game.
+ - Or you can directly run ```java io.shaeli.machinecoding.snakeandladder.Driver``` and this will ask for all the configurations of game.
  
