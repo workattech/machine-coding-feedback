@@ -1,8 +1,11 @@
-# Machine Coding Review Repo
-Get your [practice machine coding](https://workat.tech/machine-coding/practice) solutions reviewed by [Gaurav Chandak](https://www.linkedin.com/in/gcnit/) and get feedback before your machine coding round.
+# Solution of Snake and Ladder game Machine Coding
+Problem Link : [Create a snake and ladder application.](https://workat.tech/machine-coding/editorial/how-to-design-snake-and-ladder-machine-coding-ehskk9c40x2w)
+Author : [Md Sharique Eliyas](https://github.com/mdshariqueeliyas)
 
-Steps:
-- [Fork this repo and clone it in your laptop/desktop](https://workattech.github.io/machine-coding-feedback/#setup)
-- Start solving [one of the practice problems](https://workat.tech/machine-coding/practice) in a timed manner. Follow the [best practices](https://workat.tech/machine-coding/article/how-to-ace-machine-coding-round-hi8lnpp8tlmo).
-- [Push the code](https://workattech.github.io/machine-coding-feedback/#submission)
-- Wait for review. Message us on Whatsapp (9732130450) if you need to get it done urgently.
+How to build and run code
+ - Clone the repo and switch to root of the repo
+ - `find . -name "*.java" | xargs javac -d target ` this will generate all `.class` files in `target` directory
+ - Switch to target directory and run ` java io.shaeli.machinecoding.snakeandladder.Driver < ../src/main/resources/input.txt`
+ - You can update src/main/resources/input.txt file to update board size, number of players, snake and ladders
+ - Or you can directly run ` java io.shaeli.machinecoding.snakeandladder.Driver` and this will ask for all the configurations of game.
+ 
