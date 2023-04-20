@@ -6,6 +6,7 @@
 #include <iostream>
 #include <random>
 #include <string>
+#include <unordered_set>
 
 class Game {
 private:
@@ -19,6 +20,7 @@ public:
     int board_size();
     void take_input();
     int roll_dice();
+    int roll_dice_twice();
     void reset_players();
     void play();
 };
@@ -76,6 +78,11 @@ int Game::roll_dice() {
     return dist(mt);
 }
 
+int Game::roll_dice_twice() {
+    int die1 = roll_dice(), die2 = roll_dice();
+    return die1 + die2;
+}
+
 // Function for resetting player positions
 void Game::reset_players() {
     for (auto player : players)
@@ -84,20 +91,37 @@ void Game::reset_players() {
 
 // Function to start playing the game
 void Game::play () {
+    std::unordered_set <Player *> won;
     std::cout << "Playing...\n\n";
 
     while (1) {
         for (auto player:players) {
+            if (won.count(player))  continue;
+
             int curr = player->currPos;
             int roll = roll_dice();
-            if (curr + roll > 100)  continue;
+            if (roll == 6) {
+                int roll2 = roll_dice();
+                roll += roll2;
+                if (roll2 == 6) {
+                    int roll3 = roll_dice();
+                    roll += roll3;
+                    if (roll3 == 6) {
+                        roll = 0;
+                    }
+                }
+            }
+            if (curr + roll > BOARD_SIZE)  continue;
             int next = pos[curr + roll];
 
             std::cout << player->name << " rolled a " << roll << " and moved from " << curr << " to " << next << "\n";
-            if (next == 100) {
+            if (next == BOARD_SIZE) {
                 std::cout << player->name << " wins the game\n";
-                reset_players();
-                return;
+                won.insert(player);
+                if (won.size() == players.size()-1) {
+                    reset_players();
+                    return;
+                }
             }
             else {
                 player->currPos = next;
