@@ -4,35 +4,11 @@ public class User
     public string Name { get; set; } = string.Empty;
     public string Mobile { get; set; } = string.Empty;
     public string Email { get; set; } = string.Empty;
-    public Dictionary<string,int> Owes = new Dictionary<string, int>();
 
-    public void RecordExpense(Expense expense)
+    public User(string id,string name)
     {
-        throw new NotImplementedException();
+        Id = id;
+        Name = name ;
     }
-
-    public void ShowBalance()
-    {
-        foreach(var (key,value) in Owes)
-        {
-            if(key == Id)
-            {
-                continue;
-            }
-            if(value > 0)
-            {
-                Console.WriteLine($"{Name} owes {key} : {value} ");
-            }
-            if(value < 0)
-            {
-                Console.WriteLine($"{key} owes {Name} : {value} ");
-            }
-        }
-    }
-
-
-
-
-
 
 }
