@@ -8,3 +8,10 @@ tests/out
 .DS_Store
 .*
 !.gitignore
+
+SnakesAndLadders/bin/
+SnakesAndLadders/obj/
+
+
+Splitwise/obj/
+Splitwise/bin/
