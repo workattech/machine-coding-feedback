@@ -1,0 +1,63 @@
+Input 
+
+X Gaurav
+O Sagar
+2 3
+1 2
+2 2
+2 1
+1 1
+3 3
+3 2
+3 1
+1 3
+exit
+
+Output
+
+
+---
+--X
+---
+
+
+-O-
+--X
+---
+
+
+-O-
+-XX
+---
+
+
+-O-
+OXX
+---
+
+
+XO-
+OXX
+---
+
+
+XO-
+OXX
+--O
+
+
+XO-
+OXX
+-XO
+
+
+XO-
+OXX
+OXO
+
+
+XOX
+OXX
+OXO
+
+GAME OVER!!!
