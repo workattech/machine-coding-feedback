@@ -8,10 +8,12 @@ import com.pankaj.parkingsystem.service.impl.ParkingLotSystemServiceImpl;
 public class ParkingLotSystemMain {
 
 	public static void main(String[] args) {
+		System.out.println("Welcome!!!");
 		Scanner io = new Scanner(System.in);
 		IParkingLotSystemService parkingLotSystemService = new ParkingLotSystemServiceImpl();
 		while(io.hasNextLine()) {
 			String input = io.nextLine();
+			System.out.println();
 			String[] commands = input.trim().split(" ");
 			String command = commands[0];
 			switch(command) {
@@ -38,7 +40,7 @@ public class ParkingLotSystemMain {
             case "exit":
                 System.exit(0);
             default:
-                throw new IllegalStateException("Invalid Command");
+            	System.out.println("Invalid Command!!!");
 
 			}
 		}

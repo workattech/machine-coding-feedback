@@ -16,11 +16,6 @@ public class ParkingLotSystemServiceImpl implements IParkingLotSystemService{
 	
 	String parkingLotId;
 	
-
-	public String getParkingLotId() {
-		return parkingLotId;
-	}
-	
 	@Override
 	public String createParkingLot(String lotId, int floors, int slotsPerFloor) {
 		ParkingLot parkinglot = new ParkingLot(lotId, floors, slotsPerFloor);
@@ -46,17 +41,13 @@ public class ParkingLotSystemServiceImpl implements IParkingLotSystemService{
 		return "";
 	}
 
-	private String generateParkingTicketId(int i, int j) {		
-		return parkingLotId+"_" + i+ "_" + j;
-	}
-
 	@Override
 	public String removeVehice(String ticket) {
 		String[] split_ticket = ticket.trim().split("_");
-		List<Floor> floors = dao.getParkingLot(parkingLotId).getFloors();
+		List<Floor> floors = dao.getParkingLot(split_ticket[0]).getFloors();
 		if(floors==null)
 			return "Invalid Ticket";
-		if(Integer.parseInt(split_ticket[1])> floors.size() || Integer.parseInt(split_ticket[1])> floors.get(0).getSlotsPerFloor())
+		if(Integer.parseInt(split_ticket[1])> floors.size() || Integer.parseInt(split_ticket[2])> floors.get(0).getSlotsPerFloor())
 			return "Invalid Ticket";
 		Slot slot = floors.get(Integer.parseInt(split_ticket[1])-1).getSlots().get(Integer.parseInt(split_ticket[2])-1);
 		if(!slot.isOccupied())
@@ -84,6 +75,10 @@ public class ParkingLotSystemServiceImpl implements IParkingLotSystemService{
 			
 		}
 			
+	}
+	
+	private String generateParkingTicketId(int i, int j) {		
+		return parkingLotId+"_" + i + "_" + j;
 	}
 
 	private void displayOccupiedSlots(String vehicleType) {
