@@ -8,7 +8,6 @@ public class PercentageSplit extends Split{
 		this.percent=percent;
 	}
 	
-	
 	public double getPercent() {
 		return percent;
 	}

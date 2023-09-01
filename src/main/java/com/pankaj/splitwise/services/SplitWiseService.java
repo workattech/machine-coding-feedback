@@ -3,17 +3,11 @@ package com.pankaj.splitwise.services;
 import java.text.DecimalFormat;
 import java.util.HashMap;
 import java.util.List;
-
-import com.pankaj.splitwise.models.EqualExpense;
-import com.pankaj.splitwise.models.ExactExpense;
-import com.pankaj.splitwise.models.Expense;
-import com.pankaj.splitwise.models.PercentageExpense;
 import com.pankaj.splitwise.models.PercentageSplit;
 import com.pankaj.splitwise.models.Split;
 import com.pankaj.splitwise.models.User;
 
 public class SplitWiseService {
-
 	private HashMap<User, HashMap<User, Double>> balanceSheet;
 	private HashMap<String, User> userMap;
 

@@ -57,7 +57,6 @@ public class SplitWiseMain {
 							splits.add(new ExactSplit(user, Double.parseDouble(commands[expenseIndex + i + 1])));
 						}
 						splitWiseService.addExpense(way, userName, amountSpend, splits);
-
 						break;
 					case "PERCENT":
 						for (int i = 0; i < totalMembers; i++) {
