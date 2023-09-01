@@ -1,0 +1,50 @@
+SPLIT-WISE
+
+SHOW
+SHOW u1
+EXPENSE u1 1000 4 u1 u2 u3 u4 EQUAL
+SHOW u4
+SHOW u1
+EXPENSE u1 1250 2 u2 u3 EXACT 370 880
+SHOW
+EXPENSE u4 1200 4 u1 u2 u3 u4 PERCENT 40 20 20 20
+SHOW u1
+SHOW
+No Balances
+
+No Balances
+
+
+u4 owes u1: 250.0
+
+u2 owes u1: 250.0
+u4 owes u1: 250.0
+u3 owes u1: 250.0
+
+
+u2 owes u1: 620.0
+u4 owes u1: 250.0
+u2 owes u1: 620.0
+u4 owes u1: 250.0
+u3 owes u1: 1130.0
+u3 owes u1: 1130.0
+
+
+u2 owes u1: 620.0
+u1 owes u4: 230.0
+u3 owes u1: 1130.0
+
+
+u2 owes u4: 240.0
+u2 owes u1: 620.0
+u2 owes u4: 240.0
+u1 owes u4: 230.0
+u3 owes u4: 240.0
+u2 owes u1: 620.0
+u1 owes u4: 230.0
+u3 owes u1: 1130.0
+u3 owes u4: 240.0
+u3 owes u1: 1130.0
+
+
+No Expected Argument Found
