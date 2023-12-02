@@ -23,7 +23,7 @@ public class Main {
             names.add(args[i]);
         }
         Game game = Game.getInstance();
-        game.initializeGame(2,snakes,ladders, names);
+        game.initializeGame(noOfPlayers,snakes,ladders, names);
         game.Play();
     }
 }
