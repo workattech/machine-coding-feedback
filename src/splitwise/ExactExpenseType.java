@@ -16,7 +16,7 @@ public class ExactExpenseType implements ExpenseType {
         int numberOfUsersInvolvedInTheTransaction = Integer.parseInt(query[3]);
         this.payer = appConfig.getUserFromId(query[1]);
         this.amountPaid = Double.parseDouble(query[2]);
-        if (query.length != 4 + numberOfUsersInvolvedInTheTransaction) {
+        if (query.length != 5 + 2 * numberOfUsersInvolvedInTheTransaction) {
             throw new IllegalArgumentException("Number of users does not match the provided user list.");
         }
         for (int i = 4; i < 4 + numberOfUsersInvolvedInTheTransaction; ++i) {
