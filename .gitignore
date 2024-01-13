@@ -8,3 +8,4 @@ tests/out
 .DS_Store
 .*
 !.gitignore
+./LEARNING.md
