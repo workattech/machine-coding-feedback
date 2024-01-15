@@ -14,28 +14,28 @@ public class ParkingLotTest {
     }
 
     @Test
-    public void testParkVehicle() {
+    public void testParkVehicle() throws IllegalAccessException {
         ParkingSlot parkingSlot;
         Vehicle carVehicle = new Vehicle(VehicleType.CAR, "1234", "white");
         parkingSlot = parkingLot.parkVehicle(carVehicle);
-        assertEquals(parkingSlot.tickedId, "PR1234_1_4");
-        assertEquals(parkingSlot.parkedVehicle, carVehicle);
+        assertEquals(parkingSlot.getTicketId(), "PR1234_1_4");
+        assertEquals(parkingSlot.getParkedVehicle(), carVehicle);
         Vehicle anotherCarVehicle = new Vehicle(VehicleType.CAR, "1235", "white");
         parkingSlot = parkingLot.parkVehicle(anotherCarVehicle);
-        assertEquals(parkingSlot.tickedId, "PR1234_1_5");
-        assertEquals(parkingSlot.parkedVehicle, anotherCarVehicle);
+        assertEquals(parkingSlot.getTicketId(), "PR1234_1_5");
+        assertEquals(parkingSlot.getParkedVehicle(), anotherCarVehicle);
         Vehicle bikeVehicle = new Vehicle(VehicleType.BIKE, "1235", "white");
         parkingSlot = parkingLot.parkVehicle(bikeVehicle);
-        assertEquals(parkingSlot.tickedId, "PR1234_1_2");
-        assertEquals(parkingSlot.parkedVehicle, bikeVehicle);
+        assertEquals(parkingSlot.getTicketId(), "PR1234_1_2");
+        assertEquals(parkingSlot.getParkedVehicle(), bikeVehicle);
         Vehicle truckVehicle = new Vehicle(VehicleType.TRUCK, "1235", "white");
         parkingSlot = parkingLot.parkVehicle(truckVehicle);
-        assertEquals(parkingSlot.tickedId, "PR1234_1_1");
-        assertEquals(parkingSlot.parkedVehicle, truckVehicle);
+        assertEquals(parkingSlot.getTicketId(), "PR1234_1_1");
+        assertEquals(parkingSlot.getParkedVehicle(), truckVehicle);
     }
 
     @Test
-    public void testUnParkVehicle() {
+    public void testUnParkVehicle() throws IllegalAccessException {
         ParkingSlot parkingSlot;
         Vehicle carVehicle = new Vehicle(VehicleType.CAR, "1234", "white");
         parkingSlot = parkingLot.parkVehicle(carVehicle);
@@ -45,6 +45,6 @@ public class ParkingLotTest {
         assertEquals(vehicle, carVehicle);
         anotherCarVehicle = new Vehicle(VehicleType.CAR, "1234", "grey");
         parkingSlot = parkingLot.parkVehicle(anotherCarVehicle);
-        assertEquals(parkingSlot.tickedId, "PR1234_1_4");
+        assertEquals(parkingSlot.getTicketId(), "PR1234_1_4");
     }
 }

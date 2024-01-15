@@ -54,7 +54,7 @@ public class ParkingService {
         }
     }
 
-    private String unParkVehicle(String tickedId) {
+    private String unParkVehicle(String tickedId) throws IllegalAccessException {
         String[] ticketParsed = tickedId.split("_");
         int floorId = Integer.parseInt(ticketParsed[1]);
         int slotId = Integer.parseInt(ticketParsed[2]);
@@ -73,14 +73,14 @@ public class ParkingService {
         return null;
     }
 
-    String parkVehicle(String type, String registrationNumber, String color) {
+    String parkVehicle(String type, String registrationNumber, String color) throws IllegalAccessException {
         VehicleType vehicleType = validateVehicle(type);
         if (vehicleType == null) {
             throw new IllegalArgumentException("Invalid vehicle type!");
         }
         ParkingSlot parkingSlot = parkingLot.parkVehicle(new Vehicle(vehicleType, registrationNumber, color));
         return parkingSlot == null ? "Parking Lot Full"
-                : String.format("Parked vehicle. Ticket ID: %s", parkingSlot.getTickedId());
+                : String.format("Parked vehicle. Ticket ID: %s", parkingSlot.getTicketId());
     }
 
     void display(String displayType, String type) {

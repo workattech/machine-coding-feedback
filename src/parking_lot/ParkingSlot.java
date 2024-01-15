@@ -1,13 +1,13 @@
 package parking_lot;
 
 public class ParkingSlot {
-    Vehicle parkedVehicle;
-    ParkingLot parkingLot;
-    ParkingFloor parkingFloor;
-    VehicleType vehicleType;
-    String tickedId;
-    boolean isAvailable;
-    int id;
+    private Vehicle parkedVehicle;
+    private ParkingLot parkingLot;
+    private ParkingFloor parkingFloor;
+    private VehicleType vehicleType;
+    private String ticketId;
+    private boolean isAvailable;
+    private int id;
 
     public ParkingSlot(ParkingLot parkingLot, ParkingFloor parkingFloor, VehicleType vehicleType, int slotId) {
         this.parkedVehicle = null;
@@ -16,7 +16,7 @@ public class ParkingSlot {
         this.parkingLot = parkingLot;
         this.vehicleType = vehicleType;
         this.id = slotId;
-        this.tickedId = parkingLot.getId() + "_" + parkingFloor.getId() + "_" + id;
+        this.ticketId = parkingLot.getId() + "_" + parkingFloor.getId() + "_" + id;
     }
 
     public Vehicle getParkedVehicle() {
@@ -35,8 +35,8 @@ public class ParkingSlot {
         return vehicleType;
     }
 
-    public String getTickedId() {
-        return tickedId;
+    public String getTicketId() {
+        return ticketId;
     }
 
     public boolean isAvailable() {
@@ -47,12 +47,25 @@ public class ParkingSlot {
         return id;
     }
 
-    public void parkVehicle(Vehicle vehicle) {
+    public boolean canParkVehicle(Vehicle vehicle) {
+        return vehicle.getType() == vehicleType;
+    }
+
+    public void parkVehicle(Vehicle vehicle) throws IllegalAccessException {
+        if (!canParkVehicle(vehicle)) {
+            throw new IllegalArgumentException("This vehicle type can't be parked here!");
+        }
+        if (!isAvailable) {
+            throw new IllegalAccessException("This slot is already booked!");
+        }
         isAvailable = false;
         parkedVehicle = vehicle;
     }
 
-    public Vehicle unParkVehicle() {
+    public Vehicle unParkVehicle() throws IllegalAccessException {
+        if (isAvailable) {
+            throw new IllegalAccessException("This slot is already available!");
+        }
         isAvailable = true;
         Vehicle vehicle = parkedVehicle;
         parkedVehicle = null;

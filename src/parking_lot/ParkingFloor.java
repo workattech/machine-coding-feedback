@@ -1,17 +1,17 @@
 package parking_lot;
 
-import java.util.HashMap;
 import java.util.Map;
 import java.util.SortedSet;
-import java.util.TreeSet;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentSkipListSet;
 
 public class ParkingFloor {
     private int noOfSlots;
     private ParkingLot parkingLot;
     private ParkingSlot[] parkingSlots;
     private int id;
-    private Map<VehicleType, SortedSet<Integer>> availableSlots = new HashMap<>();
-    private Map<VehicleType, SortedSet<Integer>> occupiedSlots = new HashMap<>();
+    private Map<VehicleType, SortedSet<Integer>> availableSlots = new ConcurrentHashMap<>();
+    private Map<VehicleType, SortedSet<Integer>> occupiedSlots = new ConcurrentHashMap<>();
 
     public ParkingFloor(int noOfSlotsPerFloor, ParkingLot parkingLot, int floorId) {
         this.noOfSlots = noOfSlotsPerFloor;
@@ -19,8 +19,8 @@ public class ParkingFloor {
         parkingSlots = new ParkingSlot[noOfSlots + 1];
         this.id = floorId;
         for (VehicleType vehicleType : VehicleType.values()) {
-            availableSlots.put(vehicleType, new TreeSet<Integer>());
-            occupiedSlots.put(vehicleType, new TreeSet<Integer>());
+            availableSlots.put(vehicleType, new ConcurrentSkipListSet<Integer>());
+            occupiedSlots.put(vehicleType, new ConcurrentSkipListSet<Integer>());
         }
         parkingSlots[1] = new ParkingSlot(parkingLot, this, VehicleType.TRUCK, 1);
         availableSlots.get(VehicleType.TRUCK).add(1);
@@ -46,8 +46,8 @@ public class ParkingFloor {
         return parkingLot;
     }
 
-    public ParkingSlot[] getParkingSlots() {
-        return parkingSlots;
+    public ParkingSlot getParkingSlot(int slotId) {
+        return parkingSlots[slotId];
     }
 
     public int getId() {
@@ -58,7 +58,7 @@ public class ParkingFloor {
         return !availableSlots.get(type).isEmpty();
     }
 
-    public ParkingSlot parkVehicle(Vehicle vehicle) {
+    public synchronized ParkingSlot parkVehicle(Vehicle vehicle) throws IllegalAccessException {
         if (!hasFreeSlot(vehicle.getType())) {
             return null;
         }
@@ -69,7 +69,7 @@ public class ParkingFloor {
         return parkingSlots[slotId];
     }
 
-    public Vehicle unParkVehicle(int slotId) {
+    public synchronized Vehicle unParkVehicle(int slotId) throws IllegalAccessException {
         Vehicle vehicle = parkingSlots[slotId].unParkVehicle();
         availableSlots.get(vehicle.getType()).add(slotId);
         occupiedSlots.get(vehicle.getType()).remove(slotId);
