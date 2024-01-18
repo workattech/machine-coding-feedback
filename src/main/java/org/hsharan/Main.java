@@ -28,6 +28,6 @@ public class Main {
         for(int i=0;i<playerCount;i++){
             new Player(bfr.readLine());
         }
-        System.out.println("Winner Izz :"+ Game.playGame().getName());
+        System.out.println("Winner Is :"+ Game.playGame().getName());
     }
 }
