@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
@@ -36,3 +37,15 @@ build/
 
 ### Mac OS ###
 .DS_Store
+=======
+**/*.class
+**/*.out
+**/*.pyo
+**/__pycache__
+tests/out
+
+.idea
+.DS_Store
+.*
+!.gitignore
+>>>>>>> 032a28096fc7d0a46d865741cfb1b54d17a30240
