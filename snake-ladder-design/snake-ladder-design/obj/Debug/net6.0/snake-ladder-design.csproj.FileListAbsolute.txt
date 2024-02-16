@@ -1,0 +1,15 @@
+C:\Practice\machine-coding-feedback\snake-ladder-design\snake-ladder-design\bin\Debug\net6.0\snake-ladder-design.exe
+C:\Practice\machine-coding-feedback\snake-ladder-design\snake-ladder-design\bin\Debug\net6.0\snake-ladder-design.deps.json
+C:\Practice\machine-coding-feedback\snake-ladder-design\snake-ladder-design\bin\Debug\net6.0\snake-ladder-design.runtimeconfig.json
+C:\Practice\machine-coding-feedback\snake-ladder-design\snake-ladder-design\bin\Debug\net6.0\snake-ladder-design.dll
+C:\Practice\machine-coding-feedback\snake-ladder-design\snake-ladder-design\bin\Debug\net6.0\snake-ladder-design.pdb
+C:\Practice\machine-coding-feedback\snake-ladder-design\snake-ladder-design\obj\Debug\net6.0\snake-ladder-design.csproj.AssemblyReference.cache
+C:\Practice\machine-coding-feedback\snake-ladder-design\snake-ladder-design\obj\Debug\net6.0\snake-ladder-design.GeneratedMSBuildEditorConfig.editorconfig
+C:\Practice\machine-coding-feedback\snake-ladder-design\snake-ladder-design\obj\Debug\net6.0\snake-ladder-design.AssemblyInfoInputs.cache
+C:\Practice\machine-coding-feedback\snake-ladder-design\snake-ladder-design\obj\Debug\net6.0\snake-ladder-design.AssemblyInfo.cs
+C:\Practice\machine-coding-feedback\snake-ladder-design\snake-ladder-design\obj\Debug\net6.0\snake-ladder-design.csproj.CoreCompileInputs.cache
+C:\Practice\machine-coding-feedback\snake-ladder-design\snake-ladder-design\obj\Debug\net6.0\snake-ladder-design.dll
+C:\Practice\machine-coding-feedback\snake-ladder-design\snake-ladder-design\obj\Debug\net6.0\refint\snake-ladder-design.dll
+C:\Practice\machine-coding-feedback\snake-ladder-design\snake-ladder-design\obj\Debug\net6.0\snake-ladder-design.pdb
+C:\Practice\machine-coding-feedback\snake-ladder-design\snake-ladder-design\obj\Debug\net6.0\snake-ladder-design.genruntimeconfig.cache
+C:\Practice\machine-coding-feedback\snake-ladder-design\snake-ladder-design\obj\Debug\net6.0\ref\snake-ladder-design.dll
