@@ -1,0 +1,14 @@
+C:\Users\anpilli\VSCodeProjects\Project1\bin\Debug\net8.0\ParkingLot.exe
+C:\Users\anpilli\VSCodeProjects\Project1\bin\Debug\net8.0\ParkingLot.deps.json
+C:\Users\anpilli\VSCodeProjects\Project1\bin\Debug\net8.0\ParkingLot.runtimeconfig.json
+C:\Users\anpilli\VSCodeProjects\Project1\bin\Debug\net8.0\ParkingLot.dll
+C:\Users\anpilli\VSCodeProjects\Project1\bin\Debug\net8.0\ParkingLot.pdb
+C:\Users\anpilli\VSCodeProjects\Project1\obj\Debug\net8.0\ParkingLot.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\anpilli\VSCodeProjects\Project1\obj\Debug\net8.0\ParkingLot.AssemblyInfoInputs.cache
+C:\Users\anpilli\VSCodeProjects\Project1\obj\Debug\net8.0\ParkingLot.AssemblyInfo.cs
+C:\Users\anpilli\VSCodeProjects\Project1\obj\Debug\net8.0\ParkingLot.csproj.CoreCompileInputs.cache
+C:\Users\anpilli\VSCodeProjects\Project1\obj\Debug\net8.0\ParkingLot.dll
+C:\Users\anpilli\VSCodeProjects\Project1\obj\Debug\net8.0\refint\ParkingLot.dll
+C:\Users\anpilli\VSCodeProjects\Project1\obj\Debug\net8.0\ParkingLot.pdb
+C:\Users\anpilli\VSCodeProjects\Project1\obj\Debug\net8.0\ParkingLot.genruntimeconfig.cache
+C:\Users\anpilli\VSCodeProjects\Project1\obj\Debug\net8.0\ref\ParkingLot.dll

@@ -1,0 +1,15 @@
+C:\Users\anpilli\src\machine-coding-feedback\VSCodeProjects\Game2048\bin\Debug\net8.0\Game2048.exe
+C:\Users\anpilli\src\machine-coding-feedback\VSCodeProjects\Game2048\bin\Debug\net8.0\Game2048.deps.json
+C:\Users\anpilli\src\machine-coding-feedback\VSCodeProjects\Game2048\bin\Debug\net8.0\Game2048.runtimeconfig.json
+C:\Users\anpilli\src\machine-coding-feedback\VSCodeProjects\Game2048\bin\Debug\net8.0\Game2048.dll
+C:\Users\anpilli\src\machine-coding-feedback\VSCodeProjects\Game2048\bin\Debug\net8.0\Game2048.pdb
+C:\Users\anpilli\src\machine-coding-feedback\VSCodeProjects\Game2048\obj\Debug\net8.0\Game2048.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\anpilli\src\machine-coding-feedback\VSCodeProjects\Game2048\obj\Debug\net8.0\Game2048.AssemblyInfoInputs.cache
+C:\Users\anpilli\src\machine-coding-feedback\VSCodeProjects\Game2048\obj\Debug\net8.0\Game2048.AssemblyInfo.cs
+C:\Users\anpilli\src\machine-coding-feedback\VSCodeProjects\Game2048\obj\Debug\net8.0\Game2048.csproj.CoreCompileInputs.cache
+C:\Users\anpilli\src\machine-coding-feedback\VSCodeProjects\Game2048\obj\Debug\net8.0\Game2048.sourcelink.json
+C:\Users\anpilli\src\machine-coding-feedback\VSCodeProjects\Game2048\obj\Debug\net8.0\Game2048.dll
+C:\Users\anpilli\src\machine-coding-feedback\VSCodeProjects\Game2048\obj\Debug\net8.0\refint\Game2048.dll
+C:\Users\anpilli\src\machine-coding-feedback\VSCodeProjects\Game2048\obj\Debug\net8.0\Game2048.pdb
+C:\Users\anpilli\src\machine-coding-feedback\VSCodeProjects\Game2048\obj\Debug\net8.0\Game2048.genruntimeconfig.cache
+C:\Users\anpilli\src\machine-coding-feedback\VSCodeProjects\Game2048\obj\Debug\net8.0\ref\Game2048.dll

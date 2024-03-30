@@ -1,0 +1,15 @@
+C:\Users\anpilli\src\machine-coding-feedback\VSCodeProjects\PubSub\bin\Debug\net8.0\PubSub.exe
+C:\Users\anpilli\src\machine-coding-feedback\VSCodeProjects\PubSub\bin\Debug\net8.0\PubSub.deps.json
+C:\Users\anpilli\src\machine-coding-feedback\VSCodeProjects\PubSub\bin\Debug\net8.0\PubSub.runtimeconfig.json
+C:\Users\anpilli\src\machine-coding-feedback\VSCodeProjects\PubSub\bin\Debug\net8.0\PubSub.dll
+C:\Users\anpilli\src\machine-coding-feedback\VSCodeProjects\PubSub\bin\Debug\net8.0\PubSub.pdb
+C:\Users\anpilli\src\machine-coding-feedback\VSCodeProjects\PubSub\obj\Debug\net8.0\PubSub.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\anpilli\src\machine-coding-feedback\VSCodeProjects\PubSub\obj\Debug\net8.0\PubSub.AssemblyInfoInputs.cache
+C:\Users\anpilli\src\machine-coding-feedback\VSCodeProjects\PubSub\obj\Debug\net8.0\PubSub.AssemblyInfo.cs
+C:\Users\anpilli\src\machine-coding-feedback\VSCodeProjects\PubSub\obj\Debug\net8.0\PubSub.csproj.CoreCompileInputs.cache
+C:\Users\anpilli\src\machine-coding-feedback\VSCodeProjects\PubSub\obj\Debug\net8.0\PubSub.sourcelink.json
+C:\Users\anpilli\src\machine-coding-feedback\VSCodeProjects\PubSub\obj\Debug\net8.0\PubSub.dll
+C:\Users\anpilli\src\machine-coding-feedback\VSCodeProjects\PubSub\obj\Debug\net8.0\refint\PubSub.dll
+C:\Users\anpilli\src\machine-coding-feedback\VSCodeProjects\PubSub\obj\Debug\net8.0\PubSub.pdb
+C:\Users\anpilli\src\machine-coding-feedback\VSCodeProjects\PubSub\obj\Debug\net8.0\PubSub.genruntimeconfig.cache
+C:\Users\anpilli\src\machine-coding-feedback\VSCodeProjects\PubSub\obj\Debug\net8.0\ref\PubSub.dll

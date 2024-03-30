@@ -1,0 +1,15 @@
+C:\Users\anpilli\src\machine-coding-feedback\VSCodeProjects\KeyValueStore\bin\Debug\net8.0\KeyValueStore.exe
+C:\Users\anpilli\src\machine-coding-feedback\VSCodeProjects\KeyValueStore\bin\Debug\net8.0\KeyValueStore.deps.json
+C:\Users\anpilli\src\machine-coding-feedback\VSCodeProjects\KeyValueStore\bin\Debug\net8.0\KeyValueStore.runtimeconfig.json
+C:\Users\anpilli\src\machine-coding-feedback\VSCodeProjects\KeyValueStore\bin\Debug\net8.0\KeyValueStore.dll
+C:\Users\anpilli\src\machine-coding-feedback\VSCodeProjects\KeyValueStore\bin\Debug\net8.0\KeyValueStore.pdb
+C:\Users\anpilli\src\machine-coding-feedback\VSCodeProjects\KeyValueStore\obj\Debug\net8.0\KeyValueStore.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\anpilli\src\machine-coding-feedback\VSCodeProjects\KeyValueStore\obj\Debug\net8.0\KeyValueStore.AssemblyInfoInputs.cache
+C:\Users\anpilli\src\machine-coding-feedback\VSCodeProjects\KeyValueStore\obj\Debug\net8.0\KeyValueStore.AssemblyInfo.cs
+C:\Users\anpilli\src\machine-coding-feedback\VSCodeProjects\KeyValueStore\obj\Debug\net8.0\KeyValueStore.csproj.CoreCompileInputs.cache
+C:\Users\anpilli\src\machine-coding-feedback\VSCodeProjects\KeyValueStore\obj\Debug\net8.0\KeyValueStore.sourcelink.json
+C:\Users\anpilli\src\machine-coding-feedback\VSCodeProjects\KeyValueStore\obj\Debug\net8.0\KeyValueStore.dll
+C:\Users\anpilli\src\machine-coding-feedback\VSCodeProjects\KeyValueStore\obj\Debug\net8.0\refint\KeyValueStore.dll
+C:\Users\anpilli\src\machine-coding-feedback\VSCodeProjects\KeyValueStore\obj\Debug\net8.0\KeyValueStore.pdb
+C:\Users\anpilli\src\machine-coding-feedback\VSCodeProjects\KeyValueStore\obj\Debug\net8.0\KeyValueStore.genruntimeconfig.cache
+C:\Users\anpilli\src\machine-coding-feedback\VSCodeProjects\KeyValueStore\obj\Debug\net8.0\ref\KeyValueStore.dll

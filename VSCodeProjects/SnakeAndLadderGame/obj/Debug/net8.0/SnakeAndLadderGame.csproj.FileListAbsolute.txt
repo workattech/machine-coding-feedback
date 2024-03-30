@@ -1,0 +1,15 @@
+C:\Users\anpilli\src\machine-coding-feedback\VSCodeProjects\SnakeAndLadderGame\bin\Debug\net8.0\SnakeAndLadderGame.exe
+C:\Users\anpilli\src\machine-coding-feedback\VSCodeProjects\SnakeAndLadderGame\bin\Debug\net8.0\SnakeAndLadderGame.deps.json
+C:\Users\anpilli\src\machine-coding-feedback\VSCodeProjects\SnakeAndLadderGame\bin\Debug\net8.0\SnakeAndLadderGame.runtimeconfig.json
+C:\Users\anpilli\src\machine-coding-feedback\VSCodeProjects\SnakeAndLadderGame\bin\Debug\net8.0\SnakeAndLadderGame.dll
+C:\Users\anpilli\src\machine-coding-feedback\VSCodeProjects\SnakeAndLadderGame\bin\Debug\net8.0\SnakeAndLadderGame.pdb
+C:\Users\anpilli\src\machine-coding-feedback\VSCodeProjects\SnakeAndLadderGame\obj\Debug\net8.0\SnakeAndLadderGame.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\anpilli\src\machine-coding-feedback\VSCodeProjects\SnakeAndLadderGame\obj\Debug\net8.0\SnakeAndLadderGame.AssemblyInfoInputs.cache
+C:\Users\anpilli\src\machine-coding-feedback\VSCodeProjects\SnakeAndLadderGame\obj\Debug\net8.0\SnakeAndLadderGame.AssemblyInfo.cs
+C:\Users\anpilli\src\machine-coding-feedback\VSCodeProjects\SnakeAndLadderGame\obj\Debug\net8.0\SnakeAndLadderGame.csproj.CoreCompileInputs.cache
+C:\Users\anpilli\src\machine-coding-feedback\VSCodeProjects\SnakeAndLadderGame\obj\Debug\net8.0\SnakeAndLadderGame.sourcelink.json
+C:\Users\anpilli\src\machine-coding-feedback\VSCodeProjects\SnakeAndLadderGame\obj\Debug\net8.0\SnakeAndLadderGame.dll
+C:\Users\anpilli\src\machine-coding-feedback\VSCodeProjects\SnakeAndLadderGame\obj\Debug\net8.0\refint\SnakeAndLadderGame.dll
+C:\Users\anpilli\src\machine-coding-feedback\VSCodeProjects\SnakeAndLadderGame\obj\Debug\net8.0\SnakeAndLadderGame.pdb
+C:\Users\anpilli\src\machine-coding-feedback\VSCodeProjects\SnakeAndLadderGame\obj\Debug\net8.0\SnakeAndLadderGame.genruntimeconfig.cache
+C:\Users\anpilli\src\machine-coding-feedback\VSCodeProjects\SnakeAndLadderGame\obj\Debug\net8.0\ref\SnakeAndLadderGame.dll

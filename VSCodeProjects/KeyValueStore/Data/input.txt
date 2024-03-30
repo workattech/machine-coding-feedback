@@ -1,0 +1,15 @@
+put sde_bootcamp title SDE-Bootcamp price 30000.00 enrolled false estimated_time 30
+get sde_bootcamp
+keys
+put sde_kickstart title SDE-Kickstart price 4000 enrolled true estimated_time 8
+get sde_kickstart
+keys
+put sde_kickstart title SDE-Kickstart price 4000.00 enrolled true estimated_time 8
+get sde_kickstart
+keys
+delete sde_bootcamp
+get sde_bootcamp
+keys
+put sde_bootcamp title SDE-Bootcamp price 30000.00 enrolled true estimated_time 30
+search price 30000.00
+search enrolled true
