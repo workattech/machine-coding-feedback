@@ -8,3 +8,8 @@ tests/out
 .DS_Store
 .*
 !.gitignore
+
+**/out
+.target
+**/target
+*.iml
