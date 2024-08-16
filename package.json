@@ -1,0 +1,17 @@
+{
+  "name": "machine-coding-feedback",
+  "version": "1.0.0",
+  "description": "Get your [practice machine coding](https://workat.tech/machine-coding/practice) solutions reviewed by [Gaurav Chandak](https://www.linkedin.com/in/gcnit/) and get feedback before your machine coding round.",
+  "main": "index.js",
+  "type": "commonjs",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "snake-ladder": "node snake-ladder/src/main.js",
+    "split-wise": "node split-wise/src/main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
