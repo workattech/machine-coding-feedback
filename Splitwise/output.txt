@@ -1,0 +1,24 @@
+No Balances
+---------------------------------------------------------
+No Balances
+---------------------------------------------------------
+User4 owes User1 250 amount
+---------------------------------------------------------
+User2 owes User1 250 amount
+User3 owes User1 250 amount
+User4 owes User1 250 amount
+---------------------------------------------------------
+User2 owes User1 250 amount
+User3 owes User1 620 amount
+User4 owes User1 250 amount
+---------------------------------------------------------
+User2 owes User1 250 amount
+User3 owes User1 620 amount
+User4 owes User1 250 amount
+---------------------------------------------------------
+User2 owes User1 250 amount
+User2 owes User4 40 amount
+User3 owes User1 620 amount
+User3 owes User4 20 amount
+User4 owes User1 250 amount
+---------------------------------------------------------
