@@ -1,0 +1,31 @@
+MakeMyTrip.com/Yatra/Booking.com
+
+Functional Requirements:
+1.User should be able to search flights based on arrival + destination+ date of travel
+2.User should be able to login to application.
+3.Select the flight based on time/preference.
+4.Enter the personal details.
+5.Make payment in your application.
+6.Notification to the email.
+
+Non-Functional Requirements
+1.Scalable
+2.Reliable
+3.Modular
+
+Finding the actors
+1.User
+2.Airline authority
+3.Admin
+
+Entities:
+1.User
+2.Flights
+3.Booking
+4.Payment
+5.Notification
+6.Airline
+
+
+
+
